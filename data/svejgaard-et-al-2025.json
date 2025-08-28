@@ -1,0 +1,390 @@
+{
+  "trial_id": "JN_00452_2024",
+  "study_characteristics": {
+    "title": "Associative brain-computer interface training increases wrist extensor corticospinal excitability in patients with subacute stroke",
+    "design": "randomized controlled trial",
+    "sample_size": 24,
+    "sample_size_by_group": [
+      {
+        "group": "BCIassociative",
+        "n": 8
+      },
+      {
+        "group": "BCIsham",
+        "n": 16
+      },
+      {
+        "group": "intervention",
+        "n": 8
+      },
+      {
+        "group": "sham",
+        "n": 16
+      }
+    ],
+    "publication_year": 2024,
+    "geographic_location": "Denmark and Germany"
+  },
+  "population": {
+    "name": "patients with subacute stroke",
+    "condition": "subacute stroke",
+    "N": 24,
+    "age_mean": 63.0,
+    "sex_ratio_male": 0.625,
+    "baseline_characteristics": [
+      {
+        "name": "Age (years)",
+        "group": "intervention",
+        "value": 69.0,
+        "unit": "years"
+      },
+      {
+        "name": "Age (years)",
+        "group": "sham",
+        "value": 60.0,
+        "unit": "years"
+      },
+      {
+        "name": "Time after stroke (days)",
+        "group": "intervention",
+        "value": 33.0,
+        "unit": "days"
+      },
+      {
+        "name": "Time after stroke (days)",
+        "group": "sham",
+        "value": 34.0,
+        "unit": "days"
+      },
+      {
+        "name": "Resting motor threshold (%)",
+        "group": "intervention",
+        "value": 46.0,
+        "unit": "%"
+      },
+      {
+        "name": "Resting motor threshold (%)",
+        "group": "sham",
+        "value": 45.0,
+        "unit": "%"
+      },
+      {
+        "name": "Baseline FMA-UE",
+        "group": "intervention",
+        "value": 34.875,
+        "unit": "score"
+      },
+      {
+        "name": "Baseline FMA-UE",
+        "group": "sham",
+        "value": 30.25,
+        "unit": "score"
+      },
+      {
+        "name": "Sex",
+        "group": "intervention",
+        "value_text": "male: 6, female: 2"
+      },
+      {
+        "name": "Sex",
+        "group": "sham",
+        "value_text": "male: 9, female: 7"
+      },
+      {
+        "name": "Lesion type",
+        "group": "intervention",
+        "value_text": "ICH: 5, INF: 3"
+      },
+      {
+        "name": "Lesion type",
+        "group": "sham",
+        "value_text": "ICH: 6, INF: 10"
+      },
+      {
+        "name": "Lesion side",
+        "group": "intervention",
+        "value_text": "left: 5, right: 3"
+      },
+      {
+        "name": "Lesion side",
+        "group": "sham",
+        "value_text": "left: 4, right: 12"
+      },
+      {
+        "name": "Lesion location",
+        "group": "intervention",
+        "value_text": "varied"
+      },
+      {
+        "name": "Lesion location",
+        "group": "sham",
+        "value_text": "varied"
+      },
+      {
+        "name": "Age",
+        "group": "BCIassociative",
+        "unit": "years"
+      },
+      {
+        "name": "Age",
+        "group": "BCIsham",
+        "unit": "years"
+      },
+      {
+        "name": "Days after stroke",
+        "group": "BCIassociative",
+        "unit": "days"
+      },
+      {
+        "name": "Days after stroke",
+        "group": "BCIsham",
+        "unit": "days"
+      },
+      {
+        "name": "Resting motor threshold",
+        "group": "BCIassociative",
+        "unit": "% maximum stimulator output"
+      },
+      {
+        "name": "Resting motor threshold",
+        "group": "BCIsham",
+        "unit": "% maximum stimulator output"
+      },
+      {
+        "name": "FMA-UE score",
+        "group": "BCIassociative",
+        "unit": "score"
+      },
+      {
+        "name": "FMA-UE score",
+        "group": "BCIsham",
+        "unit": "score"
+      }
+    ]
+  },
+  "intervention": [
+    {
+      "group": "intervention",
+      "treatment": "associative BCI training with peripheral nerve stimulation",
+      "dose": "30 pairings",
+      "freq": "single session",
+      "route": "peripheral nerve"
+    },
+    {
+      "group": "BCIassociative",
+      "treatment": "associative BCI training",
+      "dose": "Not specified",
+      "freq": "Not specified"
+    },
+    {
+      "group": "BCIsham",
+      "treatment": "sham BCI",
+      "dose": "Not specified",
+      "freq": "Not specified"
+    },
+    {
+      "group": "BCI-associative",
+      "treatment": "BCI-associative training",
+      "dose": "Not specified",
+      "freq": "Not specified"
+    },
+    {
+      "group": "BCI group",
+      "treatment": "Brain-Computer Interface training",
+      "dose": "Not specified",
+      "freq": "Not specified"
+    },
+    {
+      "group": "Intervention group",
+      "treatment": "Brain-computer interface training",
+      "dose": "Not specified",
+      "freq": "Not specified"
+    }
+  ],
+  "comparator": [
+    {
+      "group": "sham control",
+      "placebo": true
+    },
+    {
+      "group": "sham",
+      "treatment": "sham stimulation",
+      "placebo": true
+    },
+    {
+      "group": "BCIsham",
+      "treatment": "subsensory electrical stimulation",
+      "placebo": true
+    }
+  ],
+  "baseline_outcomes": [
+    {
+      "name": "Age",
+      "outcome_type": "baseline",
+      "time_point": "baseline",
+      "unit": "years",
+      "group_results": [
+        {
+          "group": "intervention",
+          "value": 69.0
+        },
+        {
+          "group": "sham",
+          "value": 60.0
+        }
+      ],
+      "comparisons": [
+        {
+          "group1": "intervention",
+          "group2": "sham",
+          "p_value": 0.07
+        }
+      ],
+      "timepoint_month": 0.0
+    },
+    {
+      "name": "Time after stroke",
+      "outcome_type": "baseline",
+      "time_point": "baseline",
+      "unit": "days",
+      "group_results": [
+        {
+          "group": "intervention",
+          "value": 33.0
+        },
+        {
+          "group": "sham",
+          "value": 34.0
+        }
+      ],
+      "comparisons": [
+        {
+          "group1": "intervention",
+          "group2": "sham",
+          "p_value": 0.84
+        }
+      ],
+      "timepoint_month": 0.0
+    },
+    {
+      "name": "Resting motor threshold",
+      "outcome_type": "baseline",
+      "time_point": "baseline",
+      "unit": "%",
+      "group_results": [
+        {
+          "group": "intervention",
+          "value": 46.0
+        },
+        {
+          "group": "sham",
+          "value": 45.0
+        }
+      ],
+      "comparisons": [
+        {
+          "group1": "intervention",
+          "group2": "sham",
+          "p_value": 0.9
+        }
+      ],
+      "timepoint_month": 0.0
+    },
+    {
+      "name": "Baseline FMA-UE",
+      "outcome_type": "baseline",
+      "time_point": "baseline",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "intervention",
+          "value": 34.875
+        },
+        {
+          "group": "sham",
+          "value": 30.25
+        }
+      ],
+      "comparisons": [
+        {
+          "group1": "intervention",
+          "group2": "sham",
+          "p_value": 0.55
+        }
+      ],
+      "timepoint_month": 0.0
+    },
+    {
+      "name": "Resting Motor Threshold (RMT)",
+      "outcome_type": "baseline",
+      "time_point": "baseline",
+      "unit": "%",
+      "group_results": [
+        {
+          "group": "BCIassociative",
+          "value": 46.0
+        },
+        {
+          "group": "BCIsham",
+          "value": 45.0
+        }
+      ],
+      "comparisons": [
+        {
+          "group1": "BCIassociative",
+          "group2": "BCIsham",
+          "p_value": 0.84
+        }
+      ]
+    },
+    {
+      "name": "MEP amplitude at 140% RMT",
+      "outcome_type": "baseline",
+      "time_point": "baseline",
+      "unit": "μV",
+      "group_results": [
+        {
+          "group": "BCIassociative",
+          "value": 556.0
+        },
+        {
+          "group": "BCIsham",
+          "value": 538.0
+        }
+      ],
+      "comparisons": [
+        {
+          "group1": "BCIassociative",
+          "group2": "BCIsham",
+          "p_value": 0.96
+        }
+      ]
+    }
+  ],
+  "primary_outcomes": [
+    {
+      "name": "MEP amplitude at 140% RMT",
+      "outcome_type": "primary",
+      "time_point": "immediately after intervention",
+      "unit": "μV",
+      "group_results": [
+        {
+          "group": "BCIassociative",
+          "value": 845.0
+        }
+      ]
+    },
+    {
+      "name": "MEP amplitude at 140% RMT",
+      "outcome_type": "primary",
+      "time_point": "30 minutes after intervention",
+      "unit": "μV",
+      "group_results": [
+        {
+          "group": "BCIassociative",
+          "value": 948.0
+        }
+      ]
+    }
+  ]
+}

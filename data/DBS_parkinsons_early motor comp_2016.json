@@ -1,0 +1,426 @@
+{
+  "study_id": "10.1371/journal.pone.0159340",
+  "study_characteristics": {
+    "title": "Deep Brain Stimulation for Parkinson’s Disease with Early Motor Complications: A UK Cost-Effectiveness Analysis",
+    "design": "Cost-effectiveness analysis using Markov model",
+    "publication_year": 2016,
+    "geographic_location": "United Kingdom",
+    "pubmed_id": "26846185",
+    "journal_name": "PLoS ONE",
+    "author_info": {
+      "primary_author": "Tomasz Fundament",
+      "primary_author_email": "alex.green@nds.ox.ac.uk",
+      "affiliation": "HTA Consulting, Krakow, Poland"
+    },
+    "funding_source": {
+      "source": "Medtronic and HTA Consulting",
+      "details": "Medtronic funded model development and manuscript preparation; HTA Consulting provided salary support"
+    }
+  },
+  "population": {
+    "name": "PD patients with early motor complications",
+    "condition": "Parkinson’s disease",
+    "baseline_characteristics": [
+      {
+        "name": "Annual fall rate",
+        "group": "All",
+        "value": 42.78,
+        "unit": "%"
+      },
+      {
+        "name": "Hospitalization rate after falls",
+        "group": "All",
+        "value": 50.9,
+        "unit": "%"
+      }
+    ],
+    "disease_classification": {
+      "name": "Parkinson’s disease",
+      "icd_code": "G20",
+      "severity": "Early motor complications"
+    },
+    "target_population_age": "Advanced PD patients",
+    "target_population_sex": "Both",
+    "target_population_characteristics": "Patients with early onset of levodopa-induced motor complications"
+  },
+  "interventions": [
+    {
+      "group": "DBS",
+      "treatment": "Deep Brain Stimulation",
+      "dose": "Not specified",
+      "freq": "Not specified",
+      "intervention_type": "medical_device"
+    },
+    {
+      "group": "DBS group",
+      "treatment": "Deep brain stimulation",
+      "dose": "Not specified",
+      "freq": "Not specified",
+      "route": "surgical implantation",
+      "intervention_type": "medical_device"
+    },
+    {
+      "group": "DBS Group",
+      "treatment": "Deep Brain Stimulation",
+      "dose": "Not specified",
+      "freq": "Not specified",
+      "route": "Implanted device",
+      "intervention_type": "medical_device"
+    },
+    {
+      "group": "DBS",
+      "treatment": "Deep Brain Stimulation",
+      "dose": "Not specified",
+      "freq": "Not specified",
+      "route": "surgical",
+      "intervention_type": "medical_device"
+    },
+    {
+      "group": "Intervention Group",
+      "treatment": "Deep Brain Stimulation",
+      "dose": "Not specified",
+      "freq": "Not specified",
+      "intervention_type": "medical_device"
+    },
+    {
+      "group": "DBS",
+      "treatment": "Deep Brain Stimulation",
+      "dose": "Not specified",
+      "freq": "Not specified",
+      "intervention_type": "medical_device"
+    },
+    {
+      "group": "Intervention",
+      "treatment": "Deep Brain Stimulation",
+      "dose": "Not specified",
+      "freq": "Not specified",
+      "intervention_type": "medical_device"
+    },
+    {
+      "group": "Intervention",
+      "treatment": "Deep Brain Stimulation",
+      "dose": "Not specified",
+      "freq": "Not specified",
+      "intervention_type": "medical_device"
+    },
+    {
+      "group": "Intervention group",
+      "treatment": "deep brain stimulation surgery plus best medical therapy",
+      "dose": "Not specified",
+      "freq": "Not specified",
+      "intervention_type": "surgical_procedure"
+    },
+    {
+      "group": "LCIG group",
+      "treatment": "Levodopa-carbidopa intestinal gel",
+      "dose": "Not specified",
+      "freq": "Continuous infusion",
+      "route": "Intrajejunal",
+      "intervention_type": "medical_device"
+    }
+  ],
+  "comparators": [
+    {
+      "group": "BMT",
+      "treatment": "Best Medical Therapy",
+      "standard_care": true,
+      "comparator_type": "standard_care"
+    },
+    {
+      "group": "BMT group",
+      "treatment": "Best medical therapy",
+      "standard_care": true,
+      "comparator_type": "standard_care"
+    },
+    {
+      "group": "BMT Group",
+      "treatment": "Best Medical Therapy",
+      "placebo": false,
+      "standard_care": true,
+      "comparator_type": "standard_care"
+    },
+    {
+      "group": "BMT",
+      "treatment": "Best Medical Therapy",
+      "standard_care": true,
+      "comparator_type": "standard_care",
+      "number_of_comparators": 1
+    },
+    {
+      "group": "Comparator Group",
+      "treatment": "Best Medical Therapy",
+      "standard_care": true,
+      "comparator_type": "standard_care",
+      "number_of_comparators": 1
+    },
+    {
+      "group": "BMT",
+      "treatment": "Best Medical Therapy",
+      "standard_care": true,
+      "comparator_type": "standard_care"
+    },
+    {
+      "group": "Comparator",
+      "standard_care": true,
+      "comparator_type": "standard_care"
+    },
+    {
+      "group": "Control",
+      "standard_care": true,
+      "comparator_type": "standard_care"
+    },
+    {
+      "group": "Control group",
+      "treatment": "best medical therapy",
+      "standard_care": true,
+      "comparator_type": "standard_care"
+    },
+    {
+      "group": "Control group",
+      "treatment": "Standard oral levodopa",
+      "placebo": false,
+      "standard_care": true,
+      "comparator_type": "standard_care"
+    }
+  ],
+  "economic_data": {
+    "effectiveness_utility": {
+      "qaly": 1.35,
+      "number_of_utilities": 1,
+      "utility_types": "Mapped from UPDRS",
+      "health_state_utilities": [
+        {
+          "health_state_name": "Off-state",
+          "utility_value": 0.32,
+          "source": "Literature",
+          "measurement_instrument": "EQ-5D"
+        },
+        {
+          "health_state_name": "On-state without dyskinesia",
+          "utility_value": 0.69,
+          "source": "Literature",
+          "measurement_instrument": "EQ-5D"
+        }
+      ]
+    },
+    "model_parameters": {
+      "health_states": [
+        "Off-state",
+        "On-state without dyskinesia",
+        "On-state with dyskinesia"
+      ],
+      "time_horizon_year": 15.0,
+      "discount_rate": 3.5,
+      "ICER": 19887.0,
+      "WTP_threshold": 30000.0,
+      "time_horizon": "15 years",
+      "perspectives": [
+        "payer",
+        "payer",
+        "healthcare_system",
+        "healthcare_system",
+        "healthcare_system"
+      ],
+      "cost_discounted": true,
+      "discount_rate_cost": 3.5,
+      "outcome_discounted": true,
+      "discount_rate_outcome": 3.5,
+      "sensitivity_analysis": true,
+      "sensitivity_analysis_type": [
+        "one_way",
+        "probabilistic",
+        "one_way",
+        "probabilistic",
+        "probabilistic",
+        "probabilistic"
+      ],
+      "cost_effectiveness_thresholds": [
+        30000.0,
+        30000.0,
+        20000.0,
+        30000.0
+      ],
+      "health_state_definitions": [
+        "Based on UPDRS scores",
+        "Off-state: Parkinsonian symptoms present",
+        "On-state: Optimal medication response"
+      ],
+      "cycle_length": "1 year",
+      "model_type": "Markov"
+    },
+    "icer_analysis": {
+      "icer_value": 19887.0,
+      "number_of_ratios": 1,
+      "ratio_quadrant": "NE"
+    },
+    "currency_info": {
+      "currency_country": "United Kingdom",
+      "currency_year": 2016,
+      "currency_code": "GBP"
+    },
+    "treatment_group_costs": [
+      {
+        "treatment_group": "DBS",
+        "total_cost": 73077.0
+      },
+      {
+        "treatment_group": "BMT",
+        "total_cost": 46278.0
+      },
+      {
+        "treatment_group": "DBS Group",
+        "cost_components": [
+          {
+            "component_name": "Pre-surgery hospitalization",
+            "quantity": 2.0,
+            "unit": "assessments",
+            "cost_category": "hospitalization",
+            "source": "Payment by Results tariffs",
+            "cost_description": "Two pre-operative assessments"
+          },
+          {
+            "component_name": "Device acquisition and implantation",
+            "quantity": 1.0,
+            "unit": "full system",
+            "cost_category": "device",
+            "cost_description": "Device, leads, extensions and patient programmer"
+          },
+          {
+            "component_name": "Battery replacement",
+            "unit": "per replacement",
+            "cost_category": "device",
+            "cost_description": "New device plus hospitalization (every 4.5 years)"
+          },
+          {
+            "component_name": "Adverse event management",
+            "unit": "per event",
+            "cost_category": "adverse_event",
+            "source": "Payment by Results tariffs",
+            "cost_description": "Surgery-related, device-related and other events"
+          },
+          {
+            "component_name": "Drug acquisition",
+            "unit": "per day",
+            "cost_category": "pharmaceutical",
+            "source": "British National Formulary",
+            "cost_per_patient": 2.28,
+            "cost_description": "Mean daily drug cost"
+          }
+        ]
+      },
+      {
+        "treatment_group": "BMT Group",
+        "cost_components": [
+          {
+            "component_name": "Drug acquisition",
+            "unit": "per day",
+            "cost_category": "pharmaceutical",
+            "source": "British National Formulary",
+            "cost_per_patient": 4.16,
+            "cost_description": "Mean daily drug cost"
+          }
+        ]
+      },
+      {
+        "treatment_group": "DBS",
+        "cost_components": [
+          {
+            "component_name": "Device costs",
+            "cost_category": "device",
+            "cost_description": "Majority of total costs"
+          }
+        ]
+      },
+      {
+        "treatment_group": "BMT",
+        "cost_components": [
+          {
+            "component_name": "Drug therapy",
+            "cost_category": "pharmaceutical",
+            "cost_description": "Main cost driver"
+          },
+          {
+            "component_name": "Management of co-morbidities",
+            "cost_category": "medical_management",
+            "cost_description": "Main cost driver"
+          }
+        ]
+      },
+      {
+        "treatment_group": "LCIG group",
+        "total_cost": 55000.0,
+        "cost_components": [
+          {
+            "component_name": "Drug acquisition",
+            "unit_cost": 45000.0,
+            "quantity": 1.0,
+            "total_cost": 45000.0,
+            "unit": "per patient per year",
+            "cost_category": "Drug",
+            "source": "Study data",
+            "cost_per_patient": 45000.0
+          },
+          {
+            "component_name": "Device and administration",
+            "unit_cost": 10000.0,
+            "quantity": 1.0,
+            "total_cost": 10000.0,
+            "unit": "per patient per year",
+            "cost_category": "Procedure",
+            "source": "Study data",
+            "cost_per_patient": 10000.0
+          }
+        ],
+        "cost_per_year": 55000.0,
+        "upfront_costs": 5000.0,
+        "ongoing_costs": 50000.0
+      },
+      {
+        "treatment_group": "Control group",
+        "total_cost": 18000.0,
+        "cost_components": [
+          {
+            "component_name": "Oral medication",
+            "unit_cost": 8000.0,
+            "quantity": 1.0,
+            "total_cost": 8000.0,
+            "unit": "per patient per year",
+            "cost_category": "Drug",
+            "source": "Study data",
+            "cost_per_patient": 8000.0
+          },
+          {
+            "component_name": "Hospitalizations",
+            "unit_cost": 10000.0,
+            "quantity": 1.0,
+            "total_cost": 10000.0,
+            "unit": "per patient per year",
+            "cost_category": "Hospital",
+            "source": "Study data",
+            "cost_per_patient": 10000.0
+          }
+        ],
+        "cost_per_year": 18000.0,
+        "ongoing_costs": 18000.0
+      }
+    ]
+  },
+  "outcomes": [
+    {
+      "name": "Quality-Adjusted Life Years",
+      "outcome_type": "economic",
+      "time_point": "15 years",
+      "unit": "QALYs",
+      "group_results": [
+        {
+          "group": "DBS",
+          "value": 6.69
+        },
+        {
+          "group": "BMT",
+          "value": 5.35
+        }
+      ]
+    }
+  ]
+}

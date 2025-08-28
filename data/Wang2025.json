@@ -1,0 +1,90 @@
+{
+  "trial_id": "Neurofeedback_Insula_RCT",
+  "study_characteristics": {
+    "title": "Neurofeedback modulation of insula activity via MEG-based brain-machine interface: a double-blind randomized controlled crossover trial",
+    "design": "double-blind randomized controlled crossover trial",
+    "sample_size": 19,
+    "sample_size_by_group": [
+      {
+        "group": "upmodulation",
+        "n": 19
+      },
+      {
+        "group": "downmodulation",
+        "n": 19
+      },
+      {
+        "group": "Neurofeedback group",
+        "n": 19
+      }
+    ],
+    "publication_year": 2025,
+    "geographic_location": "Japan"
+  },
+  "population": {
+    "name": "healthy subjects",
+    "condition": "pain perception",
+    "N": 19,
+    "age_mean": 28.8,
+    "sex_ratio_male": 0.5789,
+    "baseline_characteristics": [
+      {
+        "name": "Age (years)",
+        "group": "All",
+        "value": 28.8,
+        "unit": "years"
+      },
+      {
+        "name": "Male sex (%)",
+        "group": "All",
+        "value": 57.89,
+        "unit": "%"
+      }
+    ]
+  },
+  "intervention": [
+    {
+      "group": "upmodulation",
+      "treatment": "neurofeedback training",
+      "dose": "Not specified",
+      "freq": "Not specified"
+    },
+    {
+      "group": "downmodulation",
+      "treatment": "neurofeedback training",
+      "dose": "Not specified",
+      "freq": "Not specified"
+    },
+    {
+      "group": "Upmodulation",
+      "treatment": "Neurofeedback training for insula upmodulation",
+      "dose": "Not specified",
+      "freq": "Not specified"
+    },
+    {
+      "group": "Downmodulation",
+      "treatment": "Neurofeedback training for insula downmodulation",
+      "dose": "Not specified",
+      "freq": "Not specified"
+    },
+    {
+      "group": "Neurofeedback group",
+      "treatment": "MEG-based neurofeedback",
+      "dose": "Not specified",
+      "freq": "Not specified"
+    },
+    {
+      "group": "neurofeedback group",
+      "treatment": "real-time neurofeedback training",
+      "dose": "Not specified",
+      "freq": "Not specified"
+    },
+    {
+      "group": "Group A",
+      "treatment": "Not specified",
+      "dose": "Not specified",
+      "freq": "Not specified"
+    }
+  ],
+  "comparator": []
+}

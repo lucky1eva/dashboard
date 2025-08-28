@@ -1,0 +1,455 @@
+{
+  "trial_id": "NCT03649958",
+  "study_characteristics": {
+    "title": "Acoustic neuromodulation with or without micro-voltage tACS reduces post-concussive symptoms",
+    "design": "Randomized controlled trial",
+    "sample_size": 80,
+    "sample_size_by_group": [
+      {
+        "group": "CR-SOP",
+        "n": 40
+      },
+      {
+        "group": "CR-CES",
+        "n": 40
+      }
+    ],
+    "follow_up_duration_month": 3.0,
+    "publication_year": 2025,
+    "geographic_location": "USA"
+  },
+  "population": {
+    "name": "Military service members, veterans, or dependents with PPCS",
+    "condition": "Persistent post-concussive symptoms (PPCS)",
+    "N": 80,
+    "age_mean": 40.2,
+    "sex_ratio_male": 0.787,
+    "baseline_characteristics": [
+      {
+        "name": "Neurobehavioral Symptom Inventory (NSI) Score",
+        "group": "CR-SOP",
+        "value": 43.9,
+        "unit": "score"
+      },
+      {
+        "name": "Neurobehavioral Symptom Inventory (NSI) Score",
+        "group": "CR-CES",
+        "value": 46.4,
+        "unit": "score"
+      },
+      {
+        "name": "Age (years)",
+        "group": "CR-CES",
+        "value": 40.7,
+        "unit": "years"
+      },
+      {
+        "name": "Age (years)",
+        "group": "CR-SOP",
+        "value": 39.7,
+        "unit": "years"
+      },
+      {
+        "name": "Male sex (%)",
+        "group": "CR-CES",
+        "value": 77.5,
+        "unit": "%"
+      },
+      {
+        "name": "Male sex (%)",
+        "group": "CR-SOP",
+        "value": 80.0,
+        "unit": "%"
+      },
+      {
+        "name": "Race",
+        "group": "CR-CES",
+        "value_text": "White: 60.0%, Black: 10.0%, Hispanic: 17.5%, Asian: 0.0%, Other: 5.0%, Multiracial: 7.5%"
+      },
+      {
+        "name": "Race",
+        "group": "CR-SOP",
+        "value_text": "White: 67.5%, Black: 5.0%, Hispanic: 12.5%, Asian: 5.0%, Other: 0.0%, Multiracial: 10.0%"
+      },
+      {
+        "name": "Marital Status",
+        "group": "CR-CES",
+        "value_text": "Single: 20.0%, Married: 65.0%, Separated: 5.0%, Divorced: 7.5%, Widowed: 2.5%"
+      },
+      {
+        "name": "Marital Status",
+        "group": "CR-SOP",
+        "value_text": "Single: 27.5%, Married: 70.0%, Separated: 2.5%, Divorced: 0.0%, Widowed: 0.0%"
+      },
+      {
+        "name": "Education",
+        "group": "CR-CES",
+        "value_text": "High School: 5.0%, Some College: 32.5%, Associate’s degree: 15.0%, Bachelor’s degree: 25.0%, Advanced degree: 22.5%"
+      },
+      {
+        "name": "Education",
+        "group": "CR-SOP",
+        "value_text": "High School: 15.0%, Some College: 22.5%, Associate’s degree: 12.5%, Bachelor’s degree: 22.5%, Advanced degree: 25.0%, Missing: 2.5%"
+      },
+      {
+        "name": "Employment Status",
+        "group": "CR-CES",
+        "value_text": "Active Duty: 30 (75.0%), Retired/Veteran: 8 (20.0%), Civilian: 2 (5.0%)"
+      },
+      {
+        "name": "Employment Status",
+        "group": "CR-SOP",
+        "value_text": "Active Duty: 31 (77.5%), Retired/Veteran: 7 (17.5%), Civilian: 2 (5.0%)"
+      },
+      {
+        "name": "Rank Category",
+        "group": "CR-CES",
+        "value_text": "E1-E3: 1 (2.5%), E4-E6: 11 (27.5%), E7-E9: 13 (32.5%), O1-O3: 0 (0.0%), O4-O6: 7 (17.5%), W1-W4: 3 (7.5%), Missing: 5 (12.5%)"
+      },
+      {
+        "name": "Rank Category",
+        "group": "CR-SOP",
+        "value_text": "E1-E3: 1 (2.5%), E4-E6: 17 (42.5%), E7-E9: 10 (25.0%), O1-O3: 1 (2.5%), O4-O6: 7 (17.5%), W1-W4: 1 (2.5%), Missing: 3 (7.5%)"
+      },
+      {
+        "name": "Branch",
+        "group": "CR-CES",
+        "value_text": "Army: 32 (80.0%), Navy: 3 (7.5%), Marine Corps: 1 (2.5%), USAF: 1 (2.5%), Coast Guard: 1 (2.5%), Missing: 2 (5.0%)"
+      },
+      {
+        "name": "Branch",
+        "group": "CR-SOP",
+        "value_text": "Army: 32 (80.0%), Navy: 4 (10.0%), Marine Corps: 1 (2.5%), USAF: 0 (0.0%), Coast Guard: 1 (2.5%), Missing: 2 (5.0%)"
+      },
+      {
+        "name": "Number of times deployed",
+        "group": "CR-CES",
+        "value": 5.2,
+        "unit": "times"
+      },
+      {
+        "name": "Number of times deployed",
+        "group": "CR-SOP",
+        "value": 4.4,
+        "unit": "times"
+      },
+      {
+        "name": "Number of months deployed",
+        "group": "CR-CES",
+        "value": 34.9,
+        "unit": "months"
+      },
+      {
+        "name": "Number of months deployed",
+        "group": "CR-SOP",
+        "value": 26.3,
+        "unit": "months"
+      },
+      {
+        "name": "Years of active duty",
+        "group": "CR-CES",
+        "value": 16.0,
+        "unit": "years"
+      },
+      {
+        "name": "Years of active duty",
+        "group": "CR-SOP",
+        "value": 14.2,
+        "unit": "years"
+      },
+      {
+        "name": "Number of TBIs",
+        "group": "CR-CES",
+        "value_text": "1: 6 (15.0%), 2: 8 (20.0%), 3: 13 (32.5%), 4: 9 (22.5%), 5 or more: 4 (10.0%)"
+      },
+      {
+        "name": "Number of TBIs",
+        "group": "CR-SOP",
+        "value_text": "1: 4 (10.0%), 2: 9 (22.5%), 3: 11 (27.5%), 4: 10 (25.0%), 5 or more: 6 (15.0%)"
+      },
+      {
+        "name": "LOC",
+        "group": "CR-CES",
+        "value_text": "Yes: 26 (65.0%)"
+      },
+      {
+        "name": "LOC",
+        "group": "CR-SOP",
+        "value_text": "Yes: 28 (70.0%)"
+      },
+      {
+        "name": "Alcohol Consumption",
+        "group": "CR-CES",
+        "value_text": "Yes: 25 (62.5%)"
+      },
+      {
+        "name": "Alcohol Consumption",
+        "group": "CR-SOP",
+        "value_text": "Yes: 22 (55.0%)"
+      },
+      {
+        "name": "Caffeine Consumption",
+        "group": "CR-CES",
+        "value_text": "Yes: 33 (82.5%)"
+      },
+      {
+        "name": "Caffeine Consumption",
+        "group": "CR-SOP",
+        "value_text": "Yes: 30 (75.0%)"
+      },
+      {
+        "name": "Tobacco Consumption",
+        "group": "CR-CES",
+        "value_text": "Yes: 5 (12.5%)"
+      },
+      {
+        "name": "Tobacco Consumption",
+        "group": "CR-SOP",
+        "value_text": "Yes: 2 (5.0%)"
+      },
+      {
+        "name": "High Blood Pressure",
+        "group": "CR-CES",
+        "value_text": "Yes: 9 (22.5%)"
+      },
+      {
+        "name": "High Blood Pressure",
+        "group": "CR-SOP",
+        "value_text": "Yes: 6 (15.0%)"
+      },
+      {
+        "name": "Diabetes",
+        "group": "CR-CES",
+        "value_text": "Yes: 2 (5.0%)"
+      },
+      {
+        "name": "Diabetes",
+        "group": "CR-SOP",
+        "value_text": "Yes: 0 (0.0%)"
+      },
+      {
+        "name": "Headache",
+        "group": "CR-CES",
+        "value_text": "Yes: 39 (97.5%)"
+      },
+      {
+        "name": "Headache",
+        "group": "CR-SOP",
+        "value_text": "Yes: 37 (92.5%)"
+      },
+      {
+        "name": "Depression",
+        "group": "CR-CES",
+        "value_text": "Yes: 18 (45.0%)"
+      },
+      {
+        "name": "Depression",
+        "group": "CR-SOP",
+        "value_text": "Yes: 19 (47.5%)"
+      },
+      {
+        "name": "Insomnia",
+        "group": "CR-CES",
+        "value_text": "Yes: 30 (75.0%)"
+      },
+      {
+        "name": "Insomnia",
+        "group": "CR-SOP",
+        "value_text": "Yes: 31 (77.5%)"
+      },
+      {
+        "name": "Anxiety/Stress/PTSD",
+        "group": "CR-CES",
+        "value_text": "Yes: 33 (92.5%)"
+      },
+      {
+        "name": "Anxiety/Stress/PTSD",
+        "group": "CR-SOP",
+        "value_text": "Yes: 30 (75.0%)"
+      },
+      {
+        "name": "Number of Comorbidities",
+        "group": "CR-CES",
+        "value_text": "1–2: 8 (20.0%), 3 or more: 29 (72.5%), Missing: 3 (7.5%)"
+      },
+      {
+        "name": "Number of Comorbidities",
+        "group": "CR-SOP",
+        "value_text": "1–2: 8 (20.0%), 3 or more: 26 (65.0%), Missing: 6 (15.0%)"
+      },
+      {
+        "name": "Therapy",
+        "group": "CR-CES",
+        "value_text": "Tried: 23 (47.9%)"
+      },
+      {
+        "name": "Therapy",
+        "group": "CR-SOP",
+        "value_text": "Tried: 25 (52.1%)"
+      },
+      {
+        "name": "Number of Therapies",
+        "group": "CR-CES",
+        "value_text": "0: 13 (32.5%), 1–2: 15 (37.5%), 3 or more: 8 (20.0%), Missing: 4 (10.0%)"
+      },
+      {
+        "name": "Number of Therapies",
+        "group": "CR-SOP",
+        "value_text": "0: 9 (22.5%), 1–2: 18 (45.0%), 3 or more: 7 (17.5%), Missing: 6 (15.0%)"
+      }
+    ]
+  },
+  "intervention": [
+    {
+      "group": "CR-SOP",
+      "treatment": "engineered tones linked to brainwaves",
+      "dose": "10 sessions",
+      "freq": "Not specified"
+    },
+    {
+      "group": "CR-CES",
+      "treatment": "CR-SOP with intermittent low voltage transcranial alternating current stimulation (tACS)",
+      "dose": "5 sessions",
+      "freq": "Not specified"
+    },
+    {
+      "group": "Intervention",
+      "treatment": "High-resolution, relational, resonance-based, electroencephalic mirroring (HIRREM)",
+      "dose": "Not specified",
+      "freq": "Not specified"
+    },
+    {
+      "group": "Neurotechnology group",
+      "treatment": "Noninvasive neurotechnology",
+      "dose": "Not specified",
+      "freq": "Not specified"
+    },
+    {
+      "group": "Music therapy group",
+      "treatment": "Music therapy",
+      "dose": "Not specified",
+      "freq": "Not specified"
+    }
+  ],
+  "comparator": [
+    {
+      "group": "CR-SOP",
+      "treatment": "tones linked to brainwaves"
+    },
+    {
+      "group": "Placebo",
+      "treatment": "placebo",
+      "placebo": true
+    },
+    {
+      "group": "Verbal standard treatment group",
+      "treatment": "Verbal standard treatment",
+      "standard_care": true
+    }
+  ],
+  "baseline_outcomes": [
+    {
+      "name": "Neurobehavioral Symptom Inventory (NSI) Score",
+      "outcome_type": "baseline",
+      "time_point": "baseline",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "CR-SOP",
+          "value": 43.9
+        },
+        {
+          "group": "CR-CES",
+          "value": 46.4
+        }
+      ],
+      "timepoint_month": 0.0
+    },
+    {
+      "name": "NSI score",
+      "outcome_type": "baseline",
+      "time_point": "baseline",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "CR-CES",
+          "value": 46.4
+        },
+        {
+          "group": "CR-SOP",
+          "value": 43.9
+        }
+      ],
+      "timepoint_month": 0.0
+    }
+  ],
+  "primary_outcomes": [
+    {
+      "name": "Neurobehavioral Symptom Inventory (NSI) Score",
+      "outcome_type": "primary",
+      "time_point": "post-intervention",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "CR-SOP",
+          "value": 26.0
+        },
+        {
+          "group": "CR-CES",
+          "value": 30.7
+        }
+      ]
+    },
+    {
+      "name": "Neurobehavioral Symptom Inventory (NSI) Score",
+      "outcome_type": "primary",
+      "time_point": "3 months",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "CR-SOP",
+          "value": 27.2
+        },
+        {
+          "group": "CR-CES",
+          "value": 31.1
+        }
+      ],
+      "timepoint_month": 3.0
+    },
+    {
+      "name": "Change in NSI score",
+      "outcome_type": "primary",
+      "time_point": "post-intervention",
+      "unit": "points",
+      "group_results": [
+        {
+          "group": "CR-CES",
+          "value": -15.2
+        },
+        {
+          "group": "CR-SOP",
+          "value": -16.4
+        }
+      ]
+    },
+    {
+      "name": "Change in NSI score",
+      "outcome_type": "primary",
+      "time_point": "3-month follow-up",
+      "unit": "points",
+      "group_results": [
+        {
+          "group": "CR-CES",
+          "value": -15.9
+        },
+        {
+          "group": "CR-SOP",
+          "value": -16.2
+        }
+      ],
+      "timepoint_month": 3.0
+    }
+  ],
+  "follow_up_month": 6.0
+}

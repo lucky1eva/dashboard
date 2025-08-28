@@ -1,0 +1,1234 @@
+{
+  "trial_id": "10.1186/s12984-024-01535-2",
+  "study_characteristics": {
+    "title": "Efficacy of brain-computer interface training with motor imagery-contingent feedback in improving upper limb function and neuroplasticity among persons with chronic stroke: a double-blinded, parallel-group, randomized controlled trial",
+    "design": "randomized controlled trial",
+    "sample_size": 27,
+    "sample_size_by_group": [
+      {
+        "group": "MI-contingent feedback BCI group",
+        "n": 12
+      },
+      {
+        "group": "MI-independent feedback BCI group",
+        "n": 12
+      },
+      {
+        "group": "MI-contingent feedback BCI",
+        "n": 12
+      },
+      {
+        "group": "MI-independent feedback BCI",
+        "n": 12
+      }
+    ],
+    "follow_up_duration_month": 1.0,
+    "publication_year": 2025,
+    "geographic_location": "Seoul, Korea"
+  },
+  "population": {
+    "name": "persons with chronic stroke",
+    "condition": "chronic stroke",
+    "N": 27,
+    "baseline_characteristics": [
+      {
+        "name": "Sex (Male/Female)",
+        "group": "MI-contingent feedback BCI group",
+        "value_text": "10/2"
+      },
+      {
+        "name": "Sex (Male/Female)",
+        "group": "MI-independent feedback BCI group",
+        "value_text": "9/4"
+      },
+      {
+        "name": "Age (years)",
+        "group": "MI-contingent feedback BCI group",
+        "value": 49.0,
+        "unit": "years"
+      },
+      {
+        "name": "Age (years)",
+        "group": "MI-independent feedback BCI group",
+        "value": 46.0,
+        "unit": "years"
+      },
+      {
+        "name": "Affected brain lesion (right/left)",
+        "group": "MI-contingent feedback BCI group",
+        "value_text": "6/6"
+      },
+      {
+        "name": "Affected brain lesion (right/left)",
+        "group": "MI-independent feedback BCI group",
+        "value_text": "10/3"
+      },
+      {
+        "name": "Type of stroke (hemorrhage/infarction)",
+        "group": "MI-contingent feedback BCI group",
+        "value_text": "7/5"
+      },
+      {
+        "name": "Type of stroke (hemorrhage/infarction)",
+        "group": "MI-independent feedback BCI group",
+        "value_text": "9/4"
+      },
+      {
+        "name": "Onset time (months)",
+        "group": "MI-contingent feedback BCI group",
+        "value": 18.2,
+        "unit": "months"
+      },
+      {
+        "name": "Onset time (months)",
+        "group": "MI-independent feedback BCI group",
+        "value": 22.2,
+        "unit": "months"
+      },
+      {
+        "name": "FMA",
+        "group": "MI-contingent feedback BCI group",
+        "value": 29.9,
+        "unit": "points"
+      },
+      {
+        "name": "FMA",
+        "group": "MI-independent feedback BCI group",
+        "value": 33.5,
+        "unit": "points"
+      },
+      {
+        "name": "MRC-WE",
+        "group": "MI-contingent feedback BCI group",
+        "value": 1.1,
+        "unit": "points"
+      },
+      {
+        "name": "MRC-WE",
+        "group": "MI-independent feedback BCI group",
+        "value": 1.2,
+        "unit": "points"
+      },
+      {
+        "name": "Modified Ashworth wrist flexor",
+        "group": "MI-contingent feedback BCI group",
+        "value": 0.4,
+        "unit": "points"
+      },
+      {
+        "name": "Modified Ashworth wrist flexor",
+        "group": "MI-independent feedback BCI group",
+        "value": 0.1,
+        "unit": "points"
+      },
+      {
+        "name": "MEP (positive/negative)",
+        "group": "MI-contingent feedback BCI group",
+        "value_text": "3/9"
+      },
+      {
+        "name": "MEP (positive/negative)",
+        "group": "MI-independent feedback BCI group",
+        "value_text": "2/11"
+      },
+      {
+        "name": "Time since stroke onset",
+        "group": "MI-contingent BCI group",
+        "value": 18.2,
+        "unit": "months"
+      },
+      {
+        "name": "Time since stroke onset",
+        "group": "MI-independent BCI group",
+        "value": 22.2,
+        "unit": "months"
+      }
+    ]
+  },
+  "intervention": [
+    {
+      "group": "MI-contingent feedback BCI group",
+      "treatment": "BCI training with MI-contingent functional electrical stimulation feedback",
+      "dose": "Not specified",
+      "freq": "Not specified"
+    },
+    {
+      "group": "MI-independent feedback BCI group",
+      "treatment": "BCI training with MI-independent feedback",
+      "dose": "Not specified",
+      "freq": "Not specified"
+    },
+    {
+      "group": "BCI group",
+      "treatment": "BCI with MI-contingent feedback",
+      "dose": "Not specified",
+      "freq": "20 sessions over 4 weeks",
+      "duration_weeks": 4.0
+    },
+    {
+      "group": "MI-independent feedback group",
+      "treatment": "MI-independent feedback",
+      "dose": "Not specified",
+      "freq": "20 sessions over 4 weeks",
+      "duration_weeks": 4.0
+    },
+    {
+      "group": "MI-contingent feedback BCI",
+      "treatment": "BCI training with contingent feedback",
+      "dose": "20 sessions",
+      "freq": "Not specified",
+      "duration_weeks": 4.0
+    },
+    {
+      "group": "MI-independent feedback BCI",
+      "treatment": "BCI training with independent feedback",
+      "dose": "20 sessions",
+      "freq": "Not specified",
+      "duration_weeks": 4.0
+    },
+    {
+      "group": "MI-contingent BCI",
+      "treatment": "BCI with motor imagery contingent feedback",
+      "dose": "Not specified",
+      "freq": "Not specified",
+      "duration_weeks": 4.0
+    },
+    {
+      "group": "MI-contingent BCI group",
+      "treatment": "BCI with MI-contingent FES feedback",
+      "dose": "Not specified",
+      "freq": "Not specified"
+    },
+    {
+      "group": "MI-independent BCI group",
+      "treatment": "BCI with MI-independent FES feedback",
+      "dose": "Not specified",
+      "freq": "Not specified"
+    },
+    {
+      "group": "MI-contingent group",
+      "treatment": "BCI training",
+      "dose": "Not specified",
+      "freq": "Not specified"
+    },
+    {
+      "group": "MI-independent group",
+      "treatment": "BCI training",
+      "dose": "Not specified",
+      "freq": "Not specified"
+    },
+    {
+      "group": "Intervention group",
+      "treatment": "motor-imagery-based BCI-controlled hand exoskeleton rehabilitation",
+      "dose": "Not specified",
+      "freq": "Not specified"
+    }
+  ],
+  "comparator": [
+    {
+      "group": "MI-independent feedback BCI group",
+      "treatment": "BCI training with MI-independent feedback",
+      "placebo": true,
+      "standard_care": false
+    },
+    {
+      "group": "MI-independent BCI",
+      "treatment": "BCI with motor imagery independent feedback"
+    }
+  ],
+  "baseline_outcomes": [
+    {
+      "name": "MRC-WE",
+      "outcome_type": "baseline",
+      "time_point": "0 months",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "MI-contingent BCI",
+          "value": 1.333
+        },
+        {
+          "group": "MI-independent BCI",
+          "value": 5.692
+        }
+      ],
+      "timepoint_month": 0.0
+    },
+    {
+      "name": "FMA-distal",
+      "outcome_type": "baseline",
+      "time_point": "0 months",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "MI-contingent BCI",
+          "value": 2.666
+        },
+        {
+          "group": "MI-independent BCI",
+          "value": 3.615
+        }
+      ],
+      "timepoint_month": 0.0
+    },
+    {
+      "name": "FMA-proximal",
+      "outcome_type": "baseline",
+      "time_point": "0 months",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "MI-contingent BCI",
+          "value": 12.75
+        },
+        {
+          "group": "MI-independent BCI",
+          "value": 14.692
+        }
+      ],
+      "timepoint_month": 0.0
+    },
+    {
+      "name": "AROM-WE",
+      "outcome_type": "baseline",
+      "time_point": "0 months",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "MI-contingent BCI",
+          "value": 14.583
+        },
+        {
+          "group": "MI-independent BCI",
+          "value": 16.538
+        }
+      ],
+      "timepoint_month": 0.0
+    },
+    {
+      "name": "AROM-WF",
+      "outcome_type": "baseline",
+      "time_point": "0 months",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "MI-contingent BCI",
+          "value": 14.583
+        },
+        {
+          "group": "MI-independent BCI",
+          "value": 16.538
+        }
+      ],
+      "timepoint_month": 0.0
+    },
+    {
+      "name": "MAS-WF",
+      "outcome_type": "baseline",
+      "time_point": "0 months",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "MI-contingent BCI",
+          "value": 1.333
+        },
+        {
+          "group": "MI-independent BCI",
+          "value": 5.692
+        }
+      ],
+      "timepoint_month": 0.0
+    },
+    {
+      "name": "BBT",
+      "outcome_type": "baseline",
+      "time_point": "0 months",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "MI-contingent BCI",
+          "value": 2.083
+        },
+        {
+          "group": "MI-independent BCI",
+          "value": 5.692
+        }
+      ],
+      "timepoint_month": 0.0
+    },
+    {
+      "name": "SIS-hand function",
+      "outcome_type": "baseline",
+      "time_point": "0 months",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "MI-contingent BCI",
+          "value": 12.917
+        },
+        {
+          "group": "MI-independent BCI",
+          "value": 16.153
+        }
+      ],
+      "timepoint_month": 0.0
+    },
+    {
+      "name": "SIS-ADL/IADL",
+      "outcome_type": "baseline",
+      "time_point": "0 months",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "MI-contingent BCI",
+          "value": 68.333
+        },
+        {
+          "group": "MI-independent BCI",
+          "value": 70.0
+        }
+      ],
+      "timepoint_month": 0.0
+    },
+    {
+      "name": "SIS-social participation",
+      "outcome_type": "baseline",
+      "time_point": "0 months",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "MI-contingent BCI",
+          "value": 45.325
+        },
+        {
+          "group": "MI-independent BCI",
+          "value": 39.915
+        }
+      ],
+      "timepoint_month": 0.0
+    }
+  ],
+  "primary_outcomes": [
+    {
+      "name": "MRC-WE",
+      "outcome_type": "primary",
+      "time_point": "baseline",
+      "unit": "points",
+      "group_results": [
+        {
+          "group": "MI-contingent feedback BCI group",
+          "value": 1.083
+        },
+        {
+          "group": "MI-independent feedback BCI group",
+          "value": 1.23
+        }
+      ],
+      "timepoint_month": 0.0
+    },
+    {
+      "name": "MRC-WE",
+      "outcome_type": "primary",
+      "time_point": "2 weeks",
+      "unit": "points",
+      "group_results": [
+        {
+          "group": "MI-contingent feedback BCI group",
+          "value": 1.25
+        },
+        {
+          "group": "MI-independent feedback BCI group",
+          "value": 1.23
+        }
+      ],
+      "timepoint_month": 0.5
+    },
+    {
+      "name": "MRC-WE",
+      "outcome_type": "primary",
+      "time_point": "4 weeks",
+      "unit": "points",
+      "group_results": [
+        {
+          "group": "MI-contingent feedback BCI group",
+          "value": 1.833
+        },
+        {
+          "group": "MI-independent feedback BCI group",
+          "value": 1.461
+        }
+      ],
+      "comparisons": [
+        {
+          "group1": "MI-contingent feedback BCI group",
+          "group2": "MI-independent feedback BCI group",
+          "p_value": 0.036
+        }
+      ],
+      "timepoint_month": 1.0
+    },
+    {
+      "name": "AROM-WE",
+      "outcome_type": "primary",
+      "time_point": "baseline",
+      "unit": "degrees",
+      "group_results": [
+        {
+          "group": "MI-contingent feedback BCI group",
+          "value": 4.166
+        },
+        {
+          "group": "MI-independent feedback BCI group",
+          "value": 5.0
+        }
+      ],
+      "timepoint_month": 0.0
+    },
+    {
+      "name": "AROM-WE",
+      "outcome_type": "primary",
+      "time_point": "2 weeks",
+      "unit": "degrees",
+      "group_results": [
+        {
+          "group": "MI-contingent feedback BCI group",
+          "value": 9.166
+        },
+        {
+          "group": "MI-independent feedback BCI group",
+          "value": 6.923
+        }
+      ],
+      "timepoint_month": 0.5
+    },
+    {
+      "name": "AROM-WE",
+      "outcome_type": "primary",
+      "time_point": "4 weeks",
+      "unit": "degrees",
+      "group_results": [
+        {
+          "group": "MI-contingent feedback BCI group",
+          "value": 12.916
+        },
+        {
+          "group": "MI-independent feedback BCI group",
+          "value": 8.461
+        }
+      ],
+      "comparisons": [
+        {
+          "group1": "MI-contingent feedback BCI group",
+          "group2": "MI-independent feedback BCI group",
+          "p_value": 0.155
+        }
+      ],
+      "timepoint_month": 1.0
+    },
+    {
+      "name": "MRC-WE",
+      "outcome_type": "primary",
+      "time_point": "0.5 months",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "MI-contingent BCI",
+          "value": 1.416
+        },
+        {
+          "group": "MI-independent BCI",
+          "value": 5.538
+        }
+      ],
+      "comparisons": [
+        {
+          "group1": "MI-contingent BCI",
+          "group2": "MI-independent BCI",
+          "p_value": 0.942
+        }
+      ],
+      "timepoint_month": 0.5
+    },
+    {
+      "name": "MRC-WE",
+      "outcome_type": "primary",
+      "time_point": "1 month",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "MI-contingent BCI",
+          "value": 1.833
+        },
+        {
+          "group": "MI-independent BCI",
+          "value": 1.461
+        }
+      ],
+      "comparisons": [
+        {
+          "group1": "MI-contingent BCI",
+          "group2": "MI-independent BCI",
+          "p_value": 0.505
+        }
+      ],
+      "timepoint_month": 1.0
+    },
+    {
+      "name": "AROM-WE",
+      "outcome_type": "primary",
+      "time_point": "0.5 months",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "MI-contingent BCI",
+          "value": 4.166
+        },
+        {
+          "group": "MI-independent BCI",
+          "value": 5.922
+        }
+      ],
+      "comparisons": [
+        {
+          "group1": "MI-contingent BCI",
+          "group2": "MI-independent BCI",
+          "p_value": 0.505
+        }
+      ],
+      "timepoint_month": 0.5
+    },
+    {
+      "name": "AROM-WE",
+      "outcome_type": "primary",
+      "time_point": "1 month",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "MI-contingent BCI",
+          "value": 5.416
+        },
+        {
+          "group": "MI-independent BCI",
+          "value": 5.461
+        }
+      ],
+      "comparisons": [
+        {
+          "group1": "MI-contingent BCI",
+          "group2": "MI-independent BCI",
+          "p_value": 0.989
+        }
+      ],
+      "timepoint_month": 1.0
+    }
+  ],
+  "secondary_outcomes": [
+    {
+      "name": "FMA-total",
+      "outcome_type": "secondary",
+      "time_point": "baseline",
+      "unit": "points",
+      "group_results": [
+        {
+          "group": "MI-contingent feedback BCI group",
+          "value": 29.917
+        },
+        {
+          "group": "MI-independent feedback BCI group",
+          "value": 33.538
+        }
+      ],
+      "timepoint_month": 0.0
+    },
+    {
+      "name": "FMA-total",
+      "outcome_type": "secondary",
+      "time_point": "2 weeks",
+      "unit": "points",
+      "group_results": [
+        {
+          "group": "MI-contingent feedback BCI group",
+          "value": 31.916
+        },
+        {
+          "group": "MI-independent feedback BCI group",
+          "value": 33.923
+        }
+      ],
+      "timepoint_month": 0.5
+    },
+    {
+      "name": "FMA-total",
+      "outcome_type": "secondary",
+      "time_point": "4 weeks",
+      "unit": "points",
+      "group_results": [
+        {
+          "group": "MI-contingent feedback BCI group",
+          "value": 31.333
+        },
+        {
+          "group": "MI-independent feedback BCI group",
+          "value": 36.307
+        }
+      ],
+      "timepoint_month": 1.0
+    },
+    {
+      "name": "FMA-distal",
+      "outcome_type": "secondary",
+      "time_point": "baseline",
+      "unit": "points",
+      "group_results": [
+        {
+          "group": "MI-contingent feedback BCI group",
+          "value": 4.333
+        },
+        {
+          "group": "MI-independent feedback BCI group",
+          "value": 6.308
+        }
+      ],
+      "timepoint_month": 0.0
+    },
+    {
+      "name": "FMA-distal",
+      "outcome_type": "secondary",
+      "time_point": "2 weeks",
+      "unit": "points",
+      "group_results": [
+        {
+          "group": "MI-contingent feedback BCI group",
+          "value": 5.25
+        },
+        {
+          "group": "MI-independent feedback BCI group",
+          "value": 6.846
+        }
+      ],
+      "timepoint_month": 0.5
+    },
+    {
+      "name": "FMA-distal",
+      "outcome_type": "secondary",
+      "time_point": "4 weeks",
+      "unit": "points",
+      "group_results": [
+        {
+          "group": "MI-contingent feedback BCI group",
+          "value": 5.416
+        },
+        {
+          "group": "MI-independent feedback BCI group",
+          "value": 8.076
+        }
+      ],
+      "timepoint_month": 1.0
+    },
+    {
+      "name": "FMA-hand",
+      "outcome_type": "secondary",
+      "time_point": "baseline",
+      "unit": "points",
+      "group_results": [
+        {
+          "group": "MI-contingent feedback BCI group",
+          "value": 3.5
+        },
+        {
+          "group": "MI-independent feedback BCI group",
+          "value": 4.846
+        }
+      ],
+      "timepoint_month": 0.0
+    },
+    {
+      "name": "FMA-hand",
+      "outcome_type": "secondary",
+      "time_point": "2 weeks",
+      "unit": "points",
+      "group_results": [
+        {
+          "group": "MI-contingent feedback BCI group",
+          "value": 3.917
+        },
+        {
+          "group": "MI-independent feedback BCI group",
+          "value": 4.846
+        }
+      ],
+      "timepoint_month": 0.5
+    },
+    {
+      "name": "FMA-hand",
+      "outcome_type": "secondary",
+      "time_point": "4 weeks",
+      "unit": "points",
+      "group_results": [
+        {
+          "group": "MI-contingent feedback BCI group",
+          "value": 3.5
+        },
+        {
+          "group": "MI-independent feedback BCI group",
+          "value": 4.846
+        }
+      ],
+      "timepoint_month": 1.0
+    },
+    {
+      "name": "FMA-wrist",
+      "outcome_type": "secondary",
+      "time_point": "baseline",
+      "unit": "points",
+      "group_results": [
+        {
+          "group": "MI-contingent feedback BCI group",
+          "value": 0.833
+        },
+        {
+          "group": "MI-independent feedback BCI group",
+          "value": 1.462
+        }
+      ],
+      "timepoint_month": 0.0
+    },
+    {
+      "name": "FMA-wrist",
+      "outcome_type": "secondary",
+      "time_point": "2 weeks",
+      "unit": "points",
+      "group_results": [
+        {
+          "group": "MI-contingent feedback BCI group",
+          "value": 1.333
+        },
+        {
+          "group": "MI-independent feedback BCI group",
+          "value": 1.538
+        }
+      ],
+      "timepoint_month": 0.5
+    },
+    {
+      "name": "FMA-wrist",
+      "outcome_type": "secondary",
+      "time_point": "4 weeks",
+      "unit": "points",
+      "group_results": [
+        {
+          "group": "MI-contingent feedback BCI group",
+          "value": 1.25
+        },
+        {
+          "group": "MI-independent feedback BCI group",
+          "value": 2.153
+        }
+      ],
+      "timepoint_month": 1.0
+    },
+    {
+      "name": "FMA-distal",
+      "outcome_type": "secondary",
+      "time_point": "0.5 months",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "MI-contingent BCI",
+          "value": 4.0
+        },
+        {
+          "group": "MI-independent BCI",
+          "value": 4.0
+        }
+      ],
+      "comparisons": [
+        {
+          "group1": "MI-contingent BCI",
+          "group2": "MI-independent BCI",
+          "p_value": 0.943
+        }
+      ],
+      "timepoint_month": 0.5
+    },
+    {
+      "name": "FMA-distal",
+      "outcome_type": "secondary",
+      "time_point": "1 month",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "MI-contingent BCI",
+          "value": 4.416
+        },
+        {
+          "group": "MI-independent BCI",
+          "value": 4.307
+        }
+      ],
+      "comparisons": [
+        {
+          "group1": "MI-contingent BCI",
+          "group2": "MI-independent BCI",
+          "p_value": 0.935
+        }
+      ],
+      "timepoint_month": 1.0
+    },
+    {
+      "name": "FMA-proximal",
+      "outcome_type": "secondary",
+      "time_point": "0.5 months",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "MI-contingent BCI",
+          "value": 14.333
+        },
+        {
+          "group": "MI-independent BCI",
+          "value": 15.692
+        }
+      ],
+      "comparisons": [
+        {
+          "group1": "MI-contingent BCI",
+          "group2": "MI-independent BCI",
+          "p_value": 0.712
+        }
+      ],
+      "timepoint_month": 0.5
+    },
+    {
+      "name": "FMA-proximal",
+      "outcome_type": "secondary",
+      "time_point": "1 month",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "MI-contingent BCI",
+          "value": 15.083
+        },
+        {
+          "group": "MI-independent BCI",
+          "value": 15.461
+        }
+      ],
+      "comparisons": [
+        {
+          "group1": "MI-contingent BCI",
+          "group2": "MI-independent BCI",
+          "p_value": 0.359
+        }
+      ],
+      "timepoint_month": 1.0
+    },
+    {
+      "name": "AROM-WF",
+      "outcome_type": "secondary",
+      "time_point": "0.5 months",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "MI-contingent BCI",
+          "value": 4.166
+        },
+        {
+          "group": "MI-independent BCI",
+          "value": 5.922
+        }
+      ],
+      "comparisons": [
+        {
+          "group1": "MI-contingent BCI",
+          "group2": "MI-independent BCI",
+          "p_value": 0.505
+        }
+      ],
+      "timepoint_month": 0.5
+    },
+    {
+      "name": "AROM-WF",
+      "outcome_type": "secondary",
+      "time_point": "1 month",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "MI-contingent BCI",
+          "value": 5.416
+        },
+        {
+          "group": "MI-independent BCI",
+          "value": 5.461
+        }
+      ],
+      "comparisons": [
+        {
+          "group1": "MI-contingent BCI",
+          "group2": "MI-independent BCI",
+          "p_value": 0.989
+        }
+      ],
+      "timepoint_month": 1.0
+    },
+    {
+      "name": "MAS-WF",
+      "outcome_type": "secondary",
+      "time_point": "0.5 months",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "MI-contingent BCI",
+          "value": 1.416
+        },
+        {
+          "group": "MI-independent BCI",
+          "value": 5.538
+        }
+      ],
+      "comparisons": [
+        {
+          "group1": "MI-contingent BCI",
+          "group2": "MI-independent BCI",
+          "p_value": 0.352
+        }
+      ],
+      "timepoint_month": 0.5
+    },
+    {
+      "name": "MAS-WF",
+      "outcome_type": "secondary",
+      "time_point": "1 month",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "MI-contingent BCI",
+          "value": 1.666
+        },
+        {
+          "group": "MI-independent BCI",
+          "value": 6.153
+        }
+      ],
+      "comparisons": [
+        {
+          "group1": "MI-contingent BCI",
+          "group2": "MI-independent BCI",
+          "p_value": 0.097
+        }
+      ],
+      "timepoint_month": 1.0
+    },
+    {
+      "name": "BBT",
+      "outcome_type": "secondary",
+      "time_point": "0.5 months",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "MI-contingent BCI",
+          "value": 2.666
+        },
+        {
+          "group": "MI-independent BCI",
+          "value": 5.538
+        }
+      ],
+      "comparisons": [
+        {
+          "group1": "MI-contingent BCI",
+          "group2": "MI-independent BCI",
+          "p_value": 0.246
+        }
+      ],
+      "timepoint_month": 0.5
+    },
+    {
+      "name": "BBT",
+      "outcome_type": "secondary",
+      "time_point": "1 month",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "MI-contingent BCI",
+          "value": 2.916
+        },
+        {
+          "group": "MI-independent BCI",
+          "value": 6.153
+        }
+      ],
+      "comparisons": [
+        {
+          "group1": "MI-contingent BCI",
+          "group2": "MI-independent BCI",
+          "p_value": 0.557
+        }
+      ],
+      "timepoint_month": 1.0
+    },
+    {
+      "name": "SIS-hand function",
+      "outcome_type": "secondary",
+      "time_point": "0.5 months",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "MI-contingent BCI",
+          "value": 12.916
+        },
+        {
+          "group": "MI-independent BCI",
+          "value": 17.692
+        }
+      ],
+      "comparisons": [
+        {
+          "group1": "MI-contingent BCI",
+          "group2": "MI-independent BCI",
+          "p_value": 0.816
+        }
+      ],
+      "timepoint_month": 0.5
+    },
+    {
+      "name": "SIS-hand function",
+      "outcome_type": "secondary",
+      "time_point": "1 month",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "MI-contingent BCI",
+          "value": 5.833
+        },
+        {
+          "group": "MI-independent BCI",
+          "value": 18.076
+        }
+      ],
+      "comparisons": [
+        {
+          "group1": "MI-contingent BCI",
+          "group2": "MI-independent BCI",
+          "p_value": 0.176
+        }
+      ],
+      "timepoint_month": 1.0
+    },
+    {
+      "name": "SIS-ADL/IADL",
+      "outcome_type": "secondary",
+      "time_point": "0.5 months",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "MI-contingent BCI",
+          "value": 73.125
+        },
+        {
+          "group": "MI-independent BCI",
+          "value": 74.038
+        }
+      ],
+      "comparisons": [
+        {
+          "group1": "MI-contingent BCI",
+          "group2": "MI-independent BCI",
+          "p_value": 0.903
+        }
+      ],
+      "timepoint_month": 0.5
+    },
+    {
+      "name": "SIS-ADL/IADL",
+      "outcome_type": "secondary",
+      "time_point": "1 month",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "MI-contingent BCI",
+          "value": 68.333
+        },
+        {
+          "group": "MI-independent BCI",
+          "value": 65.192
+        }
+      ],
+      "comparisons": [
+        {
+          "group1": "MI-contingent BCI",
+          "group2": "MI-independent BCI",
+          "p_value": 0.439
+        }
+      ],
+      "timepoint_month": 1.0
+    },
+    {
+      "name": "SIS-social participation",
+      "outcome_type": "secondary",
+      "time_point": "0.5 months",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "MI-contingent BCI",
+          "value": 54.966
+        },
+        {
+          "group": "MI-independent BCI",
+          "value": 49.061
+        }
+      ],
+      "comparisons": [
+        {
+          "group1": "MI-contingent BCI",
+          "group2": "MI-independent BCI",
+          "p_value": 0.961
+        }
+      ],
+      "timepoint_month": 0.5
+    },
+    {
+      "name": "SIS-social participation",
+      "outcome_type": "secondary",
+      "time_point": "1 month",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "MI-contingent BCI",
+          "value": 56.266
+        },
+        {
+          "group": "MI-independent BCI",
+          "value": 38.953
+        }
+      ],
+      "comparisons": [
+        {
+          "group1": "MI-contingent BCI",
+          "group2": "MI-independent BCI",
+          "p_value": 0.239
+        }
+      ],
+      "timepoint_month": 1.0
+    }
+  ],
+  "safety_outcomes": [
+    {
+      "name": "Adverse events",
+      "outcome_type": "safety",
+      "time_point": "during treatment",
+      "unit": "count",
+      "group_results": [
+        {
+          "group": "MI-contingent feedback BCI group",
+          "value": 0.0
+        },
+        {
+          "group": "MI-independent feedback BCI group",
+          "value": 0.0
+        }
+      ]
+    }
+  ],
+  "follow_up_month": 1.0
+}

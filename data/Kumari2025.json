@@ -1,0 +1,317 @@
+{
+  "trial_id": "10.1080/10790268.2024.2317011",
+  "study_characteristics": {
+    "title": "Motor priming to enhance the effect of physical therapy in people with spinal cord injury",
+    "design": "randomized control trial",
+    "sample_size": 10,
+    "sample_size_by_group": [
+      {
+        "group": "experimental",
+        "n": 5
+      },
+      {
+        "group": "control",
+        "n": 5
+      },
+      {
+        "group": "BCI-FES",
+        "n": 5
+      }
+    ],
+    "publication_year": 2024,
+    "geographic_location": "Glasgow, UK"
+  },
+  "population": {
+    "name": "subacute SCI",
+    "condition": "spinal cord injury",
+    "N": 10,
+    "age_mean": 52.0,
+    "sex_ratio_male": 0.7
+  },
+  "intervention": [
+    {
+      "group": "experimental",
+      "treatment": "BCI-FES priming before physical practice",
+      "dose": "15 min priming + 30 min practice",
+      "freq": "Not specified"
+    },
+    {
+      "group": "control",
+      "treatment": "physical practice",
+      "dose": "40 min",
+      "freq": "Not specified"
+    },
+    {
+      "group": "Experimental",
+      "treatment": "BCI-FES priming followed by physical practice",
+      "dose": "BCI-FES: 10-15 min, Physical practice: 30 min",
+      "freq": "At least 3 times per week"
+    },
+    {
+      "group": "Experimental group",
+      "treatment": "BCI-FES priming + physical therapy",
+      "dose": "Not specified",
+      "freq": "Not specified"
+    },
+    {
+      "group": "Control",
+      "treatment": "Passive FES",
+      "dose": "Not specified",
+      "freq": "Not specified"
+    },
+    {
+      "group": "E",
+      "treatment": "BCI-FES priming",
+      "dose": "Not specified",
+      "freq": "Not specified"
+    },
+    {
+      "group": "BCI-FES",
+      "treatment": "BCI-FES",
+      "dose": "Not specified",
+      "freq": "Not specified"
+    }
+  ],
+  "comparator": [
+    {
+      "group": "control",
+      "treatment": "physical practice"
+    },
+    {
+      "group": "Control",
+      "treatment": "Physical practice only",
+      "placebo": false
+    },
+    {
+      "group": "Control group",
+      "treatment": "Physical therapy",
+      "placebo": false,
+      "standard_care": true
+    },
+    {
+      "group": "C",
+      "treatment": "physical practice",
+      "standard_care": true
+    }
+  ],
+  "primary_outcomes": [
+    {
+      "name": "BCI accuracy",
+      "outcome_type": "primary",
+      "unit": "%",
+      "group_results": [
+        {
+          "group": "experimental",
+          "value": 85.0
+        }
+      ]
+    },
+    {
+      "name": "MMT (F) targeted",
+      "outcome_type": "primary",
+      "time_point": "end of treatment",
+      "unit": "points",
+      "group_results": [
+        {
+          "group": "Experimental",
+          "value": 0.36
+        },
+        {
+          "group": "Control",
+          "value": 0.59
+        }
+      ],
+      "comparisons": [
+        {
+          "group1": "Experimental",
+          "group2": "Control",
+          "p_value": 0.163
+        }
+      ]
+    },
+    {
+      "name": "MMT (U) targeted",
+      "outcome_type": "primary",
+      "time_point": "end of treatment",
+      "unit": "points",
+      "group_results": [
+        {
+          "group": "Experimental",
+          "value": 0.19
+        },
+        {
+          "group": "Control",
+          "value": 0.37
+        }
+      ],
+      "comparisons": [
+        {
+          "group1": "Experimental",
+          "group2": "Control",
+          "p_value": 0.123
+        }
+      ]
+    },
+    {
+      "name": "MMT (F) non-treated",
+      "outcome_type": "primary",
+      "time_point": "end of treatment",
+      "unit": "points",
+      "group_results": [
+        {
+          "group": "Experimental",
+          "value": 0.03
+        },
+        {
+          "group": "Control",
+          "value": 0.16
+        }
+      ],
+      "comparisons": [
+        {
+          "group1": "Experimental",
+          "group2": "Control",
+          "p_value": 0.917
+        }
+      ]
+    },
+    {
+      "name": "MMT (U) non-treated",
+      "outcome_type": "primary",
+      "time_point": "end of treatment",
+      "unit": "points",
+      "group_results": [
+        {
+          "group": "Experimental",
+          "value": 0.17
+        },
+        {
+          "group": "Control",
+          "value": 0.76
+        }
+      ],
+      "comparisons": [
+        {
+          "group1": "Experimental",
+          "group2": "Control",
+          "p_value": 0.014
+        }
+      ]
+    },
+    {
+      "name": "SCIM",
+      "outcome_type": "primary",
+      "time_point": "end of treatment",
+      "unit": "points",
+      "group_results": [
+        {
+          "group": "Experimental",
+          "value": 13.6
+        },
+        {
+          "group": "Control",
+          "value": 13.6
+        }
+      ],
+      "comparisons": [
+        {
+          "group1": "Experimental",
+          "group2": "Control",
+          "p_value": 0.841
+        }
+      ]
+    },
+    {
+      "name": "GS targeted",
+      "outcome_type": "primary",
+      "time_point": "end of treatment",
+      "unit": "units",
+      "group_results": [
+        {
+          "group": "Experimental",
+          "value": 3.8
+        },
+        {
+          "group": "Control",
+          "value": 21.4
+        }
+      ],
+      "comparisons": [
+        {
+          "group1": "Experimental",
+          "group2": "Control",
+          "p_value": 0.421
+        }
+      ]
+    },
+    {
+      "name": "GS non-treated",
+      "outcome_type": "primary",
+      "time_point": "end of treatment",
+      "unit": "units",
+      "group_results": [
+        {
+          "group": "Experimental",
+          "value": 10.4
+        },
+        {
+          "group": "Control",
+          "value": 33.0
+        }
+      ],
+      "comparisons": [
+        {
+          "group1": "Experimental",
+          "group2": "Control",
+          "p_value": 1.0
+        }
+      ]
+    },
+    {
+      "name": "ROM targeted",
+      "outcome_type": "primary",
+      "time_point": "end of treatment",
+      "unit": "units",
+      "group_results": [
+        {
+          "group": "Experimental",
+          "value": 19.6
+        },
+        {
+          "group": "Control",
+          "value": 7.7
+        }
+      ],
+      "comparisons": [
+        {
+          "group1": "Experimental",
+          "group2": "Control",
+          "p_value": 0.106
+        }
+      ]
+    },
+    {
+      "name": "ROM non-treated",
+      "outcome_type": "primary",
+      "time_point": "end of treatment",
+      "unit": "units",
+      "group_results": [
+        {
+          "group": "Experimental",
+          "value": 13.3
+        },
+        {
+          "group": "Control",
+          "value": 7.0
+        }
+      ],
+      "comparisons": [
+        {
+          "group1": "Experimental",
+          "group2": "Control",
+          "p_value": 0.625
+        }
+      ]
+    }
+  ]
+}

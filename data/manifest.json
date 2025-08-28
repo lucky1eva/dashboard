@@ -1,0 +1,28 @@
+{
+  "files": [
+    "Andrade2024.json",
+    "Blood-test-for-brain-tumour-diagnosis-bmjopen-2017.json",
+    "DBS_TRD 2024.json",
+    "DBS_parkinsons_2013.json",
+    "DBS_parkinsons_2016.json",
+    "DBS_parkinsons_early motor comp_2016.json",
+    "DBS_trOCD_2018.json",
+    "ECT_TRD_2021.json",
+    "ECT_TRD_jamapsychiatry.2018.json",
+    "FUS ayesha Jameel - 2022.json",
+    "Ji_2025.json",
+    "Kim_2025.json",
+    "Kong2025.json",
+    "Kumari2025.json",
+    "Lu2025.json",
+    "Ming2025.json",
+    "Tegeler2025.json",
+    "VNS-REHAB_Lancet 2021.json",
+    "Wang2025.json",
+    "anderson2025.json",
+    "svejgaard-et-al-2025.json"
+  ],
+  "total_files": 21,
+  "generated_at": "2025-08-28T23:05:01.066087",
+  "note": "Auto-generated file list for Clinical Trials Dashboard"
+}

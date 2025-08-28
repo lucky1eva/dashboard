@@ -1,0 +1,374 @@
+{
+  "trial_id": "Effects and neural mechanisms of a brain–computer interface-controlled soft robotic glove on upper limb function in patients with subacute stroke: a randomized controlled fNIRS study",
+  "study_characteristics": {
+    "title": "Effects and neural mechanisms of a brain–computer interface-controlled soft robotic glove on upper limb function in patients with subacute stroke: a randomized controlled fNIRS study",
+    "design": "randomized controlled trial",
+    "sample_size": 40,
+    "sample_size_by_group": [
+      {
+        "group": "BCI-SRG",
+        "n": 20
+      },
+      {
+        "group": "SRG",
+        "n": 20
+      },
+      {
+        "group": "BCI-SRG group",
+        "n": 18
+      },
+      {
+        "group": "SRG group",
+        "n": 18
+      },
+      {
+        "group": "Control",
+        "n": 20
+      }
+    ],
+    "follow_up_duration_month": 1.0,
+    "publication_year": 2025,
+    "geographic_location": "Wuxi, China"
+  },
+  "population": {
+    "name": "subacute stroke patients with left-sided hemiparesis",
+    "condition": "stroke",
+    "N": 40,
+    "baseline_characteristics": [
+      {
+        "name": "Age (years)",
+        "group": "BCI-SRG",
+        "value": 61.75,
+        "unit": "years"
+      },
+      {
+        "name": "Age (years)",
+        "group": "SRG",
+        "value": 60.05,
+        "unit": "years"
+      },
+      {
+        "name": "Male sex (%)",
+        "group": "BCI-SRG",
+        "value": 60.0,
+        "unit": "%"
+      },
+      {
+        "name": "Male sex (%)",
+        "group": "SRG",
+        "value": 78.9,
+        "unit": "%"
+      },
+      {
+        "name": "Stroke type",
+        "group": "BCI-SRG",
+        "value_text": "Ischaemic: 15 (75.0%), Haemorrhagic: 5 (25.0%)"
+      },
+      {
+        "name": "Stroke type",
+        "group": "SRG",
+        "value_text": "Ischaemic: 12 (63.2%), Haemorrhagic: 7 (36.8%)"
+      },
+      {
+        "name": "Time from onset (days)",
+        "group": "BCI-SRG",
+        "value": 49.5,
+        "unit": "days"
+      },
+      {
+        "name": "Time from onset (days)",
+        "group": "SRG",
+        "value": 42.42,
+        "unit": "days"
+      },
+      {
+        "name": "BMI (kg/m2)",
+        "group": "BCI-SRG",
+        "value": 24.32,
+        "unit": "kg/m2"
+      },
+      {
+        "name": "BMI (kg/m2)",
+        "group": "SRG",
+        "value": 24.61,
+        "unit": "kg/m2"
+      },
+      {
+        "name": "MMSE",
+        "group": "BCI-SRG",
+        "value": 24.4
+      },
+      {
+        "name": "MMSE",
+        "group": "SRG",
+        "value": 24.63
+      }
+    ]
+  },
+  "intervention": [
+    {
+      "group": "BCI-SRG",
+      "treatment": "brain-computer interface-controlled soft robotic glove",
+      "dose": "Not specified",
+      "freq": "20 sessions over 4 weeks",
+      "duration_weeks": 4.0
+    },
+    {
+      "group": "SRG",
+      "treatment": "SRG",
+      "dose": "Not specified",
+      "freq": "Not specified"
+    },
+    {
+      "group": "BCI-SRG group",
+      "treatment": "BCI-based soft robotic glove training",
+      "dose": "Not specified",
+      "freq": "5 sessions per week",
+      "duration_weeks": 4.0
+    },
+    {
+      "group": "SRG group",
+      "treatment": "soft robotic glove operated by control system",
+      "dose": "Not specified",
+      "freq": "5 sessions per week",
+      "duration_weeks": 4.0
+    },
+    {
+      "group": "Intervention",
+      "treatment": "BCI-SRG",
+      "dose": "Not specified",
+      "freq": "Not specified"
+    },
+    {
+      "group": "Intervention group",
+      "treatment": "Immersive multimodal BCI-VR training and bilateral rTMS",
+      "dose": "Not specified",
+      "freq": "Not specified"
+    }
+  ],
+  "comparator": [
+    {
+      "group": "SRG",
+      "treatment": "soft robotic glove without BCI control",
+      "placebo": false,
+      "standard_care": false
+    },
+    {
+      "group": "Control"
+    }
+  ],
+  "baseline_outcomes": [
+    {
+      "name": "ARAT",
+      "outcome_type": "baseline",
+      "time_point": "baseline",
+      "unit": "points",
+      "group_results": [
+        {
+          "group": "BCI-SRG",
+          "value": 3.0
+        },
+        {
+          "group": "SRG",
+          "value": 5.0
+        }
+      ],
+      "comparisons": [
+        {
+          "group1": "BCI-SRG",
+          "group2": "SRG",
+          "p_value": 0.369
+        }
+      ]
+    },
+    {
+      "name": "FMA-UL",
+      "outcome_type": "baseline",
+      "time_point": "baseline",
+      "unit": "points",
+      "group_results": [
+        {
+          "group": "BCI-SRG",
+          "value": 22.0
+        },
+        {
+          "group": "SRG",
+          "value": 21.0
+        }
+      ],
+      "comparisons": [
+        {
+          "group1": "BCI-SRG",
+          "group2": "SRG",
+          "p_value": 0.734
+        }
+      ]
+    },
+    {
+      "name": "MBI",
+      "outcome_type": "baseline",
+      "time_point": "baseline",
+      "unit": "points",
+      "group_results": [
+        {
+          "group": "BCI-SRG",
+          "value": 43.0
+        },
+        {
+          "group": "SRG",
+          "value": 38.0
+        }
+      ],
+      "comparisons": [
+        {
+          "group1": "BCI-SRG",
+          "group2": "SRG",
+          "p_value": 0.866
+        }
+      ]
+    }
+  ],
+  "primary_outcomes": [
+    {
+      "name": "FMA-UL",
+      "outcome_type": "primary",
+      "time_point": "postintervention",
+      "unit": "points",
+      "group_results": [
+        {
+          "group": "BCI-SRG",
+          "value": 39.5
+        },
+        {
+          "group": "SRG",
+          "value": 31.0
+        }
+      ],
+      "comparisons": [
+        {
+          "group1": "BCI-SRG",
+          "group2": "SRG",
+          "p_value": 0.035
+        }
+      ]
+    },
+    {
+      "name": "ARAT change",
+      "outcome_type": "primary",
+      "time_point": "change from baseline to postintervention",
+      "unit": "points",
+      "group_results": [
+        {
+          "group": "BCI-SRG",
+          "value": 14.0
+        },
+        {
+          "group": "SRG",
+          "value": 7.0
+        }
+      ],
+      "comparisons": [
+        {
+          "group1": "BCI-SRG",
+          "group2": "SRG",
+          "p_value": 0.032
+        }
+      ]
+    },
+    {
+      "name": "FMA-UL change",
+      "outcome_type": "primary",
+      "time_point": "change from baseline to postintervention",
+      "unit": "points",
+      "group_results": [
+        {
+          "group": "BCI-SRG",
+          "value": 18.0
+        },
+        {
+          "group": "SRG",
+          "value": 7.0
+        }
+      ],
+      "comparisons": [
+        {
+          "group1": "BCI-SRG",
+          "group2": "SRG",
+          "p_value": 0.01
+        }
+      ]
+    }
+  ],
+  "secondary_outcomes": [
+    {
+      "name": "ARAT",
+      "outcome_type": "secondary",
+      "time_point": "postintervention",
+      "unit": "points",
+      "group_results": [
+        {
+          "group": "BCI-SRG",
+          "value": 17.0
+        },
+        {
+          "group": "SRG",
+          "value": 11.0
+        }
+      ],
+      "comparisons": [
+        {
+          "group1": "BCI-SRG",
+          "group2": "SRG",
+          "p_value": 0.091
+        }
+      ]
+    },
+    {
+      "name": "MBI",
+      "outcome_type": "secondary",
+      "time_point": "postintervention",
+      "unit": "points",
+      "group_results": [
+        {
+          "group": "BCI-SRG",
+          "value": 64.0
+        },
+        {
+          "group": "SRG",
+          "value": 57.0
+        }
+      ],
+      "comparisons": [
+        {
+          "group1": "BCI-SRG",
+          "group2": "SRG",
+          "p_value": 0.14
+        }
+      ]
+    },
+    {
+      "name": "MBI change",
+      "outcome_type": "secondary",
+      "time_point": "change from baseline to postintervention",
+      "unit": "points",
+      "group_results": [
+        {
+          "group": "BCI-SRG",
+          "value": 22.0
+        },
+        {
+          "group": "SRG",
+          "value": 19.0
+        }
+      ],
+      "comparisons": [
+        {
+          "group1": "BCI-SRG",
+          "group2": "SRG",
+          "p_value": 0.065
+        }
+      ]
+    }
+  ],
+  "follow_up_month": 1.0
+}

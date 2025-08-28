@@ -1,0 +1,197 @@
+{
+  "trial_id": "DOI:10.31083/j.jin2303067",
+  "study_characteristics": {
+    "title": "Self-Modulation of Gamma-Band Synchronization through EEG-Neurofeedback Training in the Elderly",
+    "design": "double-blind, placebo-controlled RCT",
+    "sample_size": 31,
+    "sample_size_by_group": [
+      {
+        "group": "Group A",
+        "n": 17
+      },
+      {
+        "group": "Group B",
+        "n": 14
+      }
+    ],
+    "follow_up_duration_month": 3.0,
+    "publication_year": 2024,
+    "geographic_location": "Paris, France"
+  },
+  "population": {
+    "name": "Elderly with subjective memory complaints",
+    "condition": "subjective memory complaints",
+    "N": 31,
+    "age_mean": 72.0,
+    "sex_ratio_male": 0.33,
+    "baseline_characteristics": [
+      {
+        "name": "Gender",
+        "group": "Group A",
+        "value_text": "24% M, 76% F"
+      },
+      {
+        "name": "Gender",
+        "group": "Group B",
+        "value_text": "43% M, 57% F"
+      },
+      {
+        "name": "Age (years)",
+        "group": "Group A",
+        "value_text": "71 ± 7.6",
+        "unit": "years"
+      },
+      {
+        "name": "Age (years)",
+        "group": "Group B",
+        "value_text": "73 ± 5.5",
+        "unit": "years"
+      },
+      {
+        "name": "Education level (%)",
+        "group": "Group A",
+        "value_text": "82% High"
+      },
+      {
+        "name": "Education level (%)",
+        "group": "Group B",
+        "value_text": "86% High"
+      },
+      {
+        "name": "Sample size",
+        "group": "Group A",
+        "value": 17.0,
+        "unit": "participants"
+      },
+      {
+        "name": "Sample size",
+        "group": "Group B",
+        "value": 14.0,
+        "unit": "participants"
+      }
+    ]
+  },
+  "intervention": [
+    {
+      "group": "Neurofeedback group",
+      "treatment": "EEG-neurofeedback training",
+      "dose": "Not specified",
+      "freq": "Not specified"
+    },
+    {
+      "group": "Group A",
+      "treatment": "Neurofeedback based on brain dynamics",
+      "dose": "Not specified",
+      "freq": "20 sessions over 3 months",
+      "duration_weeks": 12.0
+    },
+    {
+      "group": "Group B",
+      "treatment": "Sham feedback based on muscular activity",
+      "dose": "Not specified",
+      "freq": "20 sessions over 3 months",
+      "duration_weeks": 12.0
+    },
+    {
+      "group": "Gamma Stimulation Group",
+      "treatment": "Gamma frequency sensory stimulation",
+      "dose": "Not specified",
+      "freq": "Not specified"
+    }
+  ],
+  "comparator": [
+    {
+      "group": "Sham feedback group",
+      "treatment": "Sham feedback",
+      "placebo": true
+    },
+    {
+      "group": "Group B"
+    }
+  ],
+  "primary_outcomes": [
+    {
+      "name": "Classification accuracy (Gamma-band synchronization)",
+      "outcome_type": "primary",
+      "time_point": "V21",
+      "unit": "%",
+      "group_results": [
+        {
+          "group": "Group A",
+          "value": 71.0
+        },
+        {
+          "group": "Group B",
+          "value": 71.0
+        }
+      ]
+    },
+    {
+      "name": "Correct classification for Gamma-band synchronization",
+      "outcome_type": "primary",
+      "time_point": "post-training",
+      "unit": "number of subjects",
+      "group_results": [
+        {
+          "group": "Group A",
+          "value": 12.0
+        },
+        {
+          "group": "Group B",
+          "value": 4.0
+        }
+      ]
+    },
+    {
+      "name": "Correct classification for PAF",
+      "outcome_type": "primary",
+      "time_point": "post-training",
+      "unit": "number of subjects",
+      "group_results": [
+        {
+          "group": "Group A",
+          "value": 11.0
+        },
+        {
+          "group": "Group B",
+          "value": 4.0
+        }
+      ]
+    }
+  ],
+  "secondary_outcomes": [
+    {
+      "name": "Intra-group classification accuracy for Gamma-band synchronization",
+      "outcome_type": "secondary",
+      "time_point": "post-intervention (V21)",
+      "unit": "%",
+      "group_results": [
+        {
+          "group": "Group A",
+          "value": 67.6
+        },
+        {
+          "group": "Group B",
+          "value": 35.7
+        }
+      ]
+    },
+    {
+      "name": "Intra-group classification accuracy for Peak Alpha Frequency",
+      "outcome_type": "secondary",
+      "time_point": "post-intervention (V21)",
+      "unit": "%",
+      "group_results": [
+        {
+          "group": "Group A",
+          "value": 61.8
+        },
+        {
+          "group": "Group B",
+          "value": 32.1
+        }
+      ]
+    }
+  ],
+  "follow_up_month": 3.0
+}

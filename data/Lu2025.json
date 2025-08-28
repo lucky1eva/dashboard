@@ -1,0 +1,308 @@
+{
+  "trial_id": "ChiCTR-ONC-17010739",
+  "study_characteristics": {
+    "title": "Multisensory BCI promotes motor recovery via high-order network-mediated interhemispheric integration in chronic stroke",
+    "design": "RCT",
+    "sample_size": 39,
+    "sample_size_by_group": [
+      {
+        "group": "Multi-FDBK-BCI group",
+        "n": 20
+      },
+      {
+        "group": "conventional motor imagery therapy group",
+        "n": 19
+      },
+      {
+        "group": "Multi-FDBK-BCI",
+        "n": 20
+      },
+      {
+        "group": "Motor imagery",
+        "n": 19
+      },
+      {
+        "group": "CMI group",
+        "n": 19
+      },
+      {
+        "group": "Intervention",
+        "n": 20
+      },
+      {
+        "group": "classic motor imagery group",
+        "n": 19
+      }
+    ],
+    "follow_up_duration_month": 1.0,
+    "publication_year": 2025,
+    "geographic_location": "China"
+  },
+  "population": {
+    "name": "chronic stroke patients",
+    "condition": "chronic stroke",
+    "N": 39,
+    "baseline_characteristics": [
+      {
+        "name": "Fugl-Meyer Assessment score",
+        "group": "Multi-FDBK-BCI",
+        "value": 13.9,
+        "unit": "points"
+      }
+    ]
+  },
+  "intervention": [
+    {
+      "group": "Multi-FDBK-BCI group",
+      "treatment": "multi-modal sensory feedback brain-computer interface",
+      "dose": "Not specified",
+      "freq": "Not specified"
+    },
+    {
+      "group": "Classical MI group",
+      "treatment": "classical motor imagery therapy",
+      "dose": "Not specified",
+      "freq": "5 times per week",
+      "duration_weeks": 4.0
+    },
+    {
+      "group": "Multi-FDBK-BCI",
+      "treatment": "Multi-sensory feedback BCI therapy",
+      "dose": "Not specified",
+      "freq": "5 times per week",
+      "duration_weeks": 4.0
+    },
+    {
+      "group": "Motor imagery",
+      "treatment": "Classic motor imagery training",
+      "dose": "Not specified",
+      "freq": "5 times per week",
+      "duration_weeks": 4.0
+    },
+    {
+      "group": "CMI group",
+      "treatment": "classical motor imagery training",
+      "dose": "Not specified",
+      "freq": "Not specified"
+    },
+    {
+      "group": "Intervention",
+      "treatment": "Multi-FDBK-BCI therapy",
+      "dose": "Not specified",
+      "freq": "Not specified"
+    },
+    {
+      "group": "unknown",
+      "treatment": "unknown",
+      "dose": "Not specified",
+      "freq": "Not specified"
+    }
+  ],
+  "comparator": [
+    {
+      "group": "conventional motor imagery therapy group",
+      "treatment": "conventional motor imagery therapy",
+      "standard_care": true
+    },
+    {
+      "group": "CMI group",
+      "treatment": "classical motor imagery"
+    },
+    {
+      "group": "Control",
+      "treatment": "Classical motor imagery training"
+    },
+    {
+      "group": "classic motor imagery group",
+      "treatment": "classic motor imagery"
+    }
+  ],
+  "baseline_outcomes": [
+    {
+      "name": "Fugl-Meyer Assessment score",
+      "outcome_type": "baseline",
+      "time_point": "baseline",
+      "unit": "points",
+      "group_results": [
+        {
+          "group": "Multi-FDBK-BCI",
+          "value": 13.9
+        }
+      ],
+      "timepoint_month": 0.0
+    }
+  ],
+  "primary_outcomes": [
+    {
+      "name": "Fugl-Meyer Motor Score Assessment (FMA)",
+      "outcome_type": "primary",
+      "time_point": "post-intervention",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "Multi-FDBK-BCI group",
+          "value": 18.3
+        },
+        {
+          "group": "CMI group",
+          "value": 15.89
+        }
+      ],
+      "comparisons": [
+        {
+          "group1": "Multi-FDBK-BCI group",
+          "group2": "CMI group",
+          "p_value": 0.015
+        }
+      ]
+    },
+    {
+      "name": "Change in Fugl-Meyer Assessment score",
+      "outcome_type": "primary",
+      "time_point": "after treatment",
+      "unit": "points",
+      "group_results": [
+        {
+          "group": "Multi-FDBK-BCI",
+          "value": 4.4
+        }
+      ]
+    }
+  ],
+  "secondary_outcomes": [
+    {
+      "name": "Motor Status Scale (MSS)",
+      "outcome_type": "secondary",
+      "time_point": "post-intervention",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "Multi-FDBK-BCI group",
+          "value": 21.69
+        },
+        {
+          "group": "CMI group",
+          "value": 21.94
+        }
+      ],
+      "comparisons": [
+        {
+          "group1": "Multi-FDBK-BCI group",
+          "group2": "CMI group",
+          "p_value": 0.046
+        }
+      ]
+    },
+    {
+      "name": "Average amplitude of wrist extensor muscles",
+      "outcome_type": "secondary",
+      "time_point": "post-intervention",
+      "unit": "μV",
+      "group_results": [
+        {
+          "group": "Multi-FDBK-BCI group",
+          "value": 6.11
+        },
+        {
+          "group": "CMI group",
+          "value": 5.53
+        }
+      ],
+      "comparisons": [
+        {
+          "group1": "Multi-FDBK-BCI group",
+          "group2": "CMI group",
+          "p_value": 0.037
+        }
+      ]
+    },
+    {
+      "name": "Improvement in Fugl-Meyer Motor Score",
+      "outcome_type": "secondary",
+      "time_point": "post-intervention",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "Multi-FDBK-BCI group",
+          "value": 4.4
+        },
+        {
+          "group": "CMI group",
+          "value": 2.26
+        }
+      ],
+      "comparisons": [
+        {
+          "group1": "Multi-FDBK-BCI group",
+          "group2": "CMI group",
+          "p_value": 0.015
+        }
+      ]
+    },
+    {
+      "name": "Increase in average sEMG amplitude of wrist extensor muscles",
+      "outcome_type": "secondary",
+      "time_point": "post-intervention",
+      "unit": "μV",
+      "group_results": [
+        {
+          "group": "Multi-FDBK-BCI group",
+          "value": 2.41
+        },
+        {
+          "group": "CMI group",
+          "value": 1.25
+        }
+      ],
+      "comparisons": [
+        {
+          "group1": "Multi-FDBK-BCI group",
+          "group2": "CMI group",
+          "p_value": 0.037
+        }
+      ]
+    },
+    {
+      "name": "Improvement in Motor Status Scale (MSS)",
+      "outcome_type": "secondary",
+      "time_point": "post-intervention",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "Multi-FDBK-BCI group",
+          "value": 3.23
+        },
+        {
+          "group": "CMI group",
+          "value": 1.78
+        }
+      ],
+      "comparisons": [
+        {
+          "group1": "Multi-FDBK-BCI group",
+          "group2": "CMI group",
+          "p_value": 0.046
+        }
+      ]
+    }
+  ],
+  "safety_outcomes": [
+    {
+      "name": "Adverse events",
+      "outcome_type": "safety",
+      "time_point": "post-intervention",
+      "unit": "count",
+      "group_results": [
+        {
+          "group": "Multi-FDBK-BCI group",
+          "value": 0.0
+        },
+        {
+          "group": "CMI group",
+          "value": 0.0
+        }
+      ]
+    }
+  ],
+  "follow_up_month": 0.67
+}

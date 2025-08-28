@@ -1,0 +1,480 @@
+{
+  "study_id": "Kabotyanski_2024_TRD_DBS",
+  "study_characteristics": {
+    "title": "Cost-effectiveness and threshold analysis of deep brain stimulation vs. treatment-as-usual for treatment-resistant depression",
+    "design": "Systematic review and decision-analytic model",
+    "sample_size": 274,
+    "follow_up_duration_month": 12.0,
+    "publication_year": 2024,
+    "geographic_location": "USA",
+    "journal_name": "Translational Psychiatry",
+    "author_info": {
+      "primary_author": "Katherine E. Kabotyanski",
+      "affiliation": "Baylor College of Medicine"
+    },
+    "funding_source": {
+      "source": "McNair Foundation, NIH, BRASS",
+      "details": "McNair Foundation (SAS), NIH under award number T32GM136611, BRASS: Baylor Research Advocates for Student Scientists (KEK)"
+    }
+  },
+  "population": {
+    "name": "TRD patients",
+    "condition": "Treatment-resistant depression",
+    "N": 274,
+    "baseline_characteristics": [
+      {
+        "name": "MADRS score",
+        "group": "Overall",
+        "value": 34.09,
+        "unit": "points"
+      },
+      {
+        "name": "HDRS-17 score",
+        "group": "Overall",
+        "value": 23.68,
+        "unit": "points"
+      }
+    ],
+    "disease_classification": {
+      "name": "Treatment-resistant depression",
+      "icd_code": "F33",
+      "severity": "Treatment-resistant"
+    },
+    "target_population_age": "young adults",
+    "target_population_sex": "both",
+    "target_population_characteristics": "Patients with treatment-resistant depression"
+  },
+  "interventions": [
+    {
+      "group": "DBS-pc",
+      "treatment": "Deep brain stimulation with non-rechargeable devices",
+      "dose": "Not specified",
+      "freq": "Not specified",
+      "route": "surgical",
+      "intervention_type": "medical_device"
+    },
+    {
+      "group": "DBS-rc",
+      "treatment": "Deep brain stimulation with rechargeable devices",
+      "dose": "Not specified",
+      "freq": "Not specified",
+      "route": "surgical",
+      "intervention_type": "medical_device"
+    },
+    {
+      "group": "DBS-rc",
+      "treatment": "Deep Brain Stimulation with rechargeable IPG",
+      "dose": "Not specified",
+      "freq": "Not specified",
+      "route": "implanted",
+      "intervention_type": "medical_device"
+    },
+    {
+      "group": "DBS-pc",
+      "treatment": "Deep Brain Stimulation with primary cell IPG",
+      "dose": "Not specified",
+      "freq": "Not specified",
+      "route": "implanted",
+      "intervention_type": "medical_device"
+    },
+    {
+      "group": "DBS-pc",
+      "treatment": "Deep Brain Stimulation",
+      "dose": "Not specified",
+      "freq": "Not specified",
+      "intervention_type": "medical_device"
+    },
+    {
+      "group": "DBS-rc",
+      "treatment": "Deep Brain Stimulation",
+      "dose": "Not specified",
+      "freq": "Not specified",
+      "intervention_type": "medical_device"
+    },
+    {
+      "group": "DBS non-rechargeable",
+      "treatment": "Deep Brain Stimulation with non-rechargeable device",
+      "dose": "Not specified",
+      "freq": "Not specified",
+      "intervention_type": "medical_device"
+    },
+    {
+      "group": "DBS rechargeable",
+      "treatment": "Deep Brain Stimulation with rechargeable device",
+      "dose": "Not specified",
+      "freq": "Not specified",
+      "intervention_type": "medical_device"
+    },
+    {
+      "group": "DBS-rc",
+      "treatment": "Deep Brain Stimulation with rechargeable device",
+      "dose": "Not specified",
+      "freq": "Not specified",
+      "intervention_type": "medical_device"
+    },
+    {
+      "group": "DBS-pc",
+      "treatment": "Deep Brain Stimulation with non-rechargeable device",
+      "dose": "Not specified",
+      "freq": "Not specified",
+      "intervention_type": "medical_device"
+    },
+    {
+      "group": "Intervention",
+      "treatment": "DBS with rechargeable devices",
+      "dose": "Not specified",
+      "freq": "Not specified",
+      "intervention_type": "medical_device"
+    },
+    {
+      "group": "Radiosurgical capsulotomy group",
+      "treatment": "Radiosurgical capsulotomy",
+      "dose": "Not specified",
+      "freq": "Not specified",
+      "intervention_type": "surgical_procedure"
+    },
+    {
+      "group": "DBS group",
+      "treatment": "deep brain stimulation",
+      "dose": "Not specified",
+      "freq": "Not specified",
+      "intervention_type": "medical_device"
+    }
+  ],
+  "comparators": [
+    {
+      "group": "TAU",
+      "treatment": "Treatment-as-usual",
+      "placebo": false,
+      "standard_care": true,
+      "comparator_type": "standard_care",
+      "number_of_comparators": 1
+    },
+    {
+      "group": "TAU",
+      "treatment": "Treatment As Usual",
+      "placebo": false,
+      "standard_care": true,
+      "comparator_type": "standard_care",
+      "number_of_comparators": 1
+    },
+    {
+      "group": "TAU",
+      "treatment": "Treatment As Usual",
+      "placebo": false,
+      "standard_care": true,
+      "comparator_type": "standard_care"
+    },
+    {
+      "group": "TAU",
+      "treatment": "Treatment As Usual",
+      "placebo": false,
+      "standard_care": true,
+      "comparator_type": "standard_care"
+    },
+    {
+      "group": "TAU",
+      "treatment": "Treatment As Usual",
+      "standard_care": true,
+      "comparator_type": "standard_care",
+      "number_of_comparators": 1
+    },
+    {
+      "group": "Comparator",
+      "treatment": "current treatments",
+      "standard_care": true,
+      "comparator_type": "standard_care"
+    },
+    {
+      "group": "Treatment as usual group",
+      "treatment": "Treatment as usual",
+      "placebo": false,
+      "standard_care": true,
+      "comparator_type": "standard_care",
+      "number_of_comparators": 1
+    },
+    {
+      "group": "standard care group",
+      "treatment": "standard care",
+      "standard_care": true,
+      "comparator_type": "standard_care",
+      "number_of_comparators": 1
+    }
+  ],
+  "economic_data": {
+    "effectiveness_utility": {
+      "number_of_utilities": 2,
+      "utility_types": "Published utility scores",
+      "health_state_utilities": [
+        {
+          "health_state_name": "remission",
+          "utility_value": 0.84,
+          "source": "published utility scores [44]",
+          "standard_error": 0.15
+        },
+        {
+          "health_state_name": "non-remission",
+          "utility_value": 0.54,
+          "source": "published utility scores [44]",
+          "standard_error": 0.25
+        },
+        {
+          "health_state_name": "Severe Depression",
+          "utility_value": 0.375,
+          "measurement_instrument": "EQ-5D or SF-36",
+          "confidence_interval_lower": 0.2,
+          "confidence_interval_upper": 0.55
+        },
+        {
+          "health_state_name": "Response without remission",
+          "utility_value": 0.695,
+          "measurement_instrument": "EQ-5D or SF-36",
+          "confidence_interval_lower": 0.67,
+          "confidence_interval_upper": 0.72
+        }
+      ]
+    },
+    "model_parameters": {
+      "health_states": [
+        "remission",
+        "non-remission",
+        "Remission",
+        "Non-remission",
+        "Response without remission",
+        "Severe depression"
+      ],
+      "time_horizon_year": 5.0,
+      "WTP_threshold": 50000.0,
+      "time_horizon": "5 years",
+      "perspectives": [
+        "healthcare_system",
+        "societal",
+        "healthcare_system",
+        "societal",
+        "healthcare_system",
+        "societal",
+        "healthcare_system",
+        "societal"
+      ],
+      "sensitivity_analysis": true,
+      "sensitivity_analysis_type": [
+        "probabilistic",
+        "probabilistic",
+        "one_way",
+        "probabilistic",
+        "one_way",
+        "one_way"
+      ],
+      "cost_effectiveness_thresholds": [
+        100000.0,
+        50000.0,
+        50000.0,
+        100000.0,
+        50000.0,
+        100000.0
+      ],
+      "model_type": "decision-analytic"
+    },
+    "icer_analysis": {
+      "number_of_ratios": 4
+    },
+    "currency_info": {
+      "currency_country": "US",
+      "currency_year": 2024,
+      "currency_code": "USD"
+    },
+    "treatment_group_costs": [
+      {
+        "treatment_group": "DBS-rc",
+        "total_cost": 29524.05,
+        "cost_components": [
+          {
+            "component_name": "Pre-operative office visit",
+            "unit_cost": 167.4,
+            "quantity": 1.0,
+            "total_cost": 167.4,
+            "unit": "per visit",
+            "cost_category": "medical",
+            "source": "Medicare reimbursement",
+            "cost_per_patient": 167.4
+          },
+          {
+            "component_name": "Pre-operative MRI",
+            "unit_cost": 160.63,
+            "quantity": 1.0,
+            "total_cost": 160.63,
+            "unit": "per procedure",
+            "cost_category": "imaging",
+            "source": "Medicare reimbursement",
+            "cost_per_patient": 160.63
+          },
+          {
+            "component_name": "CT scans",
+            "unit_cost": 40.67,
+            "quantity": 2.0,
+            "total_cost": 81.34,
+            "unit": "per procedure",
+            "cost_category": "imaging",
+            "source": "Medicare reimbursement",
+            "cost_per_patient": 81.34
+          },
+          {
+            "component_name": "Electrodes and neurostimulator device",
+            "unit_cost": 2731.31,
+            "quantity": 1.0,
+            "total_cost": 2731.31,
+            "unit": "per device",
+            "cost_category": "device",
+            "source": "Medicare reimbursement",
+            "cost_per_patient": 2731.31
+          },
+          {
+            "component_name": "IPG implant",
+            "unit_cost": 20378.78,
+            "quantity": 1.0,
+            "total_cost": 20378.78,
+            "unit": "per procedure",
+            "cost_category": "surgical",
+            "source": "Medicare reimbursement",
+            "cost_per_patient": 20378.78
+          },
+          {
+            "component_name": "Hospital fees",
+            "unit_cost": 2607.0,
+            "quantity": 1.0,
+            "total_cost": 2607.0,
+            "unit": "per stay",
+            "cost_category": "hospital",
+            "source": "estimated",
+            "cost_per_patient": 2607.0
+          },
+          {
+            "component_name": "Post-operative follow-up",
+            "unit_cost": 3397.59,
+            "quantity": 1.0,
+            "total_cost": 3397.59,
+            "unit": "total",
+            "cost_category": "follow-up",
+            "source": "Medicare reimbursement",
+            "cost_per_patient": 3397.59
+          }
+        ]
+      },
+      {
+        "treatment_group": "DBS-pc",
+        "total_cost": 120566.85,
+        "cost_components": [
+          {
+            "component_name": "Base DBS costs",
+            "unit_cost": 29524.05,
+            "quantity": 1.0,
+            "total_cost": 29524.05,
+            "unit": "total",
+            "cost_category": "device and procedure",
+            "source": "Medicare reimbursement",
+            "cost_per_patient": 29524.05
+          },
+          {
+            "component_name": "IPG replacements",
+            "unit_cost": 30347.6,
+            "quantity": 3.0,
+            "total_cost": 91042.8,
+            "unit": "per replacement",
+            "cost_category": "device",
+            "source": "Medicare reimbursement",
+            "cost_per_patient": 91042.8
+          }
+        ]
+      },
+      {
+        "treatment_group": "TAU",
+        "total_cost": 79500.0,
+        "cost_components": [
+          {
+            "component_name": "Yearly TAU cost",
+            "unit_cost": 16032.51,
+            "quantity": 5.0,
+            "total_cost": 80162.55,
+            "unit": "per year",
+            "cost_category": "treatment",
+            "source": "average of modalities",
+            "cost_per_patient": 80162.55
+          }
+        ],
+        "cost_per_year": 16032.51
+      },
+      {
+        "treatment_group": "TAU",
+        "cost_components": [
+          {
+            "component_name": "Healthcare sector perspective cost",
+            "total_cost": 79459.0,
+            "unit": "USD",
+            "cost_category": "total"
+          },
+          {
+            "component_name": "Societal perspective cost",
+            "total_cost": 190926.0,
+            "unit": "USD",
+            "cost_category": "total"
+          }
+        ]
+      },
+      {
+        "treatment_group": "DBS-pc",
+        "cost_components": [
+          {
+            "component_name": "Healthcare sector perspective cost",
+            "total_cost": 183529.0,
+            "unit": "USD",
+            "cost_category": "total"
+          },
+          {
+            "component_name": "Societal perspective cost",
+            "total_cost": 264039.0,
+            "unit": "USD",
+            "cost_category": "total"
+          }
+        ]
+      },
+      {
+        "treatment_group": "DBS-rc",
+        "cost_components": [
+          {
+            "component_name": "Healthcare sector perspective cost",
+            "total_cost": 92549.0,
+            "unit": "USD",
+            "cost_category": "total"
+          },
+          {
+            "component_name": "Societal perspective cost",
+            "total_cost": 173065.0,
+            "unit": "USD",
+            "cost_category": "total"
+          }
+        ]
+      }
+    ]
+  },
+  "outcomes": [
+    {
+      "name": "QALYs",
+      "outcome_type": "economic",
+      "unit": "QALY",
+      "group_results": [
+        {
+          "group": "TAU",
+          "value": 2.71
+        },
+        {
+          "group": "DBS-pc",
+          "value": 3.12
+        },
+        {
+          "group": "DBS-rc",
+          "value": 3.12
+        }
+      ]
+    }
+  ]
+}

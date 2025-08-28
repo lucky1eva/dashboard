@@ -1,0 +1,351 @@
+{
+  "study_id": "BMC_Psychiatry_2021_21_610",
+  "study_characteristics": {
+    "title": "Cost-effectiveness analysis of ECT vs esketamine for TRD",
+    "design": "Modeling study using Markov model",
+    "publication_year": 2021,
+    "geographic_location": "UK",
+    "journal_name": "BMC Psychiatry",
+    "author_info": {
+      "primary_author": "Degerlund Maldi",
+      "affiliation": "Umeå University, Sweden"
+    },
+    "funding_source": {
+      "source": "university",
+      "details": "Open access funding provided by Umea University. None of the authors received funding for conducting the study."
+    }
+  },
+  "population": {
+    "name": "TRD patients",
+    "condition": "Treatment-resistant depression",
+    "age_mean": 45.0,
+    "disease_classification": {
+      "name": "Major depressive disorder",
+      "severity": "Treatment-resistant"
+    },
+    "target_population_age": "45 years",
+    "target_population_characteristics": "Adults with treatment-resistant depression"
+  },
+  "interventions": [
+    {
+      "group": "Esketamine",
+      "treatment": "Esketamine",
+      "dose": "56mg or 84mg",
+      "freq": "Twice a week initially, then reduced to once weekly or every other week",
+      "route": "Intranasal",
+      "intervention_type": "pharmaceutical"
+    },
+    {
+      "group": "ECT",
+      "treatment": "Electroconvulsive Therapy",
+      "dose": "Not specified",
+      "freq": "Not specified",
+      "intervention_type": "other"
+    },
+    {
+      "group": "ECT",
+      "treatment": "Electroconvulsive Therapy",
+      "dose": "Not specified",
+      "freq": "Twice per week",
+      "intervention_type": "other"
+    },
+    {
+      "group": "Esketamine",
+      "treatment": "Esketamine",
+      "dose": "56 mg or 84 mg",
+      "freq": "Twice per week",
+      "route": "Intranasal",
+      "duration_weeks": 4.0,
+      "intervention_type": "pharmaceutical"
+    },
+    {
+      "group": "ECT",
+      "treatment": "Electroconvulsive Therapy",
+      "dose": "Not specified",
+      "freq": "Not specified",
+      "intervention_type": "surgical_procedure"
+    },
+    {
+      "group": "Esketamine",
+      "treatment": "Esketamine",
+      "dose": "Not specified",
+      "freq": "Not specified",
+      "intervention_type": "pharmaceutical"
+    },
+    {
+      "group": "ECT",
+      "treatment": "Electroconvulsive therapy",
+      "dose": "Not specified",
+      "freq": "Not specified",
+      "duration_weeks": 3.0,
+      "intervention_type": "other"
+    },
+    {
+      "group": "esketamine",
+      "treatment": "esketamine",
+      "dose": "Not specified",
+      "freq": "Not specified",
+      "intervention_type": "pharmaceutical"
+    },
+    {
+      "group": "ECT",
+      "treatment": "electroconvulsive therapy",
+      "dose": "Not specified",
+      "freq": "Not specified",
+      "intervention_type": "other"
+    }
+  ],
+  "comparators": [
+    {
+      "group": "Standard Care",
+      "treatment": "Antidepressants",
+      "placebo": false,
+      "standard_care": true,
+      "comparator_type": "standard_care",
+      "number_of_comparators": 1
+    },
+    {
+      "group": "Standard Treatment",
+      "treatment": "Antidepressants",
+      "placebo": false,
+      "standard_care": true,
+      "comparator_type": "standard_care",
+      "number_of_comparators": 1
+    },
+    {
+      "group": "Esketamine",
+      "treatment": "Esketamine",
+      "placebo": false,
+      "standard_care": false,
+      "comparator_type": "active_treatment",
+      "number_of_comparators": 1
+    },
+    {
+      "group": "standard care",
+      "treatment": "standard treatment",
+      "placebo": false,
+      "standard_care": true,
+      "comparator_type": "standard_care",
+      "number_of_comparators": 1
+    },
+    {
+      "group": "rTMS",
+      "treatment": "repetitive transcranial magnetic stimulation",
+      "comparator_type": "active_treatment"
+    }
+  ],
+  "economic_data": {
+    "effectiveness_utility": {
+      "number_of_utilities": 2,
+      "utility_types": "EQ-5D",
+      "health_state_utilities": [
+        {
+          "health_state_name": "Remission",
+          "utility_value": 0.07,
+          "source": "33"
+        },
+        {
+          "health_state_name": "Depression",
+          "utility_value": 0.05,
+          "source": "33"
+        },
+        {
+          "health_state_name": "Remission",
+          "utility_value": 0.85,
+          "source": "literature"
+        },
+        {
+          "health_state_name": "ECT Treatment",
+          "utility_value": 0.43,
+          "source": "literature",
+          "confidence_interval_lower": 0.3,
+          "confidence_interval_upper": 0.56
+        }
+      ],
+      "health_state_transitions": [
+        {
+          "from_state": "Depression",
+          "to_state": "Remission",
+          "transition_probability": 0.696
+        },
+        {
+          "from_state": "Remission",
+          "to_state": "Depression",
+          "transition_probability": 0.108
+        },
+        {
+          "from_state": "Depression",
+          "to_state": "Remission",
+          "transition_probability": 0.392
+        },
+        {
+          "from_state": "Remission",
+          "to_state": "Depression",
+          "transition_probability": 0.0724
+        },
+        {
+          "from_state": "Remission",
+          "to_state": "Depression",
+          "transition_probability": 0.03
+        },
+        {
+          "from_state": "Depression",
+          "to_state": "Death",
+          "transition_probability": 0.00304
+        },
+        {
+          "from_state": "Depression",
+          "to_state": "Remission",
+          "transition_probability": 0.107
+        },
+        {
+          "from_state": "Remission",
+          "to_state": "Depression",
+          "transition_probability": 0.232
+        }
+      ]
+    },
+    "model_parameters": {
+      "health_states": [
+        "State A depression",
+        "State B remission",
+        "State C depression",
+        "State D depression",
+        "State E remission",
+        "State F remission",
+        "Depression",
+        "Remission",
+        "Death",
+        "remission",
+        "relapse"
+      ],
+      "time_horizon_year": 35.0,
+      "time_horizon": "35 years",
+      "perspectives": [
+        "healthcare_system",
+        "healthcare_system",
+        "societal"
+      ],
+      "sensitivity_analysis": true,
+      "sensitivity_analysis_type": [
+        "scenario",
+        "scenario"
+      ],
+      "cost_effectiveness_thresholds": [
+        20000.0,
+        30000.0,
+        20000.0,
+        30000.0
+      ],
+      "health_state_definitions": [
+        "State A: depression on treatment",
+        "State B: remission on esketamine or ECT",
+        "State C: depression on higher dose esketamine or ECT",
+        "State D: depression on standard treatment only",
+        "State E: remission from state D",
+        "State F: remission on standard treatment after esketamine"
+      ],
+      "cycle_length": "30 days",
+      "model_type": "Markov"
+    },
+    "icer_analysis": {
+      "number_of_ratios": 3
+    },
+    "currency_info": {
+      "currency_country": "UK",
+      "currency_year": 2019,
+      "currency_code": "GBP"
+    },
+    "treatment_group_costs": [
+      {
+        "treatment_group": "ECT",
+        "cost_components": [
+          {
+            "component_name": "Cost per cycle in depression state (age < 65)",
+            "total_cost": 7932.0,
+            "unit": "per cycle",
+            "cost_category": "state cost",
+            "cost_description": "For state A and C"
+          },
+          {
+            "component_name": "Cost per cycle in depression state (age >= 65)",
+            "total_cost": 6321.0,
+            "unit": "per cycle",
+            "cost_category": "state cost",
+            "cost_description": "For state A and C"
+          },
+          {
+            "component_name": "Cost per cycle in remission state with standard treatment (age < 65)",
+            "total_cost": 701.0,
+            "unit": "per cycle",
+            "cost_category": "state cost",
+            "cost_description": "For state B"
+          },
+          {
+            "component_name": "Cost per cycle in remission state with standard treatment (age >= 65)",
+            "total_cost": 118.0,
+            "unit": "per cycle",
+            "cost_category": "state cost",
+            "cost_description": "For state B"
+          }
+        ]
+      },
+      {
+        "treatment_group": "Esketamine",
+        "cost_components": [
+          {
+            "component_name": "Cost per cycle in depression state (age < 65)",
+            "total_cost": 7210.0,
+            "unit": "per cycle",
+            "cost_category": "state cost",
+            "cost_description": "For state A and C"
+          },
+          {
+            "component_name": "Cost per cycle in depression state (age >= 65)",
+            "total_cost": 5599.0,
+            "unit": "per cycle",
+            "cost_category": "state cost",
+            "cost_description": "For state A and C"
+          }
+        ]
+      },
+      {
+        "treatment_group": "Standard Treatment",
+        "cost_components": [
+          {
+            "component_name": "Cost per cycle in remission state (age < 65)",
+            "total_cost": 701.0,
+            "unit": "per cycle",
+            "cost_category": "state cost",
+            "cost_description": "For state E and F"
+          },
+          {
+            "component_name": "Cost per cycle in remission state (age >= 65)",
+            "total_cost": 118.0,
+            "unit": "per cycle",
+            "cost_category": "state cost",
+            "cost_description": "For state E and F"
+          }
+        ]
+      }
+    ]
+  },
+  "outcomes": [
+    {
+      "name": "Remission Rate",
+      "outcome_type": "economic",
+      "time_point": "end of treatment",
+      "unit": "%",
+      "group_results": [
+        {
+          "group": "ECT",
+          "value": 69.6
+        },
+        {
+          "group": "Esketamine",
+          "value": 38.8
+        }
+      ]
+    }
+  ]
+}

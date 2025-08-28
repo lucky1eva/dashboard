@@ -1,0 +1,733 @@
+{
+  "trial_id": "Kong_2025",
+  "study_characteristics": {
+    "title": "Adoption of Rehabilitation Climbing Wall Combined with Brain-computer Fusion Interface in Adolescent Idiopathic Scoliosis",
+    "design": "Randomized controlled trial",
+    "sample_size": 100,
+    "sample_size_by_group": [
+      {
+        "group": "Group C",
+        "n": 50
+      },
+      {
+        "group": "Group B",
+        "n": 50
+      },
+      {
+        "group": "C",
+        "n": 50
+      },
+      {
+        "group": "B",
+        "n": 50
+      }
+    ],
+    "follow_up_duration_month": 3.0,
+    "publication_year": 2025,
+    "geographic_location": "China"
+  },
+  "population": {
+    "name": "AIS patients",
+    "condition": "Adolescent Idiopathic Scoliosis",
+    "N": 100,
+    "age_mean": 17.42,
+    "sex_ratio_male": 0.42,
+    "baseline_characteristics": [
+      {
+        "name": "Age (years)",
+        "group": "Group C",
+        "value": 14.26,
+        "unit": "years"
+      },
+      {
+        "name": "Male sex (%)",
+        "group": "Group C",
+        "value": 40.0,
+        "unit": "%"
+      },
+      {
+        "name": "Type of lateral curvature",
+        "group": "Group C",
+        "value_text": "simple thoracic lateral curvature in 16 patients"
+      },
+      {
+        "name": "Simple thoracic scoliosis (%)",
+        "group": "Group C",
+        "value": 26.0,
+        "unit": "%"
+      },
+      {
+        "name": "Simple lumbar scoliosis (%)",
+        "group": "Group C",
+        "value": 34.0,
+        "unit": "%"
+      },
+      {
+        "name": "Thoracic scoliosis (%)",
+        "group": "Group C",
+        "value": 40.0,
+        "unit": "%"
+      },
+      {
+        "name": "Age (years)",
+        "group": "Group B",
+        "value": 17.42,
+        "unit": "years"
+      },
+      {
+        "name": "Male sex (%)",
+        "group": "Group B",
+        "value": 44.0,
+        "unit": "%"
+      },
+      {
+        "name": "Simple thoracic scoliosis (%)",
+        "group": "Group B",
+        "value": 26.0,
+        "unit": "%"
+      },
+      {
+        "name": "Simple lumbar scoliosis (%)",
+        "group": "Group B",
+        "value": 34.0,
+        "unit": "%"
+      },
+      {
+        "name": "Thoracic scoliosis (%)",
+        "group": "Group B",
+        "value": 40.0,
+        "unit": "%"
+      },
+      {
+        "name": "Cobb angle",
+        "group": "Group C",
+        "value": 37.49,
+        "unit": "degrees"
+      },
+      {
+        "name": "Cobb angle",
+        "group": "Group B",
+        "value": 38.63,
+        "unit": "degrees"
+      },
+      {
+        "name": "Cobb angle",
+        "group": "C",
+        "value": 67.03
+      },
+      {
+        "name": "Cobb angle",
+        "group": "B",
+        "value": 80.11
+      },
+      {
+        "name": "General condition score",
+        "group": "C",
+        "value": 59.41
+      },
+      {
+        "name": "General condition score",
+        "group": "B",
+        "value": 58.45
+      },
+      {
+        "name": "Somatic pain score",
+        "group": "C",
+        "value": 59.41
+      },
+      {
+        "name": "Somatic pain score",
+        "group": "B",
+        "value": 58.45
+      },
+      {
+        "name": "Physiological function score",
+        "group": "C",
+        "value": 67.03
+      },
+      {
+        "name": "Physiological function score",
+        "group": "B",
+        "value": 80.11
+      },
+      {
+        "name": "Mental health score",
+        "group": "C",
+        "value": 59.41
+      },
+      {
+        "name": "Mental health score",
+        "group": "B",
+        "value": 58.45
+      }
+    ]
+  },
+  "intervention": [
+    {
+      "group": "Group B",
+      "treatment": "Rehabilitation climbing wall training based on BCI technology",
+      "dose": "Not specified",
+      "freq": "Not specified",
+      "duration_weeks": 12.0
+    },
+    {
+      "group": "Group C",
+      "treatment": "Rehabilitation climbing wall training",
+      "dose": "Not specified",
+      "freq": "Not specified",
+      "duration_weeks": 12.0
+    },
+    {
+      "group": "B",
+      "treatment": "Rehabilitation climbing wall combined with brain-computer fusion interface",
+      "dose": "Not specified",
+      "freq": "Not specified",
+      "duration_weeks": 12.0
+    },
+    {
+      "group": "Intervention",
+      "treatment": "Rehabilitation climbing wall training with BCI technology",
+      "dose": "Not specified",
+      "freq": "Not specified"
+    },
+    {
+      "group": "Intervention group",
+      "treatment": "Rehabilitation climbing wall training combined with BCI technology",
+      "dose": "Not specified",
+      "freq": "Not specified"
+    }
+  ],
+  "comparator": [
+    {
+      "group": "Group C",
+      "treatment": "Rehabilitation climbing wall training",
+      "placebo": false,
+      "standard_care": true
+    },
+    {
+      "group": "C",
+      "treatment": "Standard care",
+      "standard_care": true
+    }
+  ],
+  "baseline_outcomes": [
+    {
+      "name": "Cobb angle",
+      "outcome_type": "baseline",
+      "time_point": "preoperatively",
+      "unit": "degrees",
+      "group_results": [
+        {
+          "group": "Group C",
+          "value": 37.49
+        },
+        {
+          "group": "Group B",
+          "value": 38.63
+        }
+      ],
+      "timepoint_month": 0.0
+    },
+    {
+      "name": "Waist flexion range",
+      "outcome_type": "baseline",
+      "time_point": "baseline",
+      "unit": "degrees",
+      "group_results": [
+        {
+          "group": "Group C",
+          "value": 63.31
+        },
+        {
+          "group": "Group B",
+          "value": 64.28
+        }
+      ]
+    },
+    {
+      "name": "Waist extension range",
+      "outcome_type": "baseline",
+      "time_point": "baseline",
+      "unit": "degrees",
+      "group_results": [
+        {
+          "group": "Group C",
+          "value": 23.89
+        },
+        {
+          "group": "Group B",
+          "value": 23.77
+        }
+      ]
+    },
+    {
+      "name": "Left-sided lumbar flexion range",
+      "outcome_type": "baseline",
+      "time_point": "baseline",
+      "unit": "degrees",
+      "group_results": [
+        {
+          "group": "Group C",
+          "value": 9.32
+        },
+        {
+          "group": "Group B",
+          "value": 9.23
+        }
+      ]
+    },
+    {
+      "name": "Right-sided lumbar flexion range",
+      "outcome_type": "baseline",
+      "time_point": "baseline",
+      "unit": "degrees",
+      "group_results": [
+        {
+          "group": "Group C",
+          "value": 8.73
+        },
+        {
+          "group": "Group B",
+          "value": 9.12
+        }
+      ]
+    },
+    {
+      "name": "Lumbar dysfunction score",
+      "outcome_type": "baseline",
+      "time_point": "baseline",
+      "unit": "points",
+      "group_results": [
+        {
+          "group": "Group C",
+          "value": 5.83
+        },
+        {
+          "group": "Group B",
+          "value": 6.12
+        }
+      ]
+    },
+    {
+      "name": "Quality of life - General condition",
+      "outcome_type": "baseline",
+      "time_point": "baseline",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "Group C",
+          "value": 56.02
+        },
+        {
+          "group": "Group B",
+          "value": 57.29
+        }
+      ]
+    },
+    {
+      "name": "Quality of life - Body pain",
+      "outcome_type": "baseline",
+      "time_point": "baseline",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "Group C",
+          "value": 55.89
+        },
+        {
+          "group": "Group B",
+          "value": 56.12
+        }
+      ]
+    },
+    {
+      "name": "Quality of life - Physiological function",
+      "outcome_type": "baseline",
+      "time_point": "baseline",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "Group C",
+          "value": 57.92
+        },
+        {
+          "group": "Group B",
+          "value": 56.33
+        }
+      ]
+    },
+    {
+      "name": "General condition score",
+      "outcome_type": "baseline",
+      "time_point": "preoperatively",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "C",
+          "value": 59.41
+        },
+        {
+          "group": "B",
+          "value": 58.45
+        }
+      ],
+      "timepoint_month": 0.0
+    },
+    {
+      "name": "Somatic pain score",
+      "outcome_type": "baseline",
+      "time_point": "preoperatively",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "C",
+          "value": 59.41
+        },
+        {
+          "group": "B",
+          "value": 58.45
+        }
+      ],
+      "timepoint_month": 0.0
+    },
+    {
+      "name": "Physiological function score",
+      "outcome_type": "baseline",
+      "time_point": "preoperatively",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "C",
+          "value": 67.03
+        },
+        {
+          "group": "B",
+          "value": 80.11
+        }
+      ],
+      "timepoint_month": 0.0
+    },
+    {
+      "name": "Mental health score",
+      "outcome_type": "baseline",
+      "time_point": "preoperatively",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "C",
+          "value": 59.41
+        },
+        {
+          "group": "B",
+          "value": 58.45
+        }
+      ],
+      "timepoint_month": 0.0
+    }
+  ],
+  "primary_outcomes": [
+    {
+      "name": "Total effective rate",
+      "outcome_type": "primary",
+      "time_point": "after 3 months of treatment",
+      "unit": "%",
+      "group_results": [
+        {
+          "group": "Group B",
+          "value": 96.0
+        },
+        {
+          "group": "Group C",
+          "value": 82.0
+        }
+      ],
+      "comparisons": [
+        {
+          "group1": "Group B",
+          "group2": "Group C",
+          "p_value": 0.014
+        }
+      ],
+      "timepoint_month": 3.0
+    },
+    {
+      "name": "Cobb angle",
+      "outcome_type": "primary",
+      "time_point": "3 months postoperatively",
+      "unit": "degrees",
+      "group_results": [
+        {
+          "group": "Group C",
+          "value": 16.84
+        },
+        {
+          "group": "Group B",
+          "value": 10.37
+        }
+      ],
+      "timepoint_month": 3.0
+    },
+    {
+      "name": "Improvement rate of Cobb angle",
+      "outcome_type": "primary",
+      "time_point": "6 months",
+      "unit": "%",
+      "group_results": [
+        {
+          "group": "Group C",
+          "value": 19.38
+        },
+        {
+          "group": "Group B",
+          "value": 39.38
+        }
+      ],
+      "comparisons": [
+        {
+          "group1": "Group B",
+          "group2": "Group C",
+          "p_value": 0.05
+        }
+      ]
+    },
+    {
+      "name": "Total effective rate",
+      "outcome_type": "primary",
+      "time_point": "3 months postoperatively",
+      "unit": "%",
+      "group_results": [
+        {
+          "group": "C",
+          "value": 82.0
+        },
+        {
+          "group": "B",
+          "value": 96.0
+        }
+      ],
+      "timepoint_month": 3.0
+    },
+    {
+      "name": "Total effective rate",
+      "outcome_type": "primary",
+      "time_point": "after three months of treatment",
+      "unit": "%",
+      "group_results": [
+        {
+          "group": "Group C",
+          "value": 82.0
+        },
+        {
+          "group": "Group B",
+          "value": 96.0
+        }
+      ],
+      "comparisons": [
+        {
+          "group1": "Group B",
+          "group2": "Group C",
+          "p_value": 0.05
+        }
+      ],
+      "timepoint_month": 3.0
+    }
+  ],
+  "secondary_outcomes": [
+    {
+      "name": "Waist flexion range",
+      "outcome_type": "secondary",
+      "time_point": "3 months",
+      "unit": "degrees",
+      "group_results": [
+        {
+          "group": "Group C",
+          "value": 68.32
+        },
+        {
+          "group": "Group B",
+          "value": 73.23
+        }
+      ],
+      "comparisons": [
+        {
+          "group1": "Group B",
+          "group2": "Group C",
+          "p_value": 0.05
+        }
+      ]
+    },
+    {
+      "name": "Waist extension range",
+      "outcome_type": "secondary",
+      "time_point": "3 months",
+      "unit": "degrees",
+      "group_results": [
+        {
+          "group": "Group C",
+          "value": 28.03
+        },
+        {
+          "group": "Group B",
+          "value": 30.49
+        }
+      ],
+      "comparisons": [
+        {
+          "group1": "Group B",
+          "group2": "Group C",
+          "p_value": 0.05
+        }
+      ]
+    },
+    {
+      "name": "Left-sided lumbar flexion range",
+      "outcome_type": "secondary",
+      "time_point": "3 months",
+      "unit": "degrees",
+      "group_results": [
+        {
+          "group": "Group C",
+          "value": 12.09
+        },
+        {
+          "group": "Group B",
+          "value": 15.32
+        }
+      ],
+      "comparisons": [
+        {
+          "group1": "Group B",
+          "group2": "Group C",
+          "p_value": 0.05
+        }
+      ]
+    },
+    {
+      "name": "Right-sided lumbar flexion range",
+      "outcome_type": "secondary",
+      "time_point": "3 months",
+      "unit": "degrees",
+      "group_results": [
+        {
+          "group": "Group C",
+          "value": 12.37
+        },
+        {
+          "group": "Group B",
+          "value": 15.11
+        }
+      ],
+      "comparisons": [
+        {
+          "group1": "Group B",
+          "group2": "Group C",
+          "p_value": 0.05
+        }
+      ]
+    },
+    {
+      "name": "Lumbar dysfunction score",
+      "outcome_type": "secondary",
+      "time_point": "3 months",
+      "unit": "points",
+      "group_results": [
+        {
+          "group": "Group C",
+          "value": 3.32
+        },
+        {
+          "group": "Group B",
+          "value": 2.09
+        }
+      ],
+      "comparisons": [
+        {
+          "group1": "Group B",
+          "group2": "Group C",
+          "p_value": 0.05
+        }
+      ]
+    },
+    {
+      "name": "Quality of life - General condition",
+      "outcome_type": "secondary",
+      "time_point": "3 months",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "Group C",
+          "value": 71.42
+        },
+        {
+          "group": "Group B",
+          "value": 82.09
+        }
+      ],
+      "comparisons": [
+        {
+          "group1": "Group B",
+          "group2": "Group C",
+          "p_value": 0.05
+        }
+      ]
+    },
+    {
+      "name": "Quality of life - Body pain",
+      "outcome_type": "secondary",
+      "time_point": "3 months",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "Group C",
+          "value": 70.23
+        },
+        {
+          "group": "Group B",
+          "value": 78.12
+        }
+      ],
+      "comparisons": [
+        {
+          "group1": "Group B",
+          "group2": "Group C",
+          "p_value": 0.05
+        }
+      ]
+    },
+    {
+      "name": "Mental health score",
+      "outcome_type": "secondary",
+      "time_point": "3 months postoperatively",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "C",
+          "value": 68.91
+        },
+        {
+          "group": "B",
+          "value": 80.22
+        }
+      ],
+      "timepoint_month": 3.0
+    },
+    {
+      "name": "Physiological function score",
+      "outcome_type": "secondary",
+      "time_point": "3 months postoperatively",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "C",
+          "value": 68.91
+        },
+        {
+          "group": "B",
+          "value": 80.22
+        }
+      ],
+      "timepoint_month": 3.0
+    }
+  ],
+  "follow_up_month": 3.0
+}

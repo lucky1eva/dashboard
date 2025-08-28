@@ -1,0 +1,528 @@
+{
+  "trial_id": "NCT03131960",
+  "study_characteristics": {
+    "title": "Vagus nerve stimulation paired with rehabilitation for upper limb motor function after ischaemic stroke (VNS-REHAB): a randomised, blinded, pivotal, device trial",
+    "design": "randomised, triple-blind, sham-controlled trial",
+    "sample_size": 108,
+    "sample_size_by_group": [
+      {
+        "group": "VNS group",
+        "n": 53
+      },
+      {
+        "group": "control group",
+        "n": 55
+      }
+    ],
+    "follow_up_duration_month": 4.4,
+    "publication_year": 2021,
+    "geographic_location": "UK and USA",
+    "journal_name": "The Lancet",
+    "author_info": {
+      "primary_author": "Jesse Dawson",
+      "primary_author_email": "jesse.dawson@glasgow.ac.uk",
+      "affiliation": "University of Glasgow"
+    },
+    "funding_source": {
+      "source": "MicroTransponder",
+      "details": "Funder participated in study design and manuscript writing, no role in data collection/analysis/interpretation"
+    }
+  },
+  "population": {
+    "name": "Participants with moderate-to-severe arm weakness at least 9 months after ischaemic stroke",
+    "condition": "ischaemic stroke",
+    "N": 108,
+    "sex_ratio_male": 0.67,
+    "baseline_characteristics": [
+      {
+        "name": "FMA-UE score",
+        "group": "VNS group",
+        "value_text": "Not reported",
+        "unit": "points"
+      },
+      {
+        "name": "FMA-UE score",
+        "group": "control group",
+        "value_text": "Not reported",
+        "unit": "points"
+      },
+      {
+        "name": "Age, years",
+        "group": "VNS group",
+        "value": 59.1,
+        "unit": "years"
+      },
+      {
+        "name": "Age, years",
+        "group": "control group",
+        "value": 61.1,
+        "unit": "years"
+      },
+      {
+        "name": "Male sex proportion",
+        "group": "VNS group",
+        "value": 0.64,
+        "unit": "proportion"
+      },
+      {
+        "name": "Male sex proportion",
+        "group": "control group",
+        "value": 0.65,
+        "unit": "proportion"
+      },
+      {
+        "name": "Race",
+        "group": "VNS group",
+        "value_text": "White 79%, African American 17%, Asian/Indian/other 2%, Not reported 2%"
+      },
+      {
+        "name": "Race",
+        "group": "control group",
+        "value_text": "White 78%, African American 16%, Asian/Indian/other 7%, Not reported 2%"
+      },
+      {
+        "name": "Time since stroke, years",
+        "group": "VNS group",
+        "value": 3.1,
+        "unit": "years"
+      },
+      {
+        "name": "Time since stroke, years",
+        "group": "control group",
+        "value": 3.3,
+        "unit": "years"
+      },
+      {
+        "name": "Handedness",
+        "group": "VNS group",
+        "value_text": "Right 91%, Left 8%, Ambidextrous 2%"
+      },
+      {
+        "name": "Handedness",
+        "group": "control group",
+        "value_text": "Right 91%, Left 9%"
+      },
+      {
+        "name": "Side of paresis",
+        "group": "VNS group",
+        "value_text": "Right 47%, Left 53%"
+      },
+      {
+        "name": "Side of paresis",
+        "group": "control group",
+        "value_text": "Right 47%, Left 53%"
+      },
+      {
+        "name": "FMA-UE baseline score",
+        "group": "VNS group",
+        "value": 34.4,
+        "unit": "score"
+      },
+      {
+        "name": "FMA-UE baseline score",
+        "group": "control group",
+        "value": 35.7,
+        "unit": "score"
+      },
+      {
+        "name": "WMFT-Functional baseline score",
+        "group": "VNS group",
+        "value": 2.71,
+        "unit": "score"
+      },
+      {
+        "name": "WMFT-Functional baseline score",
+        "group": "control group",
+        "value": 2.83,
+        "unit": "score"
+      }
+    ],
+    "disease_classification": {
+      "name": "ischaemic stroke",
+      "severity": "moderate-to-severe"
+    },
+    "target_population_age": ">30 years (stratified, but no mean provided)",
+    "target_population_characteristics": "long-term upper limb motor impairment after stroke"
+  },
+  "intervention": [
+    {
+      "group": "VNS group",
+      "treatment": "active vagus nerve stimulation paired with rehabilitation",
+      "dose": "0.8 mA, 100 µs, 30 Hz stimulation pulses",
+      "freq": "three times per week",
+      "route": "implanted device",
+      "duration_weeks": 6.0,
+      "intervention_type": "medical_device"
+    },
+    {
+      "group": "VNS",
+      "treatment": "vagus nerve stimulation",
+      "dose": "0.8 mA (adjustable for comfort)",
+      "freq": "per movement repetition",
+      "route": "implanted device",
+      "duration_weeks": 6.0,
+      "intervention_type": "medical_device"
+    },
+    {
+      "group": "Sham",
+      "treatment": "sham stimulation",
+      "dose": "0 mA",
+      "freq": "per movement repetition",
+      "route": "implanted device",
+      "duration_weeks": 6.0,
+      "intervention_type": "other"
+    },
+    {
+      "group": "Intervention group",
+      "treatment": "Vagus nerve stimulation paired with upper-limb rehabilitation",
+      "dose": "Not specified",
+      "freq": "Not specified"
+    }
+  ],
+  "comparator": [
+    {
+      "group": "control group",
+      "treatment": "sham stimulation paired with rehabilitation",
+      "placebo": true,
+      "comparator_type": "placebo"
+    },
+    {
+      "group": "Sham",
+      "treatment": "sham stimulation",
+      "placebo": true,
+      "standard_care": false,
+      "comparator_type": "placebo",
+      "number_of_comparators": 1
+    },
+    {
+      "group": "Sham group",
+      "treatment": "Sham stimulation",
+      "placebo": true,
+      "comparator_type": "placebo"
+    }
+  ],
+  "baseline_outcomes": [
+    {
+      "name": "FMA-UE score",
+      "outcome_type": "baseline",
+      "time_point": "baseline",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "VNS group",
+          "value": 34.4
+        },
+        {
+          "group": "control group",
+          "value": 35.7
+        }
+      ]
+    },
+    {
+      "name": "WMFT-Functional score",
+      "outcome_type": "baseline",
+      "time_point": "baseline",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "VNS group",
+          "value": 2.71
+        },
+        {
+          "group": "control group",
+          "value": 2.83
+        }
+      ]
+    }
+  ],
+  "primary_outcomes": [
+    {
+      "name": "Change in Fugl-Meyer Assessment-Upper Extremity (FMA-UE) score",
+      "outcome_type": "primary",
+      "time_point": "first day after completion of in-clinic therapy",
+      "unit": "points",
+      "group_results": [
+        {
+          "group": "VNS group",
+          "value": 5.0
+        },
+        {
+          "group": "control group",
+          "value": 2.4
+        }
+      ],
+      "comparisons": [
+        {
+          "group1": "VNS group",
+          "group2": "control group",
+          "p_value": 0.0014
+        }
+      ],
+      "timepoint_month": 1.5
+    },
+    {
+      "name": "Change in FMA-UE score",
+      "outcome_type": "primary",
+      "time_point": "1 day after therapy",
+      "unit": "score change",
+      "group_results": [
+        {
+          "group": "VNS group",
+          "value": 5.0
+        },
+        {
+          "group": "control group",
+          "value": 2.4
+        }
+      ],
+      "comparisons": [
+        {
+          "group1": "VNS group",
+          "group2": "control group",
+          "p_value": 0.0014
+        }
+      ],
+      "ci95_lower": 1.0,
+      "ci95_upper": 4.2
+    }
+  ],
+  "secondary_outcomes": [
+    {
+      "name": "FMA-UE response rate",
+      "outcome_type": "secondary",
+      "time_point": "90 days after in-clinic therapy",
+      "unit": "%",
+      "group_results": [
+        {
+          "group": "VNS group",
+          "value": 47.0
+        },
+        {
+          "group": "control group",
+          "value": 24.0
+        }
+      ],
+      "comparisons": [
+        {
+          "group1": "VNS group",
+          "group2": "control group",
+          "p_value": 0.0098
+        }
+      ],
+      "timepoint_month": 4.5
+    },
+    {
+      "name": "Change in FMA-UE score",
+      "outcome_type": "secondary",
+      "time_point": "90 days after therapy",
+      "unit": "score change",
+      "group_results": [
+        {
+          "group": "VNS group",
+          "value": 5.8
+        },
+        {
+          "group": "control group",
+          "value": 2.8
+        }
+      ],
+      "comparisons": [
+        {
+          "group1": "VNS group",
+          "group2": "control group",
+          "p_value": 0.0077
+        }
+      ],
+      "ci95_lower": 0.8,
+      "ci95_upper": 5.1,
+      "timepoint_month": 3.0
+    },
+    {
+      "name": "FMA-UE response rate (≥6-point change)",
+      "outcome_type": "secondary",
+      "time_point": "90 days after therapy",
+      "unit": "%",
+      "group_results": [
+        {
+          "group": "VNS group",
+          "value": 47.0
+        },
+        {
+          "group": "control group",
+          "value": 24.0
+        }
+      ],
+      "comparisons": [
+        {
+          "group1": "VNS group",
+          "group2": "control group",
+          "p_value": 0.0098
+        }
+      ],
+      "timepoint_month": 3.0
+    },
+    {
+      "name": "Change in WMFT-Functional score",
+      "outcome_type": "secondary",
+      "time_point": "90 days after therapy",
+      "unit": "score change",
+      "group_results": [
+        {
+          "group": "VNS group",
+          "value": 0.5
+        },
+        {
+          "group": "control group",
+          "value": 0.2
+        }
+      ],
+      "comparisons": [
+        {
+          "group1": "VNS group",
+          "group2": "control group",
+          "p_value": 0.0001
+        }
+      ],
+      "ci95_lower": 0.16,
+      "ci95_upper": 0.43,
+      "timepoint_month": 3.0
+    },
+    {
+      "name": "WMFT-Functional response rate (≥0.4-point change)",
+      "outcome_type": "secondary",
+      "time_point": "90 days after therapy",
+      "unit": "%",
+      "group_results": [
+        {
+          "group": "VNS group",
+          "value": 57.0
+        },
+        {
+          "group": "control group",
+          "value": 22.0
+        }
+      ],
+      "comparisons": [
+        {
+          "group1": "VNS group",
+          "group2": "control group",
+          "p_value": 0.0001
+        }
+      ],
+      "timepoint_month": 3.0
+    }
+  ],
+  "safety_outcomes": [
+    {
+      "name": "Serious adverse events",
+      "outcome_type": "safety",
+      "time_point": "during study",
+      "unit": "count",
+      "group_results": [
+        {
+          "group": "VNS group",
+          "value": 0.0
+        },
+        {
+          "group": "control group",
+          "value": 1.0
+        }
+      ]
+    },
+    {
+      "name": "Participants with at least one adverse event",
+      "outcome_type": "safety",
+      "time_point": "during study",
+      "unit": "participants",
+      "group_results": [
+        {
+          "group": "VNS group",
+          "value": 43.0
+        },
+        {
+          "group": "control group",
+          "value": 42.0
+        }
+      ]
+    },
+    {
+      "name": "Number of severe adverse events",
+      "outcome_type": "safety",
+      "time_point": "during study",
+      "unit": "events",
+      "group_results": [
+        {
+          "group": "VNS group",
+          "value": 3.0
+        },
+        {
+          "group": "control group",
+          "value": 2.0
+        }
+      ]
+    },
+    {
+      "name": "Participants with adverse events related to device implantation",
+      "outcome_type": "safety",
+      "time_point": "during study",
+      "unit": "participants",
+      "group_results": [
+        {
+          "group": "VNS group",
+          "value": 21.0
+        },
+        {
+          "group": "control group",
+          "value": 24.0
+        }
+      ]
+    },
+    {
+      "name": "Participants with adverse events related to device use",
+      "outcome_type": "safety",
+      "time_point": "during study",
+      "unit": "participants",
+      "group_results": [
+        {
+          "group": "VNS group",
+          "value": 13.0
+        },
+        {
+          "group": "control group",
+          "value": 9.0
+        }
+      ]
+    },
+    {
+      "name": "Serious adverse events",
+      "outcome_type": "safety",
+      "time_point": "During treatment",
+      "unit": "count",
+      "group_results": [
+        {
+          "group": "VNS group",
+          "value": 0.0
+        },
+        {
+          "group": "Sham group",
+          "value": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Vocal cord palsy",
+      "outcome_type": "safety",
+      "time_point": "During treatment",
+      "unit": "rate",
+      "group_results": [
+        {
+          "group": "VNS group"
+        },
+        {
+          "group": "Sham group"
+        }
+      ]
+    }
+  ],
+  "follow_up_month": 12.0
+}

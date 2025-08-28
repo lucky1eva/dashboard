@@ -1,0 +1,394 @@
+{
+  "study_id": "study_001",
+  "study_characteristics": {
+    "title": "Cost-Effectiveness of Deep Brain Stimulation for Advanced Parkinson's Disease in the United States",
+    "design": "Markov model-based cost-effectiveness analysis",
+    "publication_year": 2016,
+    "geographic_location": "United States",
+    "journal_name": "Neuromodulation",
+    "author_info": {
+      "primary_author": "PIETZSCH ET AL.",
+      "affiliation": "Not Available"
+    },
+    "funding_source": {
+      "source": "Not Available"
+    }
+  },
+  "population": {
+    "name": "patients with advanced Parkinson's disease",
+    "condition": "Parkinson's disease",
+    "age_mean": 60.5,
+    "sex_ratio_male": 0.64,
+    "baseline_characteristics": [
+      {
+        "name": "Age (years)",
+        "group": "Overall",
+        "value": 60.5,
+        "unit": "years"
+      },
+      {
+        "name": "Male sex (%)",
+        "group": "Overall",
+        "value": 64.0,
+        "unit": "%"
+      },
+      {
+        "name": "Hoehn & Yahr stage",
+        "group": "Both",
+        "value_text": "Stratified (1-5)"
+      },
+      {
+        "name": "\"Off\" time",
+        "group": "Both",
+        "value_text": "Percentage",
+        "unit": "%"
+      }
+    ],
+    "disease_classification": {
+      "name": "Parkinson's disease",
+      "severity": "advanced"
+    },
+    "target_population_age": ">65 years",
+    "target_population_sex": "Both",
+    "target_population_characteristics": "Medicare beneficiaries"
+  },
+  "interventions": [
+    {
+      "group": "DBS group",
+      "treatment": "Deep Brain Stimulation (DBS)",
+      "dose": "Not specified",
+      "freq": "Not specified",
+      "intervention_type": "medical_device"
+    },
+    {
+      "group": "DBS",
+      "treatment": "Deep Brain Stimulation",
+      "dose": "Not specified",
+      "freq": "Not specified",
+      "route": "Implanted",
+      "intervention_type": "medical_device"
+    },
+    {
+      "group": "DBS cohort",
+      "treatment": "Deep Brain Stimulation",
+      "dose": "Not specified",
+      "freq": "Not specified",
+      "intervention_type": "medical_device"
+    },
+    {
+      "group": "DBS Group",
+      "treatment": "Deep Brain Stimulation",
+      "dose": "Not specified",
+      "freq": "Not specified",
+      "intervention_type": "medical_device"
+    },
+    {
+      "group": "DBS",
+      "treatment": "Deep Brain Stimulation",
+      "dose": "Not specified",
+      "freq": "Not specified",
+      "intervention_type": "medical_device"
+    }
+  ],
+  "comparators": [
+    {
+      "group": "BMT group",
+      "treatment": "Best Medical Therapy (BMT)",
+      "placebo": false,
+      "standard_care": true,
+      "comparator_type": "standard_care",
+      "number_of_comparators": 1
+    },
+    {
+      "group": "BMT",
+      "treatment": "Best Medical Therapy",
+      "placebo": false,
+      "standard_care": true,
+      "comparator_type": "standard_care",
+      "number_of_comparators": 1
+    },
+    {
+      "group": "BMT cohort",
+      "treatment": "Best Medical Therapy",
+      "placebo": false,
+      "standard_care": true,
+      "comparator_type": "standard_care",
+      "number_of_comparators": 1
+    },
+    {
+      "group": "Control Group",
+      "treatment": "Pharmaceutical therapy",
+      "standard_care": true,
+      "comparator_type": "standard_care"
+    },
+    {
+      "group": "BMT",
+      "treatment": "Best Medical Therapy",
+      "standard_care": true,
+      "comparator_type": "standard_care"
+    }
+  ],
+  "economic_data": {
+    "effectiveness_utility": {
+      "utility_types": "EQ-5D",
+      "health_state_utilities": [
+        {
+          "health_state_name": "H&Y stage 1",
+          "utility_value": 0.645,
+          "confidence_interval_lower": 0.51,
+          "confidence_interval_upper": 0.78
+        },
+        {
+          "health_state_name": "H&Y stage 2",
+          "utility_value": 0.605,
+          "confidence_interval_lower": 0.49,
+          "confidence_interval_upper": 0.72
+        },
+        {
+          "health_state_name": "H&Y stage 3",
+          "utility_value": 0.51,
+          "confidence_interval_lower": 0.38,
+          "confidence_interval_upper": 0.64
+        },
+        {
+          "health_state_name": "H&Y stage 4",
+          "utility_value": 0.255,
+          "confidence_interval_lower": 0.12,
+          "confidence_interval_upper": 0.39
+        },
+        {
+          "health_state_name": "H&Y stage 5",
+          "utility_value": 0.0,
+          "confidence_interval_lower": -0.13,
+          "confidence_interval_upper": 0.13
+        },
+        {
+          "health_state_name": "Baseline PD",
+          "utility_value": 0.39,
+          "measurement_instrument": "Model-derived"
+        },
+        {
+          "health_state_name": "Post-DBS treatment",
+          "utility_value": 0.613,
+          "measurement_instrument": "Model-derived"
+        }
+      ],
+      "health_state_transitions": [
+        {
+          "from_state": "Any",
+          "to_state": "Withdrawal from DBS",
+          "transition_probability": 0.1
+        },
+        {
+          "from_state": "Withdrawal from DBS",
+          "to_state": "Continued withdrawal",
+          "transition_probability": 0.02
+        }
+      ]
+    },
+    "model_parameters": {
+      "health_states": [
+        "H&Y stage 1",
+        "H&Y stage 2",
+        "H&Y stage 3",
+        "H&Y stage 4",
+        "H&Y stage 5",
+        "Death",
+        "H&Y 1",
+        "H&Y 2",
+        "H&Y 3",
+        "H&Y 4",
+        "H&Y 5"
+      ],
+      "time_horizon_year": 10.0,
+      "discount_rate": 0.03,
+      "WTP_threshold": 50000.0,
+      "time_horizon": "10 years",
+      "perspectives": [
+        "healthcare_system",
+        "payer"
+      ],
+      "cost_discounted": true,
+      "discount_rate_cost": 0.03,
+      "outcome_discounted": true,
+      "discount_rate_outcome": 0.03,
+      "sensitivity_analysis": true,
+      "sensitivity_analysis_type": [
+        "one_way",
+        "one_way",
+        "scenario",
+        "one_way",
+        "scenario",
+        "threshold",
+        "one_way"
+      ],
+      "cost_effectiveness_thresholds": [
+        50000.0,
+        150000.0,
+        50000.0
+      ],
+      "health_state_definitions": [
+        "Hoehn & Yahr stages with 'off' time percentages (0-25%, 26-50%, 51-75%, 76-100%)"
+      ],
+      "cycle_length": "6 months",
+      "model_type": "Markov"
+    },
+    "icer_analysis": {
+      "icer_value": 23404.0,
+      "number_of_ratios": 1,
+      "ratio_quadrant": "SE"
+    },
+    "currency_info": {
+      "currency_country": "United States",
+      "currency_year": 2014,
+      "currency_code": "USD"
+    },
+    "treatment_group_costs": [
+      {
+        "treatment_group": "DBS",
+        "cost_components": [
+          {
+            "component_name": "DBS implantation",
+            "unit_cost": 33319.0,
+            "unit": "per procedure",
+            "cost_category": "procedure",
+            "source": "2014 Medicare MS-DRG and physician fee schedule",
+            "cost_description": "Generator, leads, physician fees"
+          },
+          {
+            "component_name": "Infection management",
+            "unit_cost": 23441.0,
+            "unit": "per event",
+            "cost_category": "complication",
+            "source": "FY 2014 Medicare reimbursement",
+            "cost_description": "DBS-related infection treatment"
+          },
+          {
+            "component_name": "Device complication",
+            "unit_cost": 15902.0,
+            "unit": "per event",
+            "cost_category": "complication",
+            "source": "FY 2014 Medicare reimbursement",
+            "cost_description": "DBS device complication management"
+          },
+          {
+            "component_name": "Explantation",
+            "unit_cost": 4918.0,
+            "unit": "per procedure",
+            "cost_category": "procedure",
+            "source": "FY 2014 Medicare reimbursement",
+            "cost_description": "DBS removal"
+          },
+          {
+            "component_name": "Neurostimulator replacement",
+            "unit_cost": 26653.0,
+            "unit": "per procedure",
+            "cost_category": "procedure",
+            "source": "Medicare APC 0039/0315 plus CPT codes",
+            "cost_description": "Generator replacement"
+          },
+          {
+            "component_name": "Pre-operative assessment",
+            "unit_cost": 432.0,
+            "unit": "per patient",
+            "cost_category": "diagnostic",
+            "source": "CPT 70450, 70551, 99205",
+            "cost_description": "CT, MRI and evaluation"
+          }
+        ]
+      },
+      {
+        "treatment_group": "BMT"
+      },
+      {
+        "treatment_group": "DBS cohort",
+        "total_cost": 130510.0
+      },
+      {
+        "treatment_group": "BMT cohort",
+        "total_cost": 91026.0
+      },
+      {
+        "treatment_group": "Control Group",
+        "total_cost": 91026.0,
+        "cost_components": [
+          {
+            "component_name": "Baseline pharmaceutical costs",
+            "total_cost": 91026.0
+          }
+        ]
+      },
+      {
+        "treatment_group": "DBS Group",
+        "total_cost": 109085.0,
+        "cost_components": [
+          {
+            "component_name": "DBS-related procedure costs",
+            "total_cost": 109085.0,
+            "cost_description": "Low scenario (230% of baseline)"
+          },
+          {
+            "component_name": "Fall-related medical care",
+            "total_cost": 46160.0,
+            "cost_description": "High scenario (200% of baseline)"
+          },
+          {
+            "component_name": "Pharmaceutical costs",
+            "total_cost": 37042.0,
+            "cost_description": "Based on Average Wholesale Price"
+          }
+        ]
+      }
+    ]
+  },
+  "outcomes": [
+    {
+      "name": "Falls requiring medical care",
+      "outcome_type": "safety",
+      "time_point": "During treatment",
+      "unit": "Probability",
+      "group_results": [
+        {
+          "group": "DBS",
+          "value": 0.62
+        }
+      ]
+    },
+    {
+      "name": "Mortality risk",
+      "outcome_type": "safety",
+      "unit": "Relative risk",
+      "group_results": [
+        {
+          "group": "H&Y 2",
+          "value": 2.03
+        },
+        {
+          "group": "H&Y 3",
+          "value": 2.16
+        },
+        {
+          "group": "H&Y 4/5",
+          "value": 4.99
+        }
+      ],
+      "ci95_lower": 1.0,
+      "ci95_upper": 4.99
+    },
+    {
+      "name": "QALY gain",
+      "outcome_type": "economic",
+      "unit": "QALYs",
+      "group_results": [
+        {
+          "group": "DBS Group",
+          "value": 3.19
+        },
+        {
+          "group": "Control Group",
+          "value": 1.5
+        }
+      ]
+    }
+  ]
+}

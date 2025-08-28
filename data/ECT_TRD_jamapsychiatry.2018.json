@@ -1,0 +1,631 @@
+{
+  "study_id": "Ross_2018_ECT",
+  "study_characteristics": {
+    "title": "Cost-effectiveness of Electroconvulsive Therapy vs Pharmacotherapy/Psychotherapy for Treatment-Resistant Depression in the United States",
+    "design": "Decision analytic model",
+    "follow_up_duration_month": 48.0,
+    "publication_year": 2018,
+    "geographic_location": "United States",
+    "journal_name": "JAMA Psychiatry",
+    "author_info": {
+      "primary_author": "Eric L. Ross",
+      "primary_author_email": "ericlr@umich.edu",
+      "affiliation": "University of Michigan Medical School"
+    },
+    "funding_source": {
+      "source": "Department of Veterans Affairs",
+      "details": "Health Services Research and Development Services grant IIR 14-344"
+    }
+  },
+  "population": {
+    "name": "patients with treatment-resistant depression",
+    "condition": "treatment-resistant major depressive disorder",
+    "age_mean": 40.7,
+    "sex_ratio_male": 0.378,
+    "baseline_characteristics": [
+      {
+        "name": "Age (years)",
+        "group": "Overall",
+        "value": 40.7,
+        "unit": "years"
+      },
+      {
+        "name": "Female sex (%)",
+        "group": "Overall",
+        "value": 62.2,
+        "unit": "%"
+      }
+    ],
+    "disease_classification": {
+      "name": "Major Depressive Disorder",
+      "severity": "treatment-resistant"
+    },
+    "target_population_age": "mean 40.7 years",
+    "target_population_sex": "both",
+    "target_population_characteristics": "patients with treatment-resistant depression"
+  },
+  "interventions": [
+    {
+      "group": "ECT after 0 lines",
+      "treatment": "Electroconvulsive Therapy",
+      "dose": "Not specified",
+      "freq": "Not specified",
+      "intervention_type": "other"
+    },
+    {
+      "group": "ECT after 1 line",
+      "treatment": "Electroconvulsive Therapy",
+      "dose": "Not specified",
+      "freq": "Not specified",
+      "intervention_type": "other"
+    },
+    {
+      "group": "ECT after 2 lines",
+      "treatment": "Electroconvulsive Therapy",
+      "dose": "Not specified",
+      "freq": "Not specified",
+      "intervention_type": "other"
+    },
+    {
+      "group": "ECT after 3 lines",
+      "treatment": "Electroconvulsive Therapy",
+      "dose": "Not specified",
+      "freq": "Not specified",
+      "intervention_type": "other"
+    },
+    {
+      "group": "ECT after 4 lines",
+      "treatment": "Electroconvulsive Therapy",
+      "dose": "Not specified",
+      "freq": "Not specified",
+      "intervention_type": "other"
+    },
+    {
+      "group": "ECT after 5 lines",
+      "treatment": "Electroconvulsive Therapy",
+      "dose": "Not specified",
+      "freq": "Not specified",
+      "intervention_type": "other"
+    },
+    {
+      "group": "ECT",
+      "treatment": "Electroconvulsive Therapy",
+      "dose": "Not specified",
+      "freq": "Not specified",
+      "intervention_type": "other"
+    },
+    {
+      "group": "ECT",
+      "treatment": "electroconvulsive therapy",
+      "dose": "Not specified",
+      "freq": "Not specified",
+      "intervention_type": "surgical_procedure"
+    },
+    {
+      "group": "ECT",
+      "treatment": "Electroconvulsive Therapy",
+      "dose": "8 sessions initial, 16 treatments per year maintenance",
+      "freq": "Initial: over 1 month, Maintenance: annually",
+      "route": "Electrical",
+      "duration_weeks": 4.0,
+      "intervention_type": "other"
+    },
+    {
+      "group": "First-line ECT",
+      "treatment": "Electroconvulsive Therapy",
+      "dose": "Not specified",
+      "freq": "Not specified",
+      "intervention_type": "other"
+    },
+    {
+      "group": "Second-line ECT",
+      "treatment": "Electroconvulsive Therapy",
+      "dose": "Not specified",
+      "freq": "Not specified",
+      "intervention_type": "other"
+    },
+    {
+      "group": "Third-line ECT",
+      "treatment": "Electroconvulsive Therapy",
+      "dose": "Not specified",
+      "freq": "Not specified",
+      "intervention_type": "other"
+    },
+    {
+      "group": "Fourth-line ECT",
+      "treatment": "Electroconvulsive Therapy",
+      "dose": "Not specified",
+      "freq": "Not specified",
+      "intervention_type": "other"
+    },
+    {
+      "group": "Fifth-line ECT",
+      "treatment": "Electroconvulsive Therapy",
+      "dose": "Not specified",
+      "freq": "Not specified",
+      "intervention_type": "other"
+    },
+    {
+      "group": "Sixth-line ECT",
+      "treatment": "Electroconvulsive Therapy",
+      "dose": "Not specified",
+      "freq": "Not specified",
+      "intervention_type": "other"
+    },
+    {
+      "group": "ECT",
+      "treatment": "electroconvulsive therapy",
+      "dose": "Not specified",
+      "freq": "Not specified",
+      "intervention_type": "surgical_procedure"
+    },
+    {
+      "group": "ECT",
+      "treatment": "Electroconvulsive Therapy",
+      "dose": "Not specified",
+      "freq": "Not specified",
+      "intervention_type": "other"
+    },
+    {
+      "group": "ECT",
+      "treatment": "Electroconvulsive Therapy",
+      "dose": "Not specified",
+      "freq": "Not specified",
+      "intervention_type": "surgical_procedure"
+    },
+    {
+      "group": "Intervention",
+      "treatment": "Electroconvulsive Therapy",
+      "dose": "Not specified",
+      "freq": "Not specified",
+      "intervention_type": "other"
+    },
+    {
+      "group": "ECT",
+      "treatment": "Electroconvulsive Therapy",
+      "dose": "Not specified",
+      "freq": "Not specified",
+      "intervention_type": "other"
+    }
+  ],
+  "comparators": [
+    {
+      "group": "No ECT",
+      "treatment": "Pharmacotherapy/Psychotherapy",
+      "placebo": false,
+      "standard_care": true,
+      "comparator_type": "standard_care",
+      "number_of_comparators": 1
+    },
+    {
+      "group": "no ECT",
+      "treatment": "antidepressant medications and/or psychotherapy",
+      "standard_care": true,
+      "comparator_type": "standard_care",
+      "number_of_comparators": 1
+    },
+    {
+      "group": "Standard care",
+      "treatment": "antidepressant medication",
+      "placebo": false,
+      "standard_care": true,
+      "comparator_type": "standard_care",
+      "number_of_comparators": 1
+    },
+    {
+      "group": "Control",
+      "treatment": "Pharmacotherapy and psychotherapy",
+      "placebo": false,
+      "standard_care": true,
+      "comparator_type": "standard_care",
+      "number_of_comparators": 1
+    },
+    {
+      "group": "None",
+      "standard_care": true,
+      "comparator_type": "standard_care",
+      "number_of_comparators": 1
+    },
+    {
+      "group": "usual care",
+      "treatment": "pharmacotherapy and/or psychotherapy",
+      "standard_care": true,
+      "comparator_type": "standard_care",
+      "number_of_comparators": 1
+    },
+    {
+      "group": "Standard care",
+      "treatment": "Pharmacotherapy and Psychotherapy",
+      "placebo": false,
+      "standard_care": true,
+      "comparator_type": "standard_care"
+    },
+    {
+      "group": "None",
+      "treatment": "No treatment",
+      "placebo": true,
+      "standard_care": false,
+      "comparator_type": "no_treatment",
+      "number_of_comparators": 7
+    },
+    {
+      "group": "Sixth-line",
+      "treatment": "Sixth-line pharmacotherapy",
+      "placebo": false,
+      "standard_care": true,
+      "comparator_type": "standard_care",
+      "number_of_comparators": 7
+    },
+    {
+      "group": "Fifth-line",
+      "treatment": "Fifth-line pharmacotherapy",
+      "placebo": false,
+      "standard_care": true,
+      "comparator_type": "standard_care",
+      "number_of_comparators": 7
+    },
+    {
+      "group": "Fourth-line",
+      "treatment": "Fourth-line pharmacotherapy",
+      "placebo": false,
+      "standard_care": true,
+      "comparator_type": "standard_care",
+      "number_of_comparators": 7
+    },
+    {
+      "group": "Third-line",
+      "treatment": "Third-line pharmacotherapy",
+      "placebo": false,
+      "standard_care": true,
+      "comparator_type": "standard_care",
+      "number_of_comparators": 7
+    },
+    {
+      "group": "Second-line",
+      "treatment": "Second-line pharmacotherapy",
+      "placebo": false,
+      "standard_care": true,
+      "comparator_type": "standard_care",
+      "number_of_comparators": 7
+    },
+    {
+      "group": "First-line",
+      "treatment": "First-line pharmacotherapy",
+      "placebo": false,
+      "standard_care": true,
+      "comparator_type": "standard_care",
+      "number_of_comparators": 7
+    },
+    {
+      "group": "Comparator",
+      "treatment": "Pharmacotherapy",
+      "standard_care": true,
+      "comparator_type": "standard_care",
+      "number_of_comparators": 1
+    },
+    {
+      "group": "Standard care",
+      "treatment": "Standard pharmacotherapy",
+      "placebo": false,
+      "standard_care": true,
+      "comparator_type": "standard_care",
+      "number_of_comparators": 1
+    }
+  ],
+  "economic_data": {
+    "effectiveness_utility": {
+      "number_of_utilities": 3,
+      "health_state_utilities": [
+        {
+          "health_state_name": "Remission",
+          "utility_value": 0.85,
+          "source": "Sapin et al42",
+          "confidence_interval_lower": 0.829,
+          "confidence_interval_upper": 0.871
+        },
+        {
+          "health_state_name": "Response",
+          "utility_value": 0.72,
+          "source": "Sapin et al42",
+          "confidence_interval_lower": 0.653,
+          "confidence_interval_upper": 0.787
+        },
+        {
+          "health_state_name": "Nonresponse",
+          "utility_value": 0.58,
+          "source": "Sapin et al42",
+          "confidence_interval_lower": 0.499,
+          "confidence_interval_upper": 0.661
+        },
+        {
+          "health_state_name": "remission",
+          "utility_value": 0.85,
+          "source": "Prospective cohort study"
+        },
+        {
+          "health_state_name": "response",
+          "utility_value": 0.72,
+          "source": "Prospective cohort study"
+        },
+        {
+          "health_state_name": "nonresponse/relapse/initiation",
+          "utility_value": 0.58,
+          "source": "Prospective cohort study"
+        }
+      ]
+    },
+    "model_parameters": {
+      "health_states": [
+        "remission",
+        "response",
+        "nonresponse",
+        "Initiation",
+        "Remission",
+        "Response",
+        "Nonresponse",
+        "Relapse",
+        "Initiation",
+        "Remission",
+        "Response",
+        "Nonresponse",
+        "Relapse",
+        "remission",
+        "response",
+        "nonresponse/relapse/initiation",
+        "Remission",
+        "Response",
+        "Nonresponse",
+        "Relapse",
+        "Initiation",
+        "remission",
+        "response",
+        "nonresponse"
+      ],
+      "time_horizon_year": 4.0,
+      "discount_rate": 0.03,
+      "ICER": 54000.0,
+      "WTP_threshold": 100000.0,
+      "time_horizon": "4 years",
+      "perspectives": [
+        "healthcare_system",
+        "healthcare_system",
+        "healthcare_system",
+        "healthcare_system",
+        "healthcare_system"
+      ],
+      "outcome_discounted": true,
+      "discount_rate_outcome": 0.03,
+      "sensitivity_analysis": true,
+      "sensitivity_analysis_type": [
+        "one_way",
+        "scenario",
+        "probabilistic",
+        "one_way",
+        "probabilistic",
+        "one_way",
+        "probabilistic",
+        "scenario",
+        "probabilistic",
+        "scenario",
+        "one_way",
+        "probabilistic",
+        "probabilistic"
+      ],
+      "cost_effectiveness_thresholds": [
+        100000.0,
+        100000.0,
+        100000.0,
+        100000.0,
+        100000.0
+      ],
+      "health_state_definitions": [
+        "remission",
+        "response",
+        "nonresponse"
+      ],
+      "cycle_length": "1 month",
+      "model_type": "decision analytic"
+    },
+    "icer_analysis": {
+      "icer_value": 54000.0,
+      "number_of_ratios": 6
+    },
+    "currency_info": {
+      "currency_country": "United States",
+      "currency_year": 2013,
+      "currency_code": "USD"
+    },
+    "treatment_group_costs": [
+      {
+        "treatment_group": "ECT strategies",
+        "cost_components": [
+          {
+            "component_name": "ECT treatment cost",
+            "unit": "per treatment",
+            "cost_category": "procedure",
+            "source": "Literature estimates",
+            "cost_description": "$300 to $1000 per treatment, with incremental costs of $7300 to $12000"
+          }
+        ]
+      },
+      {
+        "treatment_group": "No ECT",
+        "cost_components": [
+          {
+            "component_name": "Pharmacotherapy/Psychotherapy cost",
+            "unit": "per year",
+            "cost_category": "drug",
+            "source": "Literature estimates",
+            "cost_description": "Several hundred dollars per year for medications"
+          }
+        ]
+      },
+      {
+        "treatment_group": "ECT"
+      },
+      {
+        "treatment_group": "Standard care",
+        "cost_components": [
+          {
+            "component_name": "Annual health care cost",
+            "total_cost": 7833.0,
+            "unit": "USD per year",
+            "cost_category": "total",
+            "source": "Crown et al43",
+            "cost_per_patient": 7833.0,
+            "cost_description": "Includes outpatient, inpatient, medication, and laboratory costs"
+          }
+        ],
+        "cost_per_year": 7833.0
+      },
+      {
+        "treatment_group": "ECT",
+        "cost_components": [
+          {
+            "component_name": "ECT initial treatment",
+            "quantity": 8.0,
+            "total_cost": 4691.0,
+            "unit": "per course",
+            "cost_category": "procedure",
+            "source": "Bailine45"
+          },
+          {
+            "component_name": "ECT maintenance",
+            "quantity": 16.0,
+            "total_cost": 9383.0,
+            "unit": "per year",
+            "cost_category": "procedure",
+            "source": "Multiple studies"
+          }
+        ],
+        "cost_per_year": 9383.0,
+        "upfront_costs": 4691.0,
+        "ongoing_costs": 9383.0
+      },
+      {
+        "treatment_group": "Control",
+        "cost_components": [
+          {
+            "component_name": "Background care",
+            "unit": "per year",
+            "cost_category": "medical",
+            "source": "Based on prior trials",
+            "cost_description": "Annual costs range from $7833 to $16816"
+          }
+        ]
+      },
+      {
+        "treatment_group": "None",
+        "total_cost": 42490.0
+      },
+      {
+        "treatment_group": "First-line ECT",
+        "total_cost": 54520.0,
+        "cost_components": [
+          {
+            "component_name": "ECT cost",
+            "total_cost": 17130.0,
+            "cost_category": "procedure",
+            "cost_per_patient": 17130.0
+          },
+          {
+            "component_name": "Other healthcare cost",
+            "total_cost": 37390.0,
+            "cost_category": "medical",
+            "cost_per_patient": 37390.0
+          }
+        ]
+      },
+      {
+        "treatment_group": "Second-line ECT",
+        "total_cost": 52000.0,
+        "cost_components": [
+          {
+            "component_name": "ECT cost",
+            "total_cost": 14610.0,
+            "cost_category": "procedure",
+            "cost_per_patient": 14610.0
+          },
+          {
+            "component_name": "Other healthcare cost",
+            "total_cost": 37390.0,
+            "cost_category": "medical",
+            "cost_per_patient": 37390.0
+          }
+        ]
+      },
+      {
+        "treatment_group": "Third-line ECT",
+        "total_cost": 49830.0,
+        "cost_components": [
+          {
+            "component_name": "ECT cost",
+            "total_cost": 12220.0,
+            "cost_category": "procedure",
+            "cost_per_patient": 12220.0
+          },
+          {
+            "component_name": "Other healthcare cost",
+            "total_cost": 37610.0,
+            "cost_category": "medical",
+            "cost_per_patient": 37610.0
+          }
+        ]
+      },
+      {
+        "treatment_group": "Fourth-line ECT",
+        "total_cost": 50900.0,
+        "cost_components": [
+          {
+            "component_name": "ECT cost",
+            "total_cost": 10900.0,
+            "cost_category": "procedure",
+            "cost_per_patient": 10900.0
+          },
+          {
+            "component_name": "Other healthcare cost",
+            "total_cost": 40000.0,
+            "cost_category": "medical",
+            "cost_per_patient": 40000.0
+          }
+        ]
+      },
+      {
+        "treatment_group": "Fifth-line ECT",
+        "total_cost": 49850.0,
+        "cost_components": [
+          {
+            "component_name": "ECT cost",
+            "total_cost": 9910.0,
+            "cost_category": "procedure",
+            "cost_per_patient": 9910.0
+          },
+          {
+            "component_name": "Other healthcare cost",
+            "total_cost": 39930.0,
+            "cost_category": "medical",
+            "cost_per_patient": 39930.0
+          }
+        ]
+      },
+      {
+        "treatment_group": "Sixth-line ECT",
+        "total_cost": 50080.0,
+        "cost_components": [
+          {
+            "component_name": "ECT cost",
+            "total_cost": 9090.0,
+            "cost_category": "procedure",
+            "cost_per_patient": 9090.0
+          },
+          {
+            "component_name": "Other healthcare cost",
+            "total_cost": 40990.0,
+            "cost_category": "medical",
+            "cost_per_patient": 40990.0
+          }
+        ]
+      }
+    ]
+  }
+}

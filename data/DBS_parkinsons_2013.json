@@ -1,0 +1,456 @@
+{
+  "study_id": "Not Available",
+  "study_characteristics": {
+    "title": "Not Available",
+    "design": "Markov model",
+    "follow_up_duration_month": 60.0,
+    "publication_year": 2014,
+    "geographic_location": "UK",
+    "journal_name": "Journal of Neurology",
+    "author_info": {
+      "primary_author": "Simon Eggington",
+      "affiliation": "Medtronic International"
+    },
+    "funding_source": {
+      "source": "Industry",
+      "details": "Medtronic International"
+    }
+  },
+  "population": {
+    "name": "Parkinson's disease patients",
+    "condition": "Parkinson's disease",
+    "age_mean": 60.5,
+    "disease_classification": {
+      "name": "Parkinson's disease",
+      "icd_code": "G20",
+      "severity": "Stages 1-5 (Hoehn & Yahr)"
+    },
+    "target_population_characteristics": "Newly diagnosed idiopathic Parkinson’s disease"
+  },
+  "interventions": [
+    {
+      "group": "DBS arm",
+      "treatment": "Deep Brain Stimulation",
+      "dose": "Not specified",
+      "freq": "Not specified",
+      "route": "Implanted device",
+      "intervention_type": "medical_device"
+    },
+    {
+      "group": "DBS",
+      "treatment": "Deep brain stimulation plus best medical therapy",
+      "dose": "Not specified",
+      "freq": "Not specified",
+      "intervention_type": "medical_device"
+    },
+    {
+      "group": "DBS+BMT",
+      "treatment": "Deep Brain Stimulation plus Best Medical Therapy",
+      "dose": "Not specified",
+      "freq": "Not specified",
+      "intervention_type": "medical_device"
+    },
+    {
+      "group": "DBS group",
+      "treatment": "Deep Brain Stimulation",
+      "dose": "Not specified",
+      "freq": "Not specified",
+      "intervention_type": "medical_device"
+    },
+    {
+      "group": "Not Available",
+      "treatment": "Not Available",
+      "dose": "Not specified",
+      "freq": "Not specified"
+    },
+    {
+      "group": "Intervention",
+      "treatment": "Deep brain stimulation",
+      "dose": "Not specified",
+      "freq": "Not specified",
+      "intervention_type": "medical_device"
+    }
+  ],
+  "comparators": [
+    {
+      "group": "BMT arm",
+      "treatment": "Best Medical Therapy",
+      "placebo": false,
+      "standard_care": true,
+      "comparator_type": "standard_care",
+      "number_of_comparators": 1
+    },
+    {
+      "group": "BMT",
+      "treatment": "Best medical therapy",
+      "placebo": false,
+      "standard_care": true,
+      "comparator_type": "standard_care",
+      "number_of_comparators": 1
+    },
+    {
+      "group": "BMT",
+      "treatment": "Best Medical Therapy alone",
+      "placebo": false,
+      "standard_care": true,
+      "comparator_type": "standard_care"
+    },
+    {
+      "group": "BMT group",
+      "treatment": "Best Medical Therapy",
+      "placebo": false,
+      "standard_care": true,
+      "comparator_type": "standard_care"
+    },
+    {
+      "group": "Not Available"
+    },
+    {
+      "group": "Control",
+      "standard_care": true,
+      "comparator_type": "standard_care"
+    }
+  ],
+  "economic_data": {
+    "effectiveness_utility": {
+      "number_of_utilities": 20,
+      "utility_types": "Literature sources (Palmer, Lowin)",
+      "health_state_utilities": [
+        {
+          "health_state_name": "H&Y1 0-25% OFF",
+          "utility_value": 0.74,
+          "source": "Palmer et al."
+        },
+        {
+          "health_state_name": "H&Y1 26-50% OFF",
+          "utility_value": 0.68,
+          "source": "Palmer et al."
+        },
+        {
+          "health_state_name": "H&Y1 51-75% OFF",
+          "utility_value": 0.64,
+          "source": "Palmer et al."
+        },
+        {
+          "health_state_name": "H&Y1 76-100% OFF",
+          "utility_value": 0.52,
+          "source": "Palmer et al."
+        },
+        {
+          "health_state_name": "H&Y2 0-25% OFF",
+          "utility_value": 0.72,
+          "source": "Palmer et al."
+        },
+        {
+          "health_state_name": "H&Y2 26-50% OFF",
+          "utility_value": 0.72,
+          "source": "Palmer et al."
+        },
+        {
+          "health_state_name": "H&Y2 51-75% OFF",
+          "utility_value": 0.66,
+          "source": "Palmer et al."
+        },
+        {
+          "health_state_name": "H&Y2 76-100% OFF",
+          "utility_value": 0.49,
+          "source": "Palmer et al."
+        },
+        {
+          "health_state_name": "H&Y3 0-25% OFF",
+          "utility_value": 0.643,
+          "source": "Lowin et al."
+        },
+        {
+          "health_state_name": "H&Y3 26-50% OFF",
+          "utility_value": 0.555,
+          "source": "Lowin et al."
+        },
+        {
+          "health_state_name": "H&Y3 51-75% OFF",
+          "utility_value": 0.467,
+          "source": "Lowin et al."
+        },
+        {
+          "health_state_name": "H&Y3 76-100% OFF",
+          "utility_value": 0.379,
+          "source": "Lowin et al."
+        },
+        {
+          "health_state_name": "H&Y4 0-25% OFF",
+          "utility_value": 0.387,
+          "source": "Lowin et al."
+        },
+        {
+          "health_state_name": "H&Y4 26-50% OFF",
+          "utility_value": 0.299,
+          "source": "Lowin et al."
+        },
+        {
+          "health_state_name": "H&Y4 51-75% OFF",
+          "utility_value": 0.211,
+          "source": "Lowin et al."
+        },
+        {
+          "health_state_name": "H&Y4 76-100% OFF",
+          "utility_value": 0.123,
+          "source": "Lowin et al."
+        },
+        {
+          "health_state_name": "H&Y5 0-25% OFF",
+          "utility_value": 0.131,
+          "source": "Lowin et al."
+        },
+        {
+          "health_state_name": "H&Y5 26-50% OFF",
+          "utility_value": 0.043,
+          "source": "Lowin et al."
+        },
+        {
+          "health_state_name": "H&Y5 51-75% OFF",
+          "utility_value": -0.045,
+          "source": "Lowin et al."
+        },
+        {
+          "health_state_name": "H&Y5 76-100% OFF",
+          "utility_value": -0.133,
+          "source": "Lowin et al."
+        },
+        {
+          "health_state_name": "H&Y 1",
+          "utility_value": 0.96,
+          "source": "Schrag et al. [60]"
+        },
+        {
+          "health_state_name": "H&Y 2",
+          "utility_value": 0.65,
+          "source": "Schrag et al. [60]"
+        },
+        {
+          "health_state_name": "H&Y 3",
+          "utility_value": 0.26,
+          "source": "Schrag et al. [60]"
+        },
+        {
+          "health_state_name": "H&Y 4",
+          "utility_value": 0.19,
+          "source": "Schrag et al. [60]"
+        },
+        {
+          "health_state_name": "H&Y 5",
+          "utility_value": -0.21,
+          "source": "Schrag et al. [60]"
+        },
+        {
+          "health_state_name": "H&Y 1",
+          "utility_value": 0.708,
+          "source": "Shimbo et al. [59]"
+        },
+        {
+          "health_state_name": "H&Y 2",
+          "utility_value": 0.678,
+          "source": "Shimbo et al. [59]"
+        },
+        {
+          "health_state_name": "H&Y 3",
+          "utility_value": 0.622,
+          "source": "Shimbo et al. [59]"
+        },
+        {
+          "health_state_name": "H&Y 4",
+          "utility_value": 0.547,
+          "source": "Shimbo et al. [59]"
+        },
+        {
+          "health_state_name": "H&Y 5",
+          "utility_value": 0.451,
+          "source": "Shimbo et al. [59]"
+        }
+      ],
+      "health_state_transitions": [
+        {
+          "from_state": "H&Y1",
+          "to_state": "H&Y2",
+          "transition_probability": 0.188
+        },
+        {
+          "from_state": "H&Y2",
+          "to_state": "H&Y3",
+          "transition_probability": 0.04
+        },
+        {
+          "from_state": "H&Y3",
+          "to_state": "H&Y4",
+          "transition_probability": 0.159
+        },
+        {
+          "from_state": "H&Y4",
+          "to_state": "H&Y5",
+          "transition_probability": 0.148
+        },
+        {
+          "from_state": "0-25% OFF",
+          "to_state": "26-50% OFF",
+          "transition_probability": 0.127
+        },
+        {
+          "from_state": "26-50% OFF",
+          "to_state": "51-75% OFF",
+          "transition_probability": 0.074
+        },
+        {
+          "from_state": "51-75% OFF",
+          "to_state": "76-100% OFF",
+          "transition_probability": 0.043
+        }
+      ]
+    },
+    "model_parameters": {
+      "health_states": [
+        "H&Y1",
+        "H&Y2",
+        "H&Y3",
+        "H&Y4",
+        "H&Y5",
+        "Death",
+        "H&Y 1",
+        "H&Y 2",
+        "H&Y 3",
+        "H&Y 4",
+        "H&Y 5",
+        "H&Y 1",
+        "H&Y 2",
+        "H&Y 3",
+        "H&Y 4",
+        "H&Y 5"
+      ],
+      "time_horizon_year": 5.0,
+      "discount_rate": 3.5,
+      "WTP_threshold": 30000.0,
+      "time_horizon": "5 years",
+      "perspectives": [
+        "healthcare_system",
+        "payer",
+        "payer"
+      ],
+      "cost_discounted": true,
+      "discount_rate_cost": 3.5,
+      "outcome_discounted": true,
+      "discount_rate_outcome": 3.5,
+      "sensitivity_analysis": true,
+      "sensitivity_analysis_type": [
+        "one_way",
+        "one_way",
+        "probabilistic"
+      ],
+      "cost_effectiveness_thresholds": [
+        30000.0
+      ],
+      "health_state_definitions": [
+        "H&Y stage and OFF time"
+      ],
+      "cycle_length": "6 months",
+      "model_type": "Markov"
+    },
+    "icer_analysis": {
+      "icer_value": 20678.0,
+      "number_of_ratios": 1
+    },
+    "currency_info": {
+      "currency_country": "UK",
+      "currency_year": 2011,
+      "currency_code": "GBP"
+    },
+    "treatment_group_costs": [
+      {
+        "treatment_group": "DBS arm",
+        "cost_components": [
+          {
+            "component_name": "Device implantation",
+            "unit_cost": 8326.0,
+            "source": "Medtronic UK price list"
+          },
+          {
+            "component_name": "Pre-operative assessment",
+            "unit_cost": 641.0,
+            "source": "Payment by results tariffs"
+          },
+          {
+            "component_name": "Levodopa (daily)",
+            "unit_cost": 0.07,
+            "quantity": 188.0,
+            "unit": "mg/day",
+            "source": "British National Formulary"
+          },
+          {
+            "component_name": "Non-levodopa drugs",
+            "total_cost": 2109.0,
+            "unit": "per cycle",
+            "source": "McIntosh et al."
+          }
+        ]
+      },
+      {
+        "treatment_group": "BMT arm",
+        "cost_components": [
+          {
+            "component_name": "Levodopa (daily)",
+            "unit_cost": 0.07,
+            "quantity": 205.0,
+            "unit": "mg/day",
+            "source": "British National Formulary"
+          },
+          {
+            "component_name": "Non-levodopa drugs",
+            "total_cost": 3725.0,
+            "unit": "per cycle",
+            "source": "McIntosh et al."
+          }
+        ]
+      },
+      {
+        "treatment_group": "BMT",
+        "total_cost": 48243.0
+      },
+      {
+        "treatment_group": "DBS",
+        "total_cost": 68970.0
+      },
+      {
+        "treatment_group": "DBS+BMT",
+        "cost_components": [
+          {
+            "component_name": "DBS implantation procedure",
+            "cost_category": "procedure",
+            "cost_description": "Significant component of overall cost"
+          },
+          {
+            "component_name": "Infection management",
+            "cost_category": "adverse_event",
+            "cost_description": "Costs for infections requiring DBS system explantation"
+          },
+          {
+            "component_name": "Fall-related hospitalizations",
+            "cost_category": "hospitalization",
+            "cost_description": "Hospitalization costs due to falls"
+          },
+          {
+            "component_name": "Drug therapy",
+            "cost_category": "drug",
+            "cost_description": "Ongoing medication costs"
+          }
+        ]
+      },
+      {
+        "treatment_group": "BMT",
+        "cost_components": [
+          {
+            "component_name": "Drug therapy",
+            "cost_category": "drug",
+            "cost_description": "Ongoing medication costs"
+          }
+        ]
+      }
+    ]
+  }
+}

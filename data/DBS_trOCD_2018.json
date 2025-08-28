@@ -1,0 +1,494 @@
+{
+  "study_id": "Moon_et_al_2017",
+  "study_characteristics": {
+    "title": "The cost-effectiveness of deep brain stimulation for patients with treatment-resistant obsessive-compulsive disorder",
+    "design": "Cost-effectiveness analysis using Markov model",
+    "publication_year": 2017,
+    "geographic_location": "Korea and United Kingdom",
+    "journal_name": "Medicine",
+    "author_info": {
+      "primary_author": "Woori Moon",
+      "primary_author_email": "snkim@snu.ac.kr",
+      "affiliation": "Seoul National University Hospital"
+    },
+    "funding_source": {
+      "source": "Government",
+      "details": "Korean Mental Health Technology R&D Project, HM15C1233"
+    }
+  },
+  "population": {
+    "name": "TROCD patients",
+    "condition": "treatment-resistant obsessive-compulsive disorder",
+    "disease_classification": {
+      "name": "Obsessive-compulsive disorder",
+      "icd_code": "F42",
+      "severity": "treatment-resistant"
+    },
+    "target_population_characteristics": "Patients with treatment-resistant OCD"
+  },
+  "interventions": [
+    {
+      "group": "DBS group",
+      "treatment": "Deep brain stimulation",
+      "dose": "Not specified",
+      "freq": "Not specified",
+      "intervention_type": "surgical_procedure"
+    },
+    {
+      "group": "DBS group",
+      "treatment": "Deep Brain Stimulation",
+      "dose": "Not specified",
+      "freq": "Not specified",
+      "route": "implantation",
+      "intervention_type": "medical_device"
+    },
+    {
+      "group": "DBS",
+      "treatment": "Deep Brain Stimulation",
+      "dose": "Not specified",
+      "freq": "Not specified",
+      "intervention_type": "medical_device"
+    },
+    {
+      "group": "DBS",
+      "treatment": "Deep Brain Stimulation",
+      "dose": "Not specified",
+      "freq": "Not specified",
+      "intervention_type": "medical_device"
+    },
+    {
+      "group": "DBS group",
+      "treatment": "Deep brain stimulation",
+      "dose": "Not specified",
+      "freq": "Not specified",
+      "intervention_type": "medical_device"
+    },
+    {
+      "group": "Intervention",
+      "treatment": "deep brain stimulation plus best medical therapy",
+      "dose": "Not specified",
+      "freq": "Not specified",
+      "intervention_type": "medical_device"
+    }
+  ],
+  "comparators": [
+    {
+      "group": "TAU group",
+      "treatment": "Conventional treatment",
+      "placebo": false,
+      "standard_care": true,
+      "comparator_type": "standard_care",
+      "number_of_comparators": 1
+    },
+    {
+      "group": "treatment as usual",
+      "treatment": "standard care",
+      "standard_care": true,
+      "comparator_type": "standard_care",
+      "number_of_comparators": 1
+    },
+    {
+      "group": "TAU",
+      "treatment": "Treatment As Usual",
+      "standard_care": true,
+      "comparator_type": "standard_care"
+    },
+    {
+      "group": "Control",
+      "treatment": "Standard Care",
+      "standard_care": true,
+      "comparator_type": "standard_care",
+      "number_of_comparators": 1
+    },
+    {
+      "group": "Control group",
+      "treatment": "Treatment as usual",
+      "standard_care": true,
+      "comparator_type": "standard_care",
+      "number_of_comparators": 1
+    },
+    {
+      "group": "Control",
+      "treatment": "best medical therapy alone",
+      "placebo": false,
+      "standard_care": true,
+      "comparator_type": "standard_care",
+      "number_of_comparators": 1
+    }
+  ],
+  "economic_data": {
+    "effectiveness_utility": {
+      "utility_value": 0.16,
+      "utility_types": "EQ-5D-5L",
+      "health_state_utilities": [
+        {
+          "health_state_name": "Response",
+          "utility_value": 0.16,
+          "source": "Patient survey",
+          "confidence_interval_lower": 0.001,
+          "confidence_interval_upper": 0.224
+        },
+        {
+          "health_state_name": "Complication",
+          "utility_value": -0.026,
+          "source": "Literature"
+        },
+        {
+          "health_state_name": "With Complication",
+          "utility_value": 0.7,
+          "source": "[13]",
+          "confidence_interval_lower": 0.537,
+          "confidence_interval_upper": 0.937
+        }
+      ]
+    },
+    "model_parameters": {
+      "health_states": [
+        "treatment-resistant OCD",
+        "response",
+        "no-response",
+        "death",
+        "treatment-resistant OCD",
+        "response",
+        "death"
+      ],
+      "transition_prob": {
+        "from_treatment_resistant_OCD_to_response": 0.6,
+        "complication_rate_implantation": 0.194,
+        "complication_rate_battery_change": 0.148,
+        "from_response_to_death": 0.001,
+        "from_no_response_to_death": 0.002,
+        "from_treatment_resistant_OCD_no_response_to_death": 0.002,
+        "complication_rate_after_implantation": 0.282,
+        "partial_complication_rate_after_battery_change": 0.179
+      },
+      "time_horizon_year": 10.0,
+      "discount_rate": 0.05,
+      "ICER": 34462.0,
+      "WTP_threshold": 50000.0,
+      "time_horizon": "10 years",
+      "perspectives": [
+        "payer",
+        "payer",
+        "healthcare_system"
+      ],
+      "cost_discounted": true,
+      "discount_rate_cost": 0.05,
+      "outcome_discounted": true,
+      "discount_rate_outcome": 0.05,
+      "sensitivity_analysis": true,
+      "sensitivity_analysis_type": [
+        "one_way",
+        "one_way",
+        "one_way",
+        "one_way"
+      ],
+      "cost_effectiveness_thresholds": [
+        81669.0,
+        43876.0,
+        27223.0,
+        43876.0,
+        50000.0
+      ],
+      "health_state_definitions": [
+        "Response group",
+        "No-response group"
+      ],
+      "cycle_length": "1 year",
+      "model_type": "Markov"
+    },
+    "icer_analysis": {
+      "icer_value": 37865.0,
+      "number_of_ratios": 2,
+      "ratio_quadrant": "NE"
+    },
+    "currency_info": {
+      "currency_country": "US",
+      "currency_year": 2017,
+      "currency_code": "USD"
+    },
+    "treatment_group_costs": [
+      {
+        "treatment_group": "DBS",
+        "cost_components": [
+          {
+            "component_name": "DBS device",
+            "unit_cost": 20662.0,
+            "quantity": 1.0,
+            "total_cost": 20662.0,
+            "unit": "per device",
+            "cost_category": "device",
+            "source": "Supplier (Medtronics)",
+            "cost_per_patient": 20662.0
+          },
+          {
+            "component_name": "DBS implantation",
+            "unit_cost": 7319.0,
+            "quantity": 1.0,
+            "total_cost": 7319.0,
+            "unit": "per procedure",
+            "cost_category": "surgery",
+            "source": "Hospital data, HIRA",
+            "cost_per_patient": 7319.0
+          },
+          {
+            "component_name": "Preoperation evaluation",
+            "unit_cost": 684.0,
+            "quantity": 1.0,
+            "total_cost": 684.0,
+            "unit": "per evaluation",
+            "cost_category": "examination",
+            "source": "Hospital data, HIRA",
+            "cost_per_patient": 684.0
+          },
+          {
+            "component_name": "Battery change",
+            "unit_cost": 2232.0,
+            "quantity": 1.0,
+            "total_cost": 2232.0,
+            "unit": "per procedure",
+            "cost_category": "surgery",
+            "source": "Hospital data, HIRA",
+            "cost_per_patient": 2232.0
+          },
+          {
+            "component_name": "Outpatient visit and medication (year 1)",
+            "unit_cost": 2672.0,
+            "quantity": 1.0,
+            "total_cost": 2672.0,
+            "unit": "per year",
+            "cost_category": "outpatient",
+            "source": "Hospital data, HIRA",
+            "cost_per_patient": 2672.0
+          },
+          {
+            "component_name": "Outpatient visit and medication (year 2+)",
+            "unit_cost": 1662.0,
+            "quantity": 1.0,
+            "total_cost": 1662.0,
+            "unit": "per year",
+            "cost_category": "outpatient",
+            "source": "Hospital data, HIRA",
+            "cost_per_patient": 1662.0
+          },
+          {
+            "component_name": "Complication after implantation",
+            "unit_cost": 1908.0,
+            "quantity": 1.0,
+            "total_cost": 1908.0,
+            "unit": "per event",
+            "cost_category": "complication",
+            "source": "2014 NHIS Yearbook",
+            "cost_per_patient": 1908.0
+          },
+          {
+            "component_name": "Complication after battery change",
+            "unit_cost": 2029.0,
+            "quantity": 1.0,
+            "total_cost": 2029.0,
+            "unit": "per event",
+            "cost_category": "complication",
+            "source": "2014 NHIS Yearbook",
+            "cost_per_patient": 2029.0
+          }
+        ]
+      },
+      {
+        "treatment_group": "treatment as usual",
+        "cost_components": [
+          {
+            "component_name": "Outpatient visit and medication (year 1)",
+            "unit_cost": 2440.0,
+            "quantity": 1.0,
+            "total_cost": 2440.0,
+            "unit": "per year",
+            "cost_category": "outpatient",
+            "source": "Hospital data, HIRA",
+            "cost_per_patient": 2440.0
+          },
+          {
+            "component_name": "Outpatient visit and medication (year 2+)",
+            "unit_cost": 1623.0,
+            "quantity": 1.0,
+            "total_cost": 1623.0,
+            "unit": "per year",
+            "cost_category": "outpatient",
+            "source": "Hospital data, HIRA",
+            "cost_per_patient": 1623.0
+          }
+        ]
+      },
+      {
+        "treatment_group": "DBS",
+        "total_cost": 44672.0,
+        "cost_components": [
+          {
+            "component_name": "DBS device",
+            "unit_cost": 20662.0,
+            "quantity": 1.0,
+            "total_cost": 20662.0,
+            "unit": "per device",
+            "cost_category": "device",
+            "source": "Korea cost",
+            "cost_per_patient": 20662.0
+          },
+          {
+            "component_name": "DBS implantation",
+            "unit_cost": 7319.0,
+            "quantity": 1.0,
+            "total_cost": 7319.0,
+            "unit": "per procedure",
+            "cost_category": "procedure",
+            "source": "Korea cost",
+            "cost_per_patient": 7319.0
+          },
+          {
+            "component_name": "Battery change",
+            "unit_cost": 2232.0,
+            "quantity": 3.0,
+            "total_cost": 6696.0,
+            "unit": "per change every 3 years",
+            "cost_category": "device",
+            "source": "Korea cost",
+            "cost_per_patient": 6696.0
+          },
+          {
+            "component_name": "Outpatient visit and medication",
+            "unit_cost": 2441.0,
+            "quantity": 1.0,
+            "total_cost": 2441.0,
+            "unit": "per year year 1",
+            "cost_category": "outpatient",
+            "source": "Korea cost",
+            "cost_per_patient": 2441.0
+          },
+          {
+            "component_name": "Outpatient visit and medication",
+            "unit_cost": 1366.0,
+            "quantity": 9.0,
+            "total_cost": 12294.0,
+            "unit": "per year year 2+",
+            "cost_category": "outpatient",
+            "source": "Korea cost",
+            "cost_per_patient": 12294.0
+          },
+          {
+            "component_name": "Complication treatment after implantation",
+            "unit_cost": 12123.0,
+            "quantity": 1.0,
+            "total_cost": 12123.0,
+            "unit": "per event",
+            "cost_category": "complication",
+            "source": "Korea cost",
+            "cost_per_patient": 12123.0,
+            "cost_description": "Weighted cost"
+          },
+          {
+            "component_name": "Complication treatment after battery change",
+            "unit_cost": 11511.0,
+            "quantity": 1.0,
+            "total_cost": 11511.0,
+            "unit": "per event",
+            "cost_category": "complication",
+            "source": "Korea cost",
+            "cost_per_patient": 11511.0,
+            "cost_description": "Weighted cost"
+          }
+        ],
+        "upfront_costs": 27981.0,
+        "ongoing_costs": 16691.0
+      },
+      {
+        "treatment_group": "TAU",
+        "total_cost": 10447.0,
+        "cost_components": [
+          {
+            "component_name": "Outpatient visit and medication",
+            "unit_cost": 2662.0,
+            "quantity": 1.0,
+            "total_cost": 2662.0,
+            "unit": "per year year 1",
+            "cost_category": "outpatient",
+            "source": "Korea cost",
+            "cost_per_patient": 2662.0
+          },
+          {
+            "component_name": "Outpatient visit and medication",
+            "unit_cost": 1685.0,
+            "quantity": 9.0,
+            "total_cost": 15165.0,
+            "unit": "per year year 2+",
+            "cost_category": "outpatient",
+            "source": "Korea cost",
+            "cost_per_patient": 15165.0
+          }
+        ],
+        "upfront_costs": 2662.0,
+        "ongoing_costs": 15165.0
+      },
+      {
+        "treatment_group": "DBS",
+        "cost_components": [
+          {
+            "component_name": "Initial DBS device",
+            "unit_cost": 15048.0,
+            "quantity": 1.0,
+            "total_cost": 15048.0,
+            "unit": "per device",
+            "cost_category": "device",
+            "source": "Assumption",
+            "cost_per_patient": 15048.0
+          },
+          {
+            "component_name": "Battery replacement",
+            "unit_cost": 11028.0,
+            "unit": "per replacement",
+            "cost_category": "device",
+            "source": "Assumption"
+          }
+        ],
+        "upfront_costs": 15048.0
+      },
+      {
+        "treatment_group": "Control"
+      },
+      {
+        "treatment_group": "DBS group",
+        "cost_components": [
+          {
+            "component_name": "DBS neurostimulator",
+            "unit_cost": 16912.0,
+            "quantity": 2.0,
+            "total_cost": 33824.0,
+            "unit": "per device",
+            "cost_category": "medical device",
+            "source": "Study",
+            "cost_per_patient": 33824.0
+          }
+        ]
+      },
+      {
+        "treatment_group": "Control group"
+      }
+    ]
+  },
+  "outcomes": [
+    {
+      "name": "YBOCS reduction",
+      "outcome_type": "primary",
+      "time_point": "end of treatment",
+      "unit": "%",
+      "group_results": [
+        {
+          "group": "DBS",
+          "value": 45.1
+        },
+        {
+          "group": "Control"
+        }
+      ],
+      "ci95_lower": 29.4,
+      "ci95_upper": 60.8
+    }
+  ]
+}

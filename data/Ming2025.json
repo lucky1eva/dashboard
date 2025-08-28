@@ -1,0 +1,678 @@
+{
+  "trial_id": "ChiCTR2000034730",
+  "study_characteristics": {
+    "title": "Efficacy of kinesthetic motor imagery based brain computer interface combined with tDCS on upper limb function in subacute stroke",
+    "design": "Randomized controlled trial",
+    "sample_size": 48,
+    "sample_size_by_group": [
+      {
+        "group": "KI-BCI group",
+        "n": 16
+      },
+      {
+        "group": "tDCS group",
+        "n": 16
+      },
+      {
+        "group": "BCI-tDCS group",
+        "n": 16
+      },
+      {
+        "group": "Group A",
+        "n": 20
+      },
+      {
+        "group": "Group B",
+        "n": 20
+      },
+      {
+        "group": "Group C",
+        "n": 20
+      },
+      {
+        "group": "KI-BCI",
+        "n": 15
+      },
+      {
+        "group": "tDCS",
+        "n": 14
+      },
+      {
+        "group": "BCI-tDCS",
+        "n": 14
+      }
+    ],
+    "follow_up_duration_month": 1.0,
+    "publication_year": 2025,
+    "geographic_location": "China"
+  },
+  "population": {
+    "name": "Subacute stroke survivors",
+    "condition": "Subacute stroke",
+    "N": 48,
+    "baseline_characteristics": [
+      {
+        "name": "Age (years)",
+        "group": "KI-BCI",
+        "value": 56.13,
+        "unit": "years"
+      },
+      {
+        "name": "Age (years)",
+        "group": "tDCS",
+        "value": 60.79,
+        "unit": "years"
+      },
+      {
+        "name": "Age (years)",
+        "group": "BCI-tDCS",
+        "value": 54.93,
+        "unit": "years"
+      },
+      {
+        "name": "Male sex (%)",
+        "group": "KI-BCI",
+        "value": 57.1,
+        "unit": "%"
+      },
+      {
+        "name": "Male sex (%)",
+        "group": "tDCS",
+        "value": 64.3,
+        "unit": "%"
+      },
+      {
+        "name": "Male sex (%)",
+        "group": "BCI-tDCS",
+        "value": 71.4,
+        "unit": "%"
+      },
+      {
+        "name": "Stroke type - Ischemic (%)",
+        "group": "KI-BCI",
+        "value": 66.7,
+        "unit": "%"
+      },
+      {
+        "name": "Stroke type - Ischemic (%)",
+        "group": "tDCS",
+        "value": 71.4,
+        "unit": "%"
+      },
+      {
+        "name": "Stroke type - Ischemic (%)",
+        "group": "BCI-tDCS",
+        "value": 85.7,
+        "unit": "%"
+      },
+      {
+        "name": "Stroke type - Hemorrhagic (%)",
+        "group": "KI-BCI",
+        "value": 33.3,
+        "unit": "%"
+      },
+      {
+        "name": "Stroke type - Hemorrhagic (%)",
+        "group": "tDCS",
+        "value": 28.6,
+        "unit": "%"
+      },
+      {
+        "name": "Stroke type - Hemorrhagic (%)",
+        "group": "BCI-tDCS",
+        "value": 14.3,
+        "unit": "%"
+      },
+      {
+        "name": "Affected side - Left (%)",
+        "group": "KI-BCI",
+        "value": 26.7,
+        "unit": "%"
+      },
+      {
+        "name": "Affected side - Left (%)",
+        "group": "tDCS",
+        "value": 35.7,
+        "unit": "%"
+      },
+      {
+        "name": "Affected side - Left (%)",
+        "group": "BCI-tDCS",
+        "value": 28.6,
+        "unit": "%"
+      },
+      {
+        "name": "Affected side - Right (%)",
+        "group": "KI-BCI",
+        "value": 73.3,
+        "unit": "%"
+      },
+      {
+        "name": "Affected side - Right (%)",
+        "group": "tDCS",
+        "value": 64.3,
+        "unit": "%"
+      },
+      {
+        "name": "Affected side - Right (%)",
+        "group": "BCI-tDCS",
+        "value": 71.4,
+        "unit": "%"
+      },
+      {
+        "name": "Time from onset (days)",
+        "group": "KI-BCI",
+        "value": 44.07,
+        "unit": "days"
+      },
+      {
+        "name": "Time from onset (days)",
+        "group": "tDCS",
+        "value": 39.36,
+        "unit": "days"
+      },
+      {
+        "name": "Time from onset (days)",
+        "group": "BCI-tDCS",
+        "value": 38.0,
+        "unit": "days"
+      },
+      {
+        "name": "MMSE",
+        "group": "KI-BCI",
+        "value": 27.33,
+        "unit": "score"
+      },
+      {
+        "name": "MMSE",
+        "group": "tDCS",
+        "value": 27.64,
+        "unit": "score"
+      },
+      {
+        "name": "MMSE",
+        "group": "BCI-tDCS",
+        "value": 27.71,
+        "unit": "score"
+      }
+    ]
+  },
+  "intervention": [
+    {
+      "group": "KI-BCI group",
+      "treatment": "KI-BCI training",
+      "dose": "30 min",
+      "freq": "5 times a week",
+      "duration_weeks": 4.0
+    },
+    {
+      "group": "tDCS group",
+      "treatment": "tDCS",
+      "dose": "30 min",
+      "freq": "5 times a week",
+      "duration_weeks": 4.0
+    },
+    {
+      "group": "BCI-tDCS group",
+      "treatment": "tDCS and KI-BCI",
+      "dose": "15 min tDCS and 15 min KI-BCI",
+      "freq": "5 times a week",
+      "duration_weeks": 4.0
+    },
+    {
+      "group": "Group A",
+      "treatment": "BCI-robot + tDCS",
+      "dose": "Not specified",
+      "freq": "5 sessions per week",
+      "duration_weeks": 4.0
+    },
+    {
+      "group": "Group B",
+      "treatment": "BCI-robot + sham tDCS",
+      "dose": "Not specified",
+      "freq": "5 sessions per week",
+      "duration_weeks": 4.0
+    },
+    {
+      "group": "Group C",
+      "treatment": "tDCS only",
+      "dose": "Not specified",
+      "freq": "5 sessions per week",
+      "duration_weeks": 4.0
+    },
+    {
+      "group": "KI-BCI",
+      "treatment": "kinesthetic imagery-based brain computer interface",
+      "dose": "Not specified",
+      "freq": "Not specified",
+      "duration_weeks": 4.0
+    },
+    {
+      "group": "tDCS",
+      "treatment": "transcranial direct current stimulation",
+      "dose": "Not specified",
+      "freq": "Not specified",
+      "duration_weeks": 4.0
+    },
+    {
+      "group": "BCI-tDCS",
+      "treatment": "brain computer interface with transcranial direct current stimulation",
+      "dose": "Not specified",
+      "freq": "Not specified",
+      "duration_weeks": 4.0
+    },
+    {
+      "group": "Intervention",
+      "treatment": "KI-BCI",
+      "dose": "Not specified",
+      "freq": "Not specified"
+    },
+    {
+      "group": "Not specified",
+      "treatment": "Not specified",
+      "dose": "Not specified",
+      "freq": "Not specified"
+    }
+  ],
+  "comparator": [
+    {
+      "group": "Group B",
+      "treatment": "sham tDCS",
+      "placebo": true
+    }
+  ],
+  "baseline_outcomes": [
+    {
+      "name": "FMA-UE",
+      "outcome_type": "baseline",
+      "time_point": "baseline",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "KI-BCI",
+          "value": 22.0
+        },
+        {
+          "group": "tDCS",
+          "value": 22.29
+        },
+        {
+          "group": "BCI-tDCS",
+          "value": 22.57
+        }
+      ],
+      "timepoint_month": 0.0
+    },
+    {
+      "name": "MSS",
+      "outcome_type": "baseline",
+      "time_point": "baseline",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "KI-BCI",
+          "value": 37.14
+        },
+        {
+          "group": "tDCS",
+          "value": 36.71
+        },
+        {
+          "group": "BCI-tDCS",
+          "value": 38.21
+        }
+      ],
+      "timepoint_month": 0.0
+    },
+    {
+      "name": "ARAT",
+      "outcome_type": "baseline",
+      "time_point": "baseline",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "KI-BCI",
+          "value": 15.93
+        },
+        {
+          "group": "tDCS",
+          "value": 15.07
+        },
+        {
+          "group": "BCI-tDCS",
+          "value": 12.93
+        }
+      ],
+      "timepoint_month": 0.0
+    },
+    {
+      "name": "MBI",
+      "outcome_type": "baseline",
+      "time_point": "baseline",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "KI-BCI",
+          "value": 33.86
+        },
+        {
+          "group": "tDCS",
+          "value": 35.21
+        },
+        {
+          "group": "BCI-tDCS",
+          "value": 34.79
+        }
+      ],
+      "timepoint_month": 0.0
+    },
+    {
+      "name": "DTABR",
+      "outcome_type": "baseline",
+      "time_point": "baseline",
+      "unit": "ratio",
+      "group_results": [
+        {
+          "group": "KI-BCI",
+          "value": 3.67
+        },
+        {
+          "group": "tDCS",
+          "value": 5.32
+        },
+        {
+          "group": "BCI-tDCS",
+          "value": 4.85
+        }
+      ],
+      "timepoint_month": 0.0
+    },
+    {
+      "name": "DAR",
+      "outcome_type": "baseline",
+      "time_point": "baseline",
+      "unit": "ratio",
+      "group_results": [
+        {
+          "group": "KI-BCI",
+          "value": 3.39
+        },
+        {
+          "group": "tDCS",
+          "value": 4.79
+        },
+        {
+          "group": "BCI-tDCS",
+          "value": 4.42
+        }
+      ],
+      "timepoint_month": 0.0
+    },
+    {
+      "name": "DABR",
+      "outcome_type": "baseline",
+      "time_point": "baseline",
+      "unit": "ratio",
+      "group_results": [
+        {
+          "group": "KI-BCI",
+          "value": 2.75
+        },
+        {
+          "group": "tDCS",
+          "value": 4.05
+        },
+        {
+          "group": "BCI-tDCS",
+          "value": 3.74
+        }
+      ],
+      "timepoint_month": 0.0
+    },
+    {
+      "name": "FMA-UE",
+      "outcome_type": "baseline",
+      "time_point": "baseline",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "KI-BCI",
+          "value": 22.0
+        },
+        {
+          "group": "tDCS",
+          "value": 22.29
+        },
+        {
+          "group": "BCI-tDCS",
+          "value": 22.57
+        }
+      ]
+    },
+    {
+      "name": "MSS",
+      "outcome_type": "baseline",
+      "time_point": "baseline",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "KI-BCI",
+          "value": 37.14
+        },
+        {
+          "group": "tDCS",
+          "value": 36.71
+        },
+        {
+          "group": "BCI-tDCS",
+          "value": 38.21
+        }
+      ]
+    },
+    {
+      "name": "ARAT",
+      "outcome_type": "baseline",
+      "time_point": "baseline",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "KI-BCI",
+          "value": 15.93
+        },
+        {
+          "group": "tDCS",
+          "value": 15.07
+        },
+        {
+          "group": "BCI-tDCS",
+          "value": 12.93
+        }
+      ]
+    },
+    {
+      "name": "MBI",
+      "outcome_type": "baseline",
+      "time_point": "baseline",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "KI-BCI",
+          "value": 33.86
+        },
+        {
+          "group": "tDCS",
+          "value": 35.21
+        },
+        {
+          "group": "BCI-tDCS",
+          "value": 34.79
+        }
+      ]
+    },
+    {
+      "name": "DAR",
+      "outcome_type": "baseline",
+      "time_point": "baseline",
+      "unit": "ratio",
+      "group_results": [
+        {
+          "group": "KI-BCI",
+          "value": 6.41
+        },
+        {
+          "group": "tDCS",
+          "value": 4.79
+        },
+        {
+          "group": "BCI-tDCS",
+          "value": 4.42
+        }
+      ]
+    },
+    {
+      "name": "DABR",
+      "outcome_type": "baseline",
+      "time_point": "baseline",
+      "unit": "ratio",
+      "group_results": [
+        {
+          "group": "KI-BCI",
+          "value": 2.75
+        },
+        {
+          "group": "tDCS",
+          "value": 4.05
+        },
+        {
+          "group": "BCI-tDCS",
+          "value": 3.74
+        }
+      ]
+    }
+  ],
+  "primary_outcomes": [
+    {
+      "name": "FMA-UE",
+      "outcome_type": "primary",
+      "time_point": "post-intervention",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "KI-BCI",
+          "value": 40.5
+        },
+        {
+          "group": "tDCS",
+          "value": 33.93
+        },
+        {
+          "group": "BCI-tDCS",
+          "value": 36.5
+        }
+      ]
+    },
+    {
+      "name": "MSS",
+      "outcome_type": "primary",
+      "time_point": "post-intervention",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "KI-BCI",
+          "value": 58.57
+        },
+        {
+          "group": "tDCS",
+          "value": 51.86
+        },
+        {
+          "group": "BCI-tDCS",
+          "value": 57.93
+        }
+      ]
+    },
+    {
+      "name": "ARAT",
+      "outcome_type": "primary",
+      "time_point": "post-intervention",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "KI-BCI",
+          "value": 26.5
+        },
+        {
+          "group": "tDCS",
+          "value": 19.71
+        },
+        {
+          "group": "BCI-tDCS",
+          "value": 25.93
+        }
+      ]
+    },
+    {
+      "name": "MBI",
+      "outcome_type": "primary",
+      "time_point": "post-intervention",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "KI-BCI",
+          "value": 62.86
+        },
+        {
+          "group": "tDCS",
+          "value": 55.0
+        },
+        {
+          "group": "BCI-tDCS",
+          "value": 59.79
+        }
+      ]
+    }
+  ],
+  "secondary_outcomes": [
+    {
+      "name": "DAR",
+      "outcome_type": "secondary",
+      "time_point": "post-intervention",
+      "unit": "ratio",
+      "group_results": [
+        {
+          "group": "KI-BCI",
+          "value": 3.39
+        },
+        {
+          "group": "tDCS",
+          "value": 1.78
+        },
+        {
+          "group": "BCI-tDCS",
+          "value": 5.7
+        }
+      ]
+    },
+    {
+      "name": "DABR",
+      "outcome_type": "secondary",
+      "time_point": "post-intervention",
+      "unit": "ratio",
+      "group_results": [
+        {
+          "group": "KI-BCI",
+          "value": 4.35
+        },
+        {
+          "group": "tDCS",
+          "value": 1.55
+        },
+        {
+          "group": "BCI-tDCS",
+          "value": 4.92
+        }
+      ]
+    }
+  ],
+  "follow_up_month": 1.0
+}

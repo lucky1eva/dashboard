@@ -1,0 +1,433 @@
+{
+  "study_id": "10.1136/bmjopen-2017-017593",
+  "study_characteristics": {
+    "title": "Health economic evaluation of a serum-based blood test for brain tumour diagnosis: exploration of two clinical scenarios",
+    "design": "Model-based health pre-trial economic assessment (decision tree model)",
+    "sample_size": 10000,
+    "sample_size_by_group": [
+      {
+        "group": "Intervention",
+        "n": 10000
+      },
+      {
+        "group": "Comparator",
+        "n": 10000
+      }
+    ],
+    "follow_up_duration_month": 24.0,
+    "publication_year": 2018,
+    "geographic_location": "UK and USA",
+    "journal_name": "BMJ Open",
+    "author_info": {
+      "primary_author": "Ewan Gray",
+      "primary_author_email": "matthew.baker@strath.ac.uk",
+      "affiliation": "Multiple institutions"
+    },
+    "funding_source": {
+      "source": "Not Available",
+      "details": "Scottish Enterprise economic development agency"
+    }
+  },
+  "population": {
+    "name": "Symptomatic patients with non-specific symptoms (e.g., headache, dizziness)",
+    "condition": "Brain tumour",
+    "N": 10000,
+    "disease_classification": {
+      "name": "Brain tumour",
+      "severity": "Malignant"
+    },
+    "target_population_age": "Not Available",
+    "target_population_characteristics": "Patients at risk of brain tumours presenting with non-specific symptoms"
+  },
+  "interventions": [
+    {
+      "group": "Serum-based spectroscopic test",
+      "treatment": "Blood-based spectroscopic triage tool",
+      "dose": "Not specified",
+      "freq": "Not specified",
+      "route": "Blood test",
+      "intervention_type": "diagnostic"
+    },
+    {
+      "group": "Test group",
+      "treatment": "ATR-FTIR spectroscopic test",
+      "dose": "1–5 µL",
+      "freq": "Not specified",
+      "route": "blood serum",
+      "intervention_type": "diagnostic"
+    },
+    {
+      "group": "Intervention",
+      "treatment": "Serum spectroscopic test",
+      "dose": "Not specified",
+      "freq": "Not specified",
+      "route": "Blood-based",
+      "intervention_type": "diagnostic"
+    },
+    {
+      "group": "Spectroscopic test group",
+      "treatment": "Spectroscopic serum test",
+      "dose": "Not specified",
+      "freq": "Not specified",
+      "intervention_type": "diagnostic"
+    },
+    {
+      "group": "Intervention",
+      "treatment": "Serum spectroscopy test",
+      "dose": "Not specified",
+      "freq": "Not specified",
+      "route": "Blood test",
+      "intervention_type": "diagnostic"
+    },
+    {
+      "group": "Serum spectroscopy test",
+      "treatment": "Serum spectroscopy diagnostic test",
+      "dose": "Not specified",
+      "freq": "Not specified",
+      "intervention_type": "diagnostic"
+    },
+    {
+      "group": "Serum spectroscopy group",
+      "treatment": "Serum spectroscopy test",
+      "dose": "Not specified",
+      "freq": "Not specified",
+      "intervention_type": "diagnostic"
+    },
+    {
+      "group": "Not Available",
+      "treatment": "carmustine implants and temozolomide",
+      "dose": "Not specified",
+      "freq": "Not specified",
+      "intervention_type": "pharmaceutical"
+    }
+  ],
+  "comparators": [
+    {
+      "group": "Current diagnostic pathway",
+      "standard_care": true,
+      "comparator_type": "standard_care",
+      "number_of_comparators": 1
+    },
+    {
+      "group": "Standard care group",
+      "treatment": "MRI and CT scans",
+      "standard_care": true,
+      "comparator_type": "standard_care"
+    },
+    {
+      "group": "Comparator",
+      "treatment": "Imaging alone",
+      "standard_care": true,
+      "comparator_type": "standard_care"
+    },
+    {
+      "group": "No test group",
+      "standard_care": true,
+      "comparator_type": "standard_care"
+    },
+    {
+      "group": "Comparator",
+      "treatment": "Standard care",
+      "placebo": false,
+      "standard_care": true,
+      "comparator_type": "standard_care",
+      "number_of_comparators": 1
+    },
+    {
+      "group": "Current practice without test",
+      "treatment": "Standard imaging (CT/MRI)",
+      "standard_care": true,
+      "comparator_type": "standard_care"
+    },
+    {
+      "group": "Current practice group",
+      "treatment": "Current clinical practice",
+      "standard_care": true,
+      "comparator_type": "standard_care"
+    },
+    {
+      "group": "Not Available",
+      "standard_care": true,
+      "comparator_type": "standard_care"
+    }
+  ],
+  "economic_data": {
+    "effectiveness_utility": {
+      "utility_types": "EQ-5D (inferred)",
+      "health_state_utilities": [
+        {
+          "health_state_name": "High-grade glioma",
+          "utility_value": 0.89,
+          "source": "Previous UK economic evaluation of glioblastoma treatment"
+        }
+      ]
+    },
+    "model_parameters": {
+      "time_horizon_year": 2.0,
+      "WTP_threshold": 30000.0,
+      "time_horizon": "Not specified",
+      "perspectives": [
+        "healthcare_system",
+        "healthcare_system",
+        "healthcare_system",
+        "healthcare_system"
+      ],
+      "sensitivity_analysis": true,
+      "sensitivity_analysis_type": [
+        "one_way",
+        "probabilistic",
+        "scenario",
+        "one_way",
+        "one_way",
+        "probabilistic"
+      ],
+      "cost_effectiveness_thresholds": [
+        20000.0,
+        30000.0,
+        20000.0,
+        30000.0,
+        30000.0
+      ],
+      "model_type": "decision tree"
+    },
+    "icer_analysis": {
+      "icer_value": 8840.0,
+      "number_of_ratios": 4,
+      "ratio_quadrant": "NE"
+    },
+    "currency_info": {
+      "currency_country": "UK",
+      "currency_year": 2015,
+      "currency_code": "GBP"
+    },
+    "treatment_group_costs": [
+      {
+        "treatment_group": "Serum-based spectroscopic test",
+        "cost_components": [
+          {
+            "component_name": "Test cost",
+            "unit_cost": 40.0,
+            "unit": "per test",
+            "cost_category": "diagnostic",
+            "source": "Assumption for cost-effectiveness",
+            "cost_description": "Maximum price point for cost-effectiveness"
+          }
+        ]
+      },
+      {
+        "treatment_group": "Current diagnostic pathway"
+      },
+      {
+        "treatment_group": "Standard care group",
+        "cost_components": [
+          {
+            "component_name": "MRI scan",
+            "unit_cost": 164.0,
+            "unit": "per scan",
+            "cost_category": "diagnostic",
+            "source": "National Schedule of Reference Costs (2014–2015)"
+          },
+          {
+            "component_name": "CT scan",
+            "unit_cost": 85.0,
+            "unit": "per scan",
+            "cost_category": "diagnostic",
+            "source": "National Schedule of Reference Costs (2014–2015)"
+          }
+        ]
+      },
+      {
+        "treatment_group": "Test group"
+      },
+      {
+        "treatment_group": "Spectroscopic test group",
+        "cost_components": [
+          {
+            "component_name": "Spectroscopic serum test",
+            "cost_description": "Applied at upper/lower bounds (not commercialized)"
+          },
+          {
+            "component_name": "MRI/CT imaging",
+            "cost_description": "50% of negative tests continue to imaging (primary care)"
+          },
+          {
+            "component_name": "Outpatient neurology visits",
+            "source": "UK NHS reference costs"
+          },
+          {
+            "component_name": "GP visits",
+            "source": "PSSRU costs schedule"
+          }
+        ]
+      },
+      {
+        "treatment_group": "No test group",
+        "cost_components": [
+          {
+            "component_name": "MRI/CT imaging",
+            "cost_description": "All patients receive imaging (secondary care)"
+          },
+          {
+            "component_name": "Neurology referral",
+            "cost_description": "Where imaging not available (primary care)"
+          },
+          {
+            "component_name": "Outpatient visits",
+            "source": "UK NHS reference costs"
+          },
+          {
+            "component_name": "GP visits",
+            "source": "PSSRU costs schedule"
+          }
+        ]
+      },
+      {
+        "treatment_group": "Intervention",
+        "cost_components": [
+          {
+            "component_name": "Serum spectroscopy test",
+            "unit_cost": 50.0,
+            "quantity": 1.0,
+            "unit": "per test",
+            "cost_category": "diagnostic",
+            "source": "Assumed prices",
+            "cost_per_patient": 50.0
+          },
+          {
+            "component_name": "CT imaging study",
+            "unit_cost": 85.0,
+            "unit": "per study",
+            "cost_category": "imaging",
+            "source": "National Schedule of Reference Costs"
+          },
+          {
+            "component_name": "MRI imaging study",
+            "unit_cost": 164.0,
+            "unit": "per study",
+            "cost_category": "imaging",
+            "source": "National Schedule of Reference Costs"
+          },
+          {
+            "component_name": "Neurology outpatient appointment",
+            "unit_cost": 35.0,
+            "unit": "per appointment",
+            "cost_category": "consultation",
+            "source": "PSSRU"
+          },
+          {
+            "component_name": "GP visit",
+            "unit_cost": 47.25,
+            "unit": "per visit",
+            "cost_category": "consultation",
+            "source": "PSSRU"
+          }
+        ]
+      },
+      {
+        "treatment_group": "Comparator",
+        "cost_components": [
+          {
+            "component_name": "CT imaging study",
+            "unit_cost": 85.0,
+            "unit": "per study",
+            "cost_category": "imaging",
+            "source": "National Schedule of Reference Costs"
+          },
+          {
+            "component_name": "MRI imaging study",
+            "unit_cost": 164.0,
+            "unit": "per study",
+            "cost_category": "imaging",
+            "source": "National Schedule of Reference Costs"
+          },
+          {
+            "component_name": "Neurology outpatient appointment",
+            "unit_cost": 35.0,
+            "unit": "per appointment",
+            "cost_category": "consultation",
+            "source": "PSSRU"
+          },
+          {
+            "component_name": "GP visit",
+            "unit_cost": 47.25,
+            "unit": "per visit",
+            "cost_category": "consultation",
+            "source": "PSSRU"
+          }
+        ]
+      },
+      {
+        "treatment_group": "Serum spectroscopy (Primary care)",
+        "cost_components": [
+          {
+            "component_name": "Test cost",
+            "unit_cost": 50.0,
+            "unit": "per test",
+            "cost_category": "diagnostic"
+          }
+        ]
+      },
+      {
+        "treatment_group": "Serum spectroscopy (Secondary care)",
+        "cost_components": [
+          {
+            "component_name": "Test cost",
+            "unit_cost": 100.0,
+            "unit": "per test",
+            "cost_category": "diagnostic"
+          }
+        ]
+      }
+    ]
+  },
+  "outcomes": [
+    {
+      "name": "Diagnostic accuracy",
+      "outcome_type": "primary",
+      "time_point": "Diagnosis",
+      "unit": "Percentage",
+      "group_results": [
+        {
+          "group": "Serum-based spectroscopic test",
+          "value": 92.8
+        },
+        {
+          "group": "Serum-based spectroscopic test",
+          "value": 91.5
+        }
+      ]
+    },
+    {
+      "name": "Incremental QALYs",
+      "outcome_type": "economic",
+      "time_point": "lifetime",
+      "unit": "QALYs per 10,000 patients",
+      "group_results": [
+        {
+          "group": "Primary care (£50 test)",
+          "value": 8.81
+        },
+        {
+          "group": "Secondary care (£50 test)",
+          "value": 10.153
+        }
+      ]
+    },
+    {
+      "name": "Incremental costs",
+      "outcome_type": "economic",
+      "time_point": "lifetime",
+      "unit": "GBP per 10,000 patients",
+      "group_results": [
+        {
+          "group": "Primary care (£50 test)",
+          "value": -1718475.0
+        },
+        {
+          "group": "Secondary care (£50 test)",
+          "value": 536702.0
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2084 @@
+{
+  "trial_id": "Anderson2025",
+  "study_characteristics": {
+    "title": "A safety and feasibility randomized placebo controlled trial exploring electroencephalographic effective connectivity neurofeedback treatment for fibromyalgia",
+    "design": "randomized placebo controlled trial",
+    "sample_size": 30,
+    "sample_size_by_group": [
+      {
+        "group": "active",
+        "n": 15
+      },
+      {
+        "group": "placebo",
+        "n": 15
+      },
+      {
+        "group": "Active",
+        "n": 15
+      },
+      {
+        "group": "Placebo",
+        "n": 15
+      },
+      {
+        "group": "Group 1",
+        "n": 15
+      },
+      {
+        "group": "Group 2",
+        "n": 15
+      }
+    ],
+    "follow_up_duration_month": 1.0,
+    "publication_year": 2025,
+    "geographic_location": "New Zealand"
+  },
+  "population": {
+    "name": "participants with fibromyalgia",
+    "condition": "fibromyalgia",
+    "N": 30,
+    "baseline_characteristics": [
+      {
+        "name": "Age (years)",
+        "group": "Active",
+        "value": 42.4,
+        "unit": "years"
+      },
+      {
+        "name": "Age (years)",
+        "group": "Placebo",
+        "value": 46.5,
+        "unit": "years"
+      },
+      {
+        "name": "Male sex (%)",
+        "group": "Active",
+        "value": 6.7,
+        "unit": "%"
+      },
+      {
+        "name": "Male sex (%)",
+        "group": "Placebo",
+        "value": 6.7,
+        "unit": "%"
+      },
+      {
+        "name": "Female sex (%)",
+        "group": "Active",
+        "value": 93.3,
+        "unit": "%"
+      },
+      {
+        "name": "Female sex (%)",
+        "group": "Placebo",
+        "value": 86.7,
+        "unit": "%"
+      },
+      {
+        "name": "Non-Binary sex (%)",
+        "group": "Active",
+        "value": 0.0,
+        "unit": "%"
+      },
+      {
+        "name": "Non-Binary sex (%)",
+        "group": "Placebo",
+        "value": 6.7,
+        "unit": "%"
+      },
+      {
+        "name": "NZ European ethnicity (%)",
+        "group": "Active",
+        "value": 100.0,
+        "unit": "%"
+      },
+      {
+        "name": "NZ European ethnicity (%)",
+        "group": "Placebo",
+        "value": 80.0,
+        "unit": "%"
+      },
+      {
+        "name": "Other ethnicity (%)",
+        "group": "Active",
+        "value": 0.0,
+        "unit": "%"
+      },
+      {
+        "name": "Other ethnicity (%)",
+        "group": "Placebo",
+        "value": 20.0,
+        "unit": "%"
+      },
+      {
+        "name": "Employed (%)",
+        "group": "Active",
+        "value": 53.0,
+        "unit": "%"
+      },
+      {
+        "name": "Employed (%)",
+        "group": "Placebo",
+        "value": 46.7,
+        "unit": "%"
+      },
+      {
+        "name": "Unemployed (%)",
+        "group": "Active",
+        "value": 13.0,
+        "unit": "%"
+      },
+      {
+        "name": "Unemployed (%)",
+        "group": "Placebo",
+        "value": 26.7,
+        "unit": "%"
+      },
+      {
+        "name": "Retired (%)",
+        "group": "Active",
+        "value": 13.0,
+        "unit": "%"
+      },
+      {
+        "name": "Retired (%)",
+        "group": "Placebo",
+        "value": 6.7,
+        "unit": "%"
+      },
+      {
+        "name": "Looking after family (%)",
+        "group": "Active",
+        "value": 6.7,
+        "unit": "%"
+      },
+      {
+        "name": "Looking after family (%)",
+        "group": "Placebo",
+        "value": 13.0,
+        "unit": "%"
+      },
+      {
+        "name": "Self-employed (%)",
+        "group": "Active",
+        "value": 13.0,
+        "unit": "%"
+      },
+      {
+        "name": "Self-employed (%)",
+        "group": "Placebo",
+        "value": 0.0,
+        "unit": "%"
+      },
+      {
+        "name": "Studying (%)",
+        "group": "Active",
+        "value": 0.0,
+        "unit": "%"
+      },
+      {
+        "name": "Studying (%)",
+        "group": "Placebo",
+        "value": 6.7,
+        "unit": "%"
+      },
+      {
+        "name": "University degree (%)",
+        "group": "Active",
+        "value": 20.0,
+        "unit": "%"
+      },
+      {
+        "name": "University degree (%)",
+        "group": "Placebo",
+        "value": 46.7,
+        "unit": "%"
+      },
+      {
+        "name": "Trade/Apprenticeship (%)",
+        "group": "Active",
+        "value": 0.0,
+        "unit": "%"
+      },
+      {
+        "name": "Trade/Apprenticeship (%)",
+        "group": "Placebo",
+        "value": 0.0,
+        "unit": "%"
+      },
+      {
+        "name": "Certificate/Diploma (%)",
+        "group": "Active",
+        "value": 40.0,
+        "unit": "%"
+      },
+      {
+        "name": "Certificate/Diploma (%)",
+        "group": "Placebo",
+        "value": 33.0,
+        "unit": "%"
+      },
+      {
+        "name": "Year 12/equivalent (%)",
+        "group": "Active",
+        "value": 20.0,
+        "unit": "%"
+      },
+      {
+        "name": "Year 12/equivalent (%)",
+        "group": "Placebo",
+        "value": 6.7,
+        "unit": "%"
+      },
+      {
+        "name": "Year 10/equivalent (%)",
+        "group": "Active",
+        "value": 13.0,
+        "unit": "%"
+      },
+      {
+        "name": "Year 10/equivalent (%)",
+        "group": "Placebo",
+        "value": 6.7,
+        "unit": "%"
+      },
+      {
+        "name": "No formal qualification (%)",
+        "group": "Active",
+        "value": 6.7,
+        "unit": "%"
+      },
+      {
+        "name": "No formal qualification (%)",
+        "group": "Placebo",
+        "value": 6.7,
+        "unit": "%"
+      },
+      {
+        "name": "Fibromyalgia Duration of Symptoms (years)",
+        "group": "Active",
+        "value": 14.4,
+        "unit": "years"
+      },
+      {
+        "name": "Fibromyalgia Duration of Symptoms (years)",
+        "group": "Placebo",
+        "value": 15.0,
+        "unit": "years"
+      },
+      {
+        "name": "Time Since Diagnosis (years)",
+        "group": "Active",
+        "value": 15.1,
+        "unit": "years"
+      },
+      {
+        "name": "Time Since Diagnosis (years)",
+        "group": "Placebo",
+        "value": 11.0,
+        "unit": "years"
+      },
+      {
+        "name": "Arthritis presence (%)",
+        "group": "Active",
+        "value": 20.0,
+        "unit": "%"
+      },
+      {
+        "name": "Arthritis presence (%)",
+        "group": "Placebo",
+        "value": 46.7,
+        "unit": "%"
+      },
+      {
+        "name": "RFIQ (points)",
+        "group": "Active",
+        "value": 65.4,
+        "unit": "points"
+      },
+      {
+        "name": "RFIQ (points)",
+        "group": "Placebo",
+        "value": 59.7,
+        "unit": "points"
+      },
+      {
+        "name": "BPI Pain Severity (points)",
+        "group": "Active",
+        "value": 5.6,
+        "unit": "points"
+      },
+      {
+        "name": "BPI Pain Severity (points)",
+        "group": "Placebo",
+        "value": 5.4,
+        "unit": "points"
+      },
+      {
+        "name": "BPI Pain Interference (points)",
+        "group": "Active",
+        "value": 6.4,
+        "unit": "points"
+      },
+      {
+        "name": "BPI Pain Interference (points)",
+        "group": "Placebo",
+        "value": 6.1,
+        "unit": "points"
+      },
+      {
+        "name": "PVAQ (points)",
+        "group": "Active",
+        "value": 50.3,
+        "unit": "points"
+      },
+      {
+        "name": "PVAQ (points)",
+        "group": "Placebo",
+        "value": 47.6,
+        "unit": "points"
+      },
+      {
+        "name": "PCS (points)",
+        "group": "Active",
+        "value": 24.9,
+        "unit": "points"
+      },
+      {
+        "name": "PCS (points)",
+        "group": "Placebo",
+        "value": 22.9,
+        "unit": "points"
+      },
+      {
+        "name": "AIMS Physical (points)",
+        "group": "Active",
+        "value": 2.2,
+        "unit": "points"
+      },
+      {
+        "name": "AIMS Physical (points)",
+        "group": "Placebo",
+        "value": 2.6,
+        "unit": "points"
+      },
+      {
+        "name": "AIMS Affect (points)",
+        "group": "Active",
+        "value": 5.9,
+        "unit": "points"
+      },
+      {
+        "name": "AIMS Affect (points)",
+        "group": "Placebo",
+        "value": 4.7,
+        "unit": "points"
+      },
+      {
+        "name": "AIMS Symptoms (points)",
+        "group": "Active",
+        "value": 5.8,
+        "unit": "points"
+      },
+      {
+        "name": "AIMS Symptoms (points)",
+        "group": "Placebo",
+        "value": 5.5,
+        "unit": "points"
+      },
+      {
+        "name": "AIMS Social Interaction (points)",
+        "group": "Active",
+        "value": 4.6,
+        "unit": "points"
+      },
+      {
+        "name": "AIMS Social Interaction (points)",
+        "group": "Placebo",
+        "value": 5.2,
+        "unit": "points"
+      },
+      {
+        "name": "DASS Stress (points)",
+        "group": "Active",
+        "value": 21.1,
+        "unit": "points"
+      },
+      {
+        "name": "DASS Stress (points)",
+        "group": "Placebo",
+        "value": 19.2,
+        "unit": "points"
+      },
+      {
+        "name": "DASS Anxiety (points)",
+        "group": "Active",
+        "value": 15.1,
+        "unit": "points"
+      },
+      {
+        "name": "DASS Anxiety (points)",
+        "group": "Placebo",
+        "value": 17.1,
+        "unit": "points"
+      },
+      {
+        "name": "DASS Depression (points)",
+        "group": "Active",
+        "value": 14.1,
+        "unit": "points"
+      },
+      {
+        "name": "DASS Depression (points)",
+        "group": "Placebo",
+        "value": 15.7,
+        "unit": "points"
+      },
+      {
+        "name": "WHO-5 Wellbeing (points)",
+        "group": "Active",
+        "value": 27.2,
+        "unit": "points"
+      },
+      {
+        "name": "WHO-5 Wellbeing (points)",
+        "group": "Placebo",
+        "value": 34.4,
+        "unit": "points"
+      },
+      {
+        "name": "EQ-5D Health Status (points)",
+        "group": "Active",
+        "value": 33.1,
+        "unit": "points"
+      },
+      {
+        "name": "EQ-5D Health Status (points)",
+        "group": "Placebo",
+        "value": 40.6,
+        "unit": "points"
+      }
+    ]
+  },
+  "intervention": [
+    {
+      "group": "active",
+      "treatment": "electroencephalography-based neurofeedback training targeting effective alpha-band connectivity from pgACC to S1",
+      "dose": "12 sessions",
+      "freq": "Not specified"
+    },
+    {
+      "group": "Active",
+      "treatment": "Neurofeedback",
+      "dose": "Not specified",
+      "freq": "Not specified"
+    },
+    {
+      "group": "Group 1",
+      "treatment": "Targeted EEG neurofeedback training EC from pgACC to S1 region",
+      "dose": "12 sessions over 4 weeks",
+      "freq": "three times a week",
+      "duration_weeks": 4.0
+    },
+    {
+      "group": "Group 2",
+      "treatment": "Placebo neurofeedback",
+      "dose": "12 sessions over 4 weeks",
+      "freq": "three times a week",
+      "duration_weeks": 4.0
+    },
+    {
+      "group": "active-neurofeedback",
+      "treatment": "Neurofeedback training",
+      "dose": "Not specified",
+      "freq": "Not specified"
+    },
+    {
+      "group": "Group A",
+      "treatment": "Not specified",
+      "dose": "Not specified",
+      "freq": "Not specified"
+    },
+    {
+      "group": "Group B",
+      "treatment": "Not specified",
+      "dose": "Not specified",
+      "freq": "Not specified"
+    },
+    {
+      "group": "Intervention group",
+      "treatment": "neurofeedback",
+      "dose": "Not specified",
+      "freq": "Not specified"
+    },
+    {
+      "group": "Neurofeedback group",
+      "treatment": "source localized infraslow neurofeedback training",
+      "dose": "Not specified",
+      "freq": "Not specified"
+    }
+  ],
+  "comparator": [
+    {
+      "group": "placebo",
+      "treatment": "placebo neurofeedback",
+      "placebo": true
+    },
+    {
+      "group": "Placebo",
+      "placebo": true
+    },
+    {
+      "group": "Group 2",
+      "treatment": "Placebo neurofeedback",
+      "placebo": true
+    },
+    {
+      "group": "placebo-neurofeedback",
+      "treatment": "Pre-recorded neurofeedback",
+      "placebo": true
+    },
+    {
+      "group": "Sham group",
+      "placebo": true
+    }
+  ],
+  "baseline_outcomes": [
+    {
+      "name": "RFIQ",
+      "outcome_type": "baseline",
+      "time_point": "baseline",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": 65.4
+        },
+        {
+          "group": "Placebo",
+          "value": 59.7
+        }
+      ],
+      "timepoint_month": 0.0
+    },
+    {
+      "name": "BPI Pain Severity",
+      "outcome_type": "baseline",
+      "time_point": "baseline",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": 5.6
+        },
+        {
+          "group": "Placebo",
+          "value": 5.4
+        }
+      ],
+      "timepoint_month": 0.0
+    },
+    {
+      "name": "BPI Pain Interference",
+      "outcome_type": "baseline",
+      "time_point": "baseline",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": 6.4
+        },
+        {
+          "group": "Placebo",
+          "value": 6.1
+        }
+      ],
+      "timepoint_month": 0.0
+    },
+    {
+      "name": "PVAQ",
+      "outcome_type": "baseline",
+      "time_point": "baseline",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": 50.3
+        },
+        {
+          "group": "Placebo",
+          "value": 47.6
+        }
+      ],
+      "timepoint_month": 0.0
+    },
+    {
+      "name": "PCS",
+      "outcome_type": "baseline",
+      "time_point": "baseline",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": 24.9
+        },
+        {
+          "group": "Placebo",
+          "value": 22.9
+        }
+      ],
+      "timepoint_month": 0.0
+    },
+    {
+      "name": "DASS Stress",
+      "outcome_type": "baseline",
+      "time_point": "baseline",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": 21.1
+        },
+        {
+          "group": "Placebo",
+          "value": 19.2
+        }
+      ],
+      "timepoint_month": 0.0
+    },
+    {
+      "name": "DASS Anxiety",
+      "outcome_type": "baseline",
+      "time_point": "baseline",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": 15.1
+        },
+        {
+          "group": "Placebo",
+          "value": 17.1
+        }
+      ],
+      "timepoint_month": 0.0
+    },
+    {
+      "name": "DASS Depression",
+      "outcome_type": "baseline",
+      "time_point": "baseline",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": 14.1
+        },
+        {
+          "group": "Placebo",
+          "value": 15.7
+        }
+      ],
+      "timepoint_month": 0.0
+    },
+    {
+      "name": "WHO-5 Wellbeing",
+      "outcome_type": "baseline",
+      "time_point": "baseline",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": 27.2
+        },
+        {
+          "group": "Placebo",
+          "value": 34.4
+        }
+      ],
+      "timepoint_month": 0.0
+    },
+    {
+      "name": "EQ5D Health Status",
+      "outcome_type": "baseline",
+      "time_point": "baseline",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": 33.1
+        },
+        {
+          "group": "Placebo",
+          "value": 40.6
+        }
+      ],
+      "timepoint_month": 0.0
+    },
+    {
+      "name": "EQ5D Index",
+      "outcome_type": "baseline",
+      "time_point": "baseline",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": 15.0
+        },
+        {
+          "group": "Placebo",
+          "value": 7.0
+        }
+      ],
+      "comparisons": [
+        {
+          "group1": "Active",
+          "group2": "Placebo",
+          "p_value": 0.36
+        }
+      ],
+      "timepoint_month": 0.0
+    },
+    {
+      "name": "MOS Sleep Scale",
+      "outcome_type": "baseline",
+      "time_point": "baseline",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": 56.3
+        },
+        {
+          "group": "Placebo",
+          "value": 57.6
+        }
+      ],
+      "comparisons": [
+        {
+          "group1": "Active",
+          "group2": "Placebo",
+          "p_value": 0.79
+        }
+      ],
+      "timepoint_month": 0.0
+    },
+    {
+      "name": "MTS",
+      "outcome_type": "baseline",
+      "time_point": "baseline",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": 17.5
+        },
+        {
+          "group": "Placebo",
+          "value": 17.1
+        }
+      ],
+      "comparisons": [
+        {
+          "group1": "Active",
+          "group2": "Placebo",
+          "p_value": 0.96
+        }
+      ],
+      "timepoint_month": 0.0
+    },
+    {
+      "name": "PPT",
+      "outcome_type": "baseline",
+      "time_point": "baseline",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": 161.8
+        },
+        {
+          "group": "Placebo",
+          "value": 206.3
+        }
+      ],
+      "comparisons": [
+        {
+          "group1": "Active",
+          "group2": "Placebo",
+          "p_value": 0.23
+        }
+      ],
+      "timepoint_month": 0.0
+    }
+  ],
+  "primary_outcomes": [
+    {
+      "name": "RFIQ",
+      "outcome_type": "primary",
+      "time_point": "T1",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": 46.9
+        },
+        {
+          "group": "Placebo",
+          "value": 50.1
+        }
+      ]
+    },
+    {
+      "name": "RFIQ",
+      "outcome_type": "primary",
+      "time_point": "T2",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": 40.7
+        },
+        {
+          "group": "Placebo",
+          "value": 48.0
+        }
+      ]
+    },
+    {
+      "name": "RFIQ",
+      "outcome_type": "primary",
+      "time_point": "T3",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": 46.2
+        },
+        {
+          "group": "Placebo",
+          "value": 46.5
+        }
+      ]
+    },
+    {
+      "name": "RFIQ % Change from baseline to T1",
+      "outcome_type": "primary",
+      "time_point": "T1",
+      "unit": "%",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": -28.1
+        },
+        {
+          "group": "Placebo",
+          "value": -16.6
+        }
+      ]
+    },
+    {
+      "name": "RFIQ % Change from baseline to T2",
+      "outcome_type": "primary",
+      "time_point": "T2",
+      "unit": "%",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": -38.1
+        },
+        {
+          "group": "Placebo",
+          "value": -20.3
+        }
+      ]
+    },
+    {
+      "name": "RFIQ % Change from baseline to T3",
+      "outcome_type": "primary",
+      "time_point": "T3",
+      "unit": "%",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": -28.5
+        },
+        {
+          "group": "Placebo",
+          "value": -23.0
+        }
+      ]
+    },
+    {
+      "name": "BPI Pain Severity",
+      "outcome_type": "primary",
+      "time_point": "T1",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": 4.5
+        },
+        {
+          "group": "Placebo",
+          "value": 4.5
+        }
+      ]
+    },
+    {
+      "name": "BPI Pain Severity",
+      "outcome_type": "primary",
+      "time_point": "T2",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": 4.2
+        },
+        {
+          "group": "Placebo",
+          "value": 4.4
+        }
+      ]
+    },
+    {
+      "name": "BPI Pain Severity",
+      "outcome_type": "primary",
+      "time_point": "T3",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": 4.6
+        },
+        {
+          "group": "Placebo",
+          "value": 4.3
+        }
+      ]
+    },
+    {
+      "name": "BPI Pain Severity % Change from baseline to T1",
+      "outcome_type": "primary",
+      "time_point": "T1",
+      "unit": "%",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": -23.5
+        },
+        {
+          "group": "Placebo",
+          "value": -18.1
+        }
+      ]
+    },
+    {
+      "name": "BPI Pain Severity % Change from baseline to T2",
+      "outcome_type": "primary",
+      "time_point": "T2",
+      "unit": "%",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": -27.6
+        },
+        {
+          "group": "Placebo",
+          "value": -17.0
+        }
+      ]
+    },
+    {
+      "name": "BPI Pain Severity % Change from baseline to T3",
+      "outcome_type": "primary",
+      "time_point": "T3",
+      "unit": "%",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": -19.6
+        },
+        {
+          "group": "Placebo",
+          "value": -20.7
+        }
+      ]
+    },
+    {
+      "name": "BPI Pain Interference",
+      "outcome_type": "primary",
+      "time_point": "T1",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": 5.4
+        },
+        {
+          "group": "Placebo",
+          "value": 4.7
+        }
+      ]
+    },
+    {
+      "name": "BPI Pain Interference",
+      "outcome_type": "primary",
+      "time_point": "T2",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": 5.3
+        },
+        {
+          "group": "Placebo",
+          "value": 4.8
+        }
+      ]
+    },
+    {
+      "name": "BPI Pain Interference",
+      "outcome_type": "primary",
+      "time_point": "T3",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": 5.0
+        },
+        {
+          "group": "Placebo",
+          "value": 4.8
+        }
+      ]
+    },
+    {
+      "name": "BPI Pain Interference % Change from baseline to T1",
+      "outcome_type": "primary",
+      "time_point": "T1",
+      "unit": "%",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": -15.7
+        },
+        {
+          "group": "Placebo",
+          "value": -23.7
+        }
+      ]
+    },
+    {
+      "name": "BPI Pain Interference % Change from baseline to T2",
+      "outcome_type": "primary",
+      "time_point": "T2",
+      "unit": "%",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": -16.5
+        },
+        {
+          "group": "Placebo",
+          "value": -21.7
+        }
+      ]
+    },
+    {
+      "name": "BPI Pain Interference % Change from baseline to T3",
+      "outcome_type": "primary",
+      "time_point": "T3",
+      "unit": "%",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": -23.8
+        },
+        {
+          "group": "Placebo",
+          "value": -23.1
+        }
+      ]
+    },
+    {
+      "name": "PVAQ",
+      "outcome_type": "primary",
+      "time_point": "T1",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": 42.1
+        },
+        {
+          "group": "Placebo",
+          "value": 43.9
+        }
+      ]
+    },
+    {
+      "name": "PVAQ",
+      "outcome_type": "primary",
+      "time_point": "T2",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": 41.5
+        },
+        {
+          "group": "Placebo",
+          "value": 37.7
+        }
+      ]
+    },
+    {
+      "name": "PVAQ",
+      "outcome_type": "primary",
+      "time_point": "T3",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": 39.6
+        },
+        {
+          "group": "Placebo",
+          "value": 37.2
+        }
+      ]
+    },
+    {
+      "name": "PVAQ % Change from baseline to T1",
+      "outcome_type": "primary",
+      "time_point": "T1",
+      "unit": "%",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": -15.3
+        },
+        {
+          "group": "Placebo",
+          "value": -8.2
+        }
+      ]
+    },
+    {
+      "name": "PVAQ % Change from baseline to T2",
+      "outcome_type": "primary",
+      "time_point": "T2",
+      "unit": "%",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": -16.3
+        },
+        {
+          "group": "Placebo",
+          "value": -21.8
+        }
+      ]
+    },
+    {
+      "name": "PVAQ % Change from baseline to T3",
+      "outcome_type": "primary",
+      "time_point": "T3",
+      "unit": "%",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": -20.7
+        },
+        {
+          "group": "Placebo",
+          "value": -23.7
+        }
+      ]
+    },
+    {
+      "name": "PCS",
+      "outcome_type": "primary",
+      "time_point": "T1",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": 18.7
+        },
+        {
+          "group": "Placebo",
+          "value": 14.8
+        }
+      ]
+    },
+    {
+      "name": "PCS",
+      "outcome_type": "primary",
+      "time_point": "T2",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": 17.9
+        },
+        {
+          "group": "Placebo",
+          "value": 15.2
+        }
+      ]
+    },
+    {
+      "name": "PCS",
+      "outcome_type": "primary",
+      "time_point": "T3",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": 17.2
+        },
+        {
+          "group": "Placebo",
+          "value": 13.8
+        }
+      ]
+    },
+    {
+      "name": "PCS % Change from baseline to T1",
+      "outcome_type": "primary",
+      "time_point": "T1",
+      "unit": "%",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": -23.6
+        },
+        {
+          "group": "Placebo",
+          "value": -30.2
+        }
+      ]
+    },
+    {
+      "name": "PCS % Change from baseline to T2",
+      "outcome_type": "primary",
+      "time_point": "T2",
+      "unit": "%",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": -30.5
+        },
+        {
+          "group": "Placebo",
+          "value": -37.3
+        }
+      ]
+    },
+    {
+      "name": "PCS % Change from baseline to T3",
+      "outcome_type": "primary",
+      "time_point": "T3",
+      "unit": "%",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": -34.8
+        },
+        {
+          "group": "Placebo",
+          "value": -39.9
+        }
+      ]
+    },
+    {
+      "name": "DASS Stress",
+      "outcome_type": "primary",
+      "time_point": "T1",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": 16.3
+        },
+        {
+          "group": "Placebo",
+          "value": 17.2
+        }
+      ]
+    },
+    {
+      "name": "DASS Stress",
+      "outcome_type": "primary",
+      "time_point": "T2",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": 17.5
+        },
+        {
+          "group": "Placebo",
+          "value": 16.9
+        }
+      ]
+    },
+    {
+      "name": "DASS Stress",
+      "outcome_type": "primary",
+      "time_point": "T3",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": 17.3
+        },
+        {
+          "group": "Placebo",
+          "value": 16.3
+        }
+      ]
+    },
+    {
+      "name": "DASS Stress % Change from baseline to T1",
+      "outcome_type": "primary",
+      "time_point": "T1",
+      "unit": "%",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": -27.7
+        },
+        {
+          "group": "Placebo",
+          "value": -4.2
+        }
+      ]
+    },
+    {
+      "name": "DASS Stress % Change from baseline to T2",
+      "outcome_type": "primary",
+      "time_point": "T2",
+      "unit": "%",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": -18.9
+        },
+        {
+          "group": "Placebo",
+          "value": -5.6
+        }
+      ]
+    },
+    {
+      "name": "DASS Stress % Change from baseline to T3",
+      "outcome_type": "primary",
+      "time_point": "T3",
+      "unit": "%",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": -16.9
+        },
+        {
+          "group": "Placebo",
+          "value": -4.7
+        }
+      ]
+    },
+    {
+      "name": "DASS Anxiety",
+      "outcome_type": "primary",
+      "time_point": "T1",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": 8.9
+        },
+        {
+          "group": "Placebo",
+          "value": 13.1
+        }
+      ]
+    },
+    {
+      "name": "DASS Anxiety",
+      "outcome_type": "primary",
+      "time_point": "T2",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": 9.7
+        },
+        {
+          "group": "Placebo",
+          "value": 12.3
+        }
+      ]
+    },
+    {
+      "name": "DASS Anxiety",
+      "outcome_type": "primary",
+      "time_point": "T3",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": 9.6
+        },
+        {
+          "group": "Placebo",
+          "value": 13.3
+        }
+      ]
+    },
+    {
+      "name": "DASS Anxiety % Change from baseline to T1",
+      "outcome_type": "primary",
+      "time_point": "T1",
+      "unit": "%",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": -39.6
+        },
+        {
+          "group": "Placebo",
+          "value": -5.6
+        }
+      ]
+    },
+    {
+      "name": "DASS Anxiety % Change from baseline to T2",
+      "outcome_type": "primary",
+      "time_point": "T2",
+      "unit": "%",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": -28.8
+        },
+        {
+          "group": "Placebo",
+          "value": -22.1
+        }
+      ]
+    },
+    {
+      "name": "DASS Anxiety % Change from baseline to T3",
+      "outcome_type": "primary",
+      "time_point": "T3",
+      "unit": "%",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": -30.2
+        },
+        {
+          "group": "Placebo",
+          "value": -6.3
+        }
+      ]
+    },
+    {
+      "name": "DASS Depression",
+      "outcome_type": "primary",
+      "time_point": "T1",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": 13.1
+        },
+        {
+          "group": "Placebo",
+          "value": 11.9
+        }
+      ]
+    },
+    {
+      "name": "DASS Depression",
+      "outcome_type": "primary",
+      "time_point": "T2",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": 13.6
+        },
+        {
+          "group": "Placebo",
+          "value": 12.3
+        }
+      ]
+    },
+    {
+      "name": "DASS Depression",
+      "outcome_type": "primary",
+      "time_point": "T3",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": 12.9
+        },
+        {
+          "group": "Placebo",
+          "value": 12.7
+        }
+      ]
+    },
+    {
+      "name": "DASS Depression % Change from baseline to T1",
+      "outcome_type": "primary",
+      "time_point": "T1",
+      "unit": "%",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": -16.9
+        },
+        {
+          "group": "Placebo",
+          "value": -21.2
+        }
+      ]
+    },
+    {
+      "name": "DASS Depression % Change from baseline to T2",
+      "outcome_type": "primary",
+      "time_point": "T2",
+      "unit": "%",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": -10.9
+        },
+        {
+          "group": "Placebo",
+          "value": -18.1
+        }
+      ]
+    },
+    {
+      "name": "DASS Depression % Change from baseline to T3",
+      "outcome_type": "primary",
+      "time_point": "T3",
+      "unit": "%",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": -12.7
+        },
+        {
+          "group": "Placebo",
+          "value": -20.8
+        }
+      ]
+    },
+    {
+      "name": "WHO-5 Wellbeing",
+      "outcome_type": "primary",
+      "time_point": "T1",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": 39.5
+        },
+        {
+          "group": "Placebo",
+          "value": 39.2
+        }
+      ]
+    },
+    {
+      "name": "WHO-5 Wellbeing",
+      "outcome_type": "primary",
+      "time_point": "T2",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": 37.1
+        },
+        {
+          "group": "Placebo",
+          "value": 38.9
+        }
+      ]
+    },
+    {
+      "name": "WHO-5 Wellbeing",
+      "outcome_type": "primary",
+      "time_point": "T3",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": 35.7
+        },
+        {
+          "group": "Placebo",
+          "value": 40.3
+        }
+      ]
+    },
+    {
+      "name": "WHO-5 Wellbeing % Change from baseline to T1",
+      "outcome_type": "primary",
+      "time_point": "T1",
+      "unit": "%",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": 41.0
+        },
+        {
+          "group": "Placebo",
+          "value": 22.8
+        }
+      ]
+    },
+    {
+      "name": "WHO-5 Wellbeing % Change from baseline to T2",
+      "outcome_type": "primary",
+      "time_point": "T2",
+      "unit": "%",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": 24.3
+        },
+        {
+          "group": "Placebo",
+          "value": 19.4
+        }
+      ]
+    },
+    {
+      "name": "WHO-5 Wellbeing % Change from baseline to T3",
+      "outcome_type": "primary",
+      "time_point": "T3",
+      "unit": "%",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": 18.7
+        },
+        {
+          "group": "Placebo",
+          "value": 16.7
+        }
+      ]
+    },
+    {
+      "name": "EQ5D Health Status",
+      "outcome_type": "primary",
+      "time_point": "T1",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": 42.8
+        },
+        {
+          "group": "Placebo",
+          "value": 41.8
+        }
+      ]
+    },
+    {
+      "name": "EQ5D Health Status",
+      "outcome_type": "primary",
+      "time_point": "T2",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": 40.5
+        },
+        {
+          "group": "Placebo",
+          "value": 43.3
+        }
+      ]
+    },
+    {
+      "name": "EQ5D Health Status",
+      "outcome_type": "primary",
+      "time_point": "T3",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": 37.2
+        },
+        {
+          "group": "Placebo",
+          "value": 44.2
+        }
+      ]
+    },
+    {
+      "name": "EQ5D Health Status % Change from baseline to T1",
+      "outcome_type": "primary",
+      "time_point": "T1",
+      "unit": "%",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": 70.4
+        },
+        {
+          "group": "Placebo",
+          "value": 7.3
+        }
+      ]
+    },
+    {
+      "name": "EQ5D Health Status % Change from baseline to T2",
+      "outcome_type": "primary",
+      "time_point": "T2",
+      "unit": "%",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": 55.9
+        },
+        {
+          "group": "Placebo",
+          "value": 12.5
+        }
+      ]
+    },
+    {
+      "name": "EQ5D Health Status % Change from baseline to T3",
+      "outcome_type": "primary",
+      "time_point": "T3",
+      "unit": "%",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": 47.0
+        },
+        {
+          "group": "Placebo",
+          "value": 12.8
+        }
+      ]
+    },
+    {
+      "name": "EQ5D Index",
+      "outcome_type": "primary",
+      "time_point": "T1",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": 16.1
+        },
+        {
+          "group": "Placebo",
+          "value": 9.0
+        }
+      ]
+    },
+    {
+      "name": "EQ5D Index",
+      "outcome_type": "primary",
+      "time_point": "T2",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": 15.8
+        },
+        {
+          "group": "Placebo",
+          "value": 11.9
+        }
+      ]
+    },
+    {
+      "name": "EQ5D Index",
+      "outcome_type": "primary",
+      "time_point": "T3",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": 15.9
+        },
+        {
+          "group": "Placebo",
+          "value": 9.2
+        }
+      ]
+    },
+    {
+      "name": "EQ5D Index % Change from baseline to T1",
+      "outcome_type": "primary",
+      "time_point": "T1",
+      "unit": "%",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": 10.5
+        },
+        {
+          "group": "Placebo",
+          "value": 7.3
+        }
+      ]
+    },
+    {
+      "name": "EQ5D Index % Change from baseline to T2",
+      "outcome_type": "primary",
+      "time_point": "T2",
+      "unit": "%",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": 3.4
+        },
+        {
+          "group": "Placebo",
+          "value": 12.5
+        }
+      ]
+    },
+    {
+      "name": "EQ5D Index % Change from baseline to T3",
+      "outcome_type": "primary",
+      "time_point": "T3",
+      "unit": "%",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": 12.4
+        },
+        {
+          "group": "Placebo",
+          "value": 12.8
+        }
+      ]
+    },
+    {
+      "name": "MOS Sleep Scale",
+      "outcome_type": "primary",
+      "time_point": "T1",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": 52.7
+        },
+        {
+          "group": "Placebo",
+          "value": 54.1
+        }
+      ]
+    },
+    {
+      "name": "MOS Sleep Scale",
+      "outcome_type": "primary",
+      "time_point": "T2",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": 52.5
+        },
+        {
+          "group": "Placebo",
+          "value": 50.1
+        }
+      ]
+    },
+    {
+      "name": "MOS Sleep Scale",
+      "outcome_type": "primary",
+      "time_point": "T3",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": 51.2
+        },
+        {
+          "group": "Placebo",
+          "value": 50.9
+        }
+      ]
+    },
+    {
+      "name": "MOS Sleep Scale % Change from baseline to T1",
+      "outcome_type": "primary",
+      "time_point": "T1",
+      "unit": "%",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": -5.3
+        },
+        {
+          "group": "Placebo",
+          "value": -6.9
+        }
+      ]
+    },
+    {
+      "name": "MOS Sleep Scale % Change from baseline to T2",
+      "outcome_type": "primary",
+      "time_point": "T2",
+      "unit": "%",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": -5.9
+        },
+        {
+          "group": "Placebo",
+          "value": -12.6
+        }
+      ]
+    },
+    {
+      "name": "MOS Sleep Scale % Change from baseline to T3",
+      "outcome_type": "primary",
+      "time_point": "T3",
+      "unit": "%",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": -9.1
+        },
+        {
+          "group": "Placebo",
+          "value": -12.0
+        }
+      ]
+    },
+    {
+      "name": "MTS",
+      "outcome_type": "primary",
+      "time_point": "T1",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": 17.3
+        },
+        {
+          "group": "Placebo",
+          "value": 17.8
+        }
+      ]
+    },
+    {
+      "name": "MTS",
+      "outcome_type": "primary",
+      "time_point": "T2",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": 17.9
+        },
+        {
+          "group": "Placebo",
+          "value": 15.8
+        }
+      ]
+    },
+    {
+      "name": "MTS",
+      "outcome_type": "primary",
+      "time_point": "T3",
+      "unit": "score",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": 19.5
+        },
+        {
+          "group": "Placebo",
+          "value": 14.3
+        }
+      ]
+    },
+    {
+      "name": "MTS % Change from baseline to T1",
+      "outcome_type": "primary",
+      "time_point": "T1",
+      "unit": "%",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": -37.0
+        },
+        {
+          "group": "Placebo",
+          "value": 56.8
+        }
+      ]
+    },
+    {
+      "name": "MTS % Change from baseline to T2",
+      "outcome_type": "primary",
+      "time_point": "T2",
+      "unit": "%",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": -17.3
+        },
+        {
+          "group": "Placebo",
+          "value": -27.0
+        }
+      ]
+    },
+    {
+      "name": "MTS % Change from baseline to T3",
+      "outcome_type": "primary",
+      "time_point": "T3",
+      "unit": "%",
+      "group_results": [
+        {
+          "group": "Active",
+          "value": -20.4
+        },
+        {
+          "group": "Placebo",
+          "value": -37.7
+        }
+      ]
+    }
+  ],
+  "safety_outcomes": [
+    {
+      "name": "Adverse events",
+      "outcome_type": "safety",
+      "time_point": "throughout study",
+      "unit": "count",
+      "group_results": [
+        {
+          "group": "active",
+          "value": 0.0
+        },
+        {
+          "group": "placebo",
+          "value": 0.0
+        }
+      ]
+    }
+  ],
+  "follow_up_month": 3.0
+}
