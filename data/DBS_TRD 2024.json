@@ -276,6 +276,7 @@
       "model_type": "decision-analytic"
     },
     "icer_analysis": {
+      "icer_value": 31878.61,
       "number_of_ratios": 4
     },
     "currency_info": {

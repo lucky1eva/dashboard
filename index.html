@@ -1,142 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Dashboard</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!-- Google Fonts: Inter -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <!-- Chart.js for charts -->
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
-  <!-- Styles -->
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evidence Radar v1.0</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts: Inter (for the dashboard) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Chart.js for charts (for the dashboard) -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 </head>
 <body>
-  <!-- Loading Spinner -->
-  <div id="loadingSpinner" class="loading-spinner">
-    <div class="spinner"></div>
-    <p>Loading clinical trials data...</p>
-  </div>
+    <header>
+        <nav>
+            <a href="#" class="logo">Evidence Radar</a>
+            <div class="header-right-items">
+                 <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <!-- Your Company Logo -->
+                <img src="assets/company-logo.png" alt="Company Logo" class="company-logo">
+            </div>
+        </nav>
+    </header>
 
-  <div class="dashboard-container">
-    <!-- Sidebar -->
-    <aside id="sidebar" class="sidebar">
-      <div class="sidebar-header">
-        <h1>Evidence-Radar</h1>
-      </div>
-      <nav class="sidebar-nav">
-        <button class="nav-button active" data-category="overview" title="Overview">
-          <span class="nav-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></span>
-          <span class="nav-text">Overview</span>
-        </button>
-        <button class="nav-button" data-category="study_characteristics" title="Study Characteristics">
-          <span class="nav-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg></span>
-          <span class="nav-text">Study Characteristics</span>
-        </button>
-        <button class="nav-button" data-category="population" title="Population">
-          <span class="nav-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></span>
-          <span class="nav-text">Population</span>
-        </button>
-        <button class="nav-button" data-category="intervention" title="Interventions">
-          <span class="nav-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m4.93 19.07 1.41-1.41"></path><path d="m17.66 6.34 1.41-1.41"></path><circle cx="12" cy="12" r="10"></circle><path d="M12 7v10"></path></svg></span>
-          <span class="nav-text">Interventions</span>
-        </button>
-        <button class="nav-button" data-category="outcomes" title="Outcomes">
-          <span class="nav-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg></span>
-          <span class="nav-text">Outcomes</span>
-        </button>
-      </nav>
-      <section class="sidebar-filters">
-        <div class="search-container"><input id="searchInput" class="search-input" type="text" placeholder="Search..."></div>
-        <div class="filters-container">
-          <label for="yearFilter">Year</label><select id="yearFilter" class="filter-select"><option value="">All</option></select>
-          <label for="designFilter">Design</label><select id="designFilter" class="filter-select"><option value="">All</option></select>
-          <label for="conditionFilter">Condition</label><select id="conditionFilter" class="filter-select"><option value="">All</option></select>
-          <button id="clearFilters" class="btn-secondary">Clear Filters</button>
-        </div>
-      </section>
-    </aside>
-
-    <!-- Main Content -->
-    <main class="main-content">
-      <header class="dashboard-header">
-        <div class="header-left">
-          <button id="sidebarToggle" class="sidebar-toggle" aria-label="Toggle sidebar">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M3 12H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M3 6H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-          <h2>Dashboard</h2>
-        </div>
-        <div class="header-right">
-          <img src="company-logo.png" alt="Company Logo" class="brand-logo" />
-        </div>
-      </header>
-
-      <!-- Overview Section -->
-      <section id="overview-section" class="content-section active">
-        <div class="kpi-panel">
-          <div class="kpi-box"><div class="kpi-value" id="overviewStudies">0</div><div class="kpi-label">Total Studies</div></div>
-          <div class="kpi-box"><div class="kpi-value" id="overviewParticipants">0</div><div class="kpi-label">Total Participants</div></div>
-          <div class="kpi-box"><div class="kpi-value" id="overviewYears">-</div><div class="kpi-label">Publication Years</div></div>
-          <div class="kpi-box"><div class="kpi-value" id="overviewAvgSize">0</div><div class="kpi-label">Avg. Sample Size</div></div>
-        </div>
-        
-        <!-- Charts Grid -->
-        <div class="charts-grid">
-          <div class="chart-container"><h3>Geographic Location</h3><canvas id="geoChart"></canvas></div>
-          <div class="chart-container"><h3>Study Designs</h3><canvas id="designsChart"></canvas></div>
-          <div class="chart-container"><h3>Top 5 Conditions</h3><canvas id="conditionsChart"></canvas></div>
-          <div class="chart-container"><h3>Clinical Outcome Measures</h3><div id="outcomesList" class="outcomes-list"></div></div>
+    <div class="content">
+        <!-- Dashboard Start -->
+        <div id="loadingSpinner" class="loading-spinner">
+            <div class="spinner"></div>
+            <p>Loading clinical trials data...</p>
         </div>
 
-        <!-- Study Cards Section Header -->
-        <div class="section-header">
-          <h2 class="category-title">Studies</h2>
-          <div class="results-info">0 studies found</div>
-        </div>
-        
-        <!-- Study Cards Grid -->
-        <div class="study-cards-grid"></div>
-        <div class="no-results" style="display: none;">
-          <h3>No studies found</h3><p>Try adjusting your filters or search terms.</p>
-        </div>
-      </section>
+        <div class="dashboard-container">
+            <!-- Sidebar -->
+            <aside id="sidebar" class="sidebar">
+                <div class="sidebar-header">
+                    <h1>Evidence-Radar</h1>
+                </div>
+                <nav class="sidebar-nav">
+                    <button class="nav-button active" data-category="overview" title="Overview">
+                        <span class="nav-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></span>
+                        <span class="nav-text">Overview</span>
+                    </button>
+                    <button class="nav-button" data-category="study_characteristics" title="Study Characteristics">
+                        <span class="nav-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg></span>
+                        <span class="nav-text">Study Characteristics</span>
+                    </button>
+                    <button class="nav-button" data-category="population" title="Population">
+                        <span class="nav-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></span>
+                        <span class="nav-text">Population</span>
+                    </button>
+                    <button class="nav-button" data-category="intervention" title="Interventions">
+                        <span class="nav-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m4.93 19.07 1.41-1.41"></path><path d="m17.66 6.34 1.41-1.41"></path><circle cx="12" cy="12" r="10"></circle><path d="M12 7v10"></path></svg></span>
+                        <span class="nav-text">Interventions</span>
+                    </button>
+                    <button class="nav-button" data-category="outcomes" title="Outcomes">
+                        <span class="nav-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg></span>
+                        <span class="nav-text">Outcomes</span>
+                    </button>
+                </nav>
+                <section class="sidebar-filters">
+                    <div class="search-container"><input id="searchInput" class="search-input" type="text" placeholder="Search..."></div>
+                    <div class="filters-container">
+                        <label for="yearFilter">Year</label><select id="yearFilter" class="filter-select"><option value="">All</option></select>
+                        <label for="designFilter">Design</label><select id="designFilter" class="filter-select"><option value="">All</option></select>
+                        <label for="conditionFilter">Condition</label><select id="conditionFilter" class="filter-select"><option value="">All</option></select>
+                        <button id="clearFilters" class="btn-secondary">Clear Filters</button>
+                    </div>
+                </section>
+            </aside>
 
-      <!-- Dynamic Section for other categories -->
-      <section id="dynamic-section" class="content-section">
-        <div class="section-header">
-          <h2 class="category-title">Studies</h2>
-          <div class="results-info">0 studies found</div>
-        </div>
-        <div class="study-cards-grid"></div>
-        <div class="no-results" style="display: none;">
-          <h3>No studies found</h3><p>Try adjusting your filters or search terms.</p>
-        </div>
-      </section>
-    </main>
+            <!-- Main Content -->
+            <main class="main-content">
+                <header class="dashboard-header">
+                    <div class="header-left">
+                        <button id="sidebarToggle" class="sidebar-toggle" aria-label="Toggle sidebar">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 12H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 6H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </button>
+                        <h2>
+                            <svg class="header-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+                            Evidence Dashboard
+                        </h2>
+                    </div>
+                    <div class="header-right">
+                        <!-- Intentionally empty to not clash with main site logo -->
+                    </div>
+                </header>
 
-    <!-- Compare Panel -->
-    <div id="comparePanel" class="compare-panel">
-      <div class="compare-header">
-        <h3>Compare Studies (<span id="compareCount">0</span>/3 selected)</h3>
-        <div class="compare-actions">
-          <button id="compareStudiesBtn" class="btn-primary" disabled>Compare</button>
-          <button id="clearCompareBtn" class="btn-secondary">Clear</button>
-          <button id="closeComparePanelBtn" class="btn-close" aria-label="Close">&times;</button>
+                <!-- Overview Section -->
+                <section id="overview-section" class="content-section active">
+                    <div class="kpi-panel">
+                        <div class="kpi-box"><div class="kpi-value" id="overviewStudies">0</div><div class="kpi-label">Total Studies</div></div>
+                        <div class="kpi-box"><div class="kpi-value" id="overviewParticipants">0</div><div class="kpi-label">Total Participants</div></div>
+                        <div class="kpi-box"><div class="kpi-value" id="overviewYears">-</div><div class="kpi-label">Publication Years</div></div>
+                        <div class="kpi-box"><div class="kpi-value" id="overviewAvgSize">0</div><div class="kpi-label">Avg. Sample Size</div></div>
+                    </div>
+                    <div class="charts-grid">
+                        <div class="chart-container"><h3><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>Geographic Location</h3><canvas id="geoChart"></canvas></div>
+                        <div class="chart-container"><h3><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.21 15.89A10 10 0 1 1 8.11 2.98"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path></svg>Study Designs</h3><canvas id="designsChart"></canvas></div>
+                        <div class="chart-container"><h3><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>Top 5 Conditions</h3><canvas id="conditionsChart"></canvas></div>
+                        <div class="chart-container"><h3><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>Clinical Outcome Measures</h3><div id="outcomesList" class="outcomes-list"></div></div>
+                    </div>
+                    <div class="section-header"><h2 class="category-title">Studies</h2></div>
+                    <div class="study-cards-grid"></div>
+                    <div class="no-results" style="display: none;"><h3>No studies found</h3><p>Try adjusting your filters.</p></div>
+                </section>
+
+                <!-- Dynamic Section for other categories -->
+                <section id="dynamic-section" class="content-section">
+                    <div class="charts-grid" id="dynamic-charts-grid" style="display: none;"></div>
+                    <div class="section-header"><h2 class="category-title">Studies</h2></div>
+                    <div class="study-cards-grid"></div>
+                    <div class="no-results" style="display: none;"><h3>No studies found</h3><p>Try adjusting your filters.</p></div>
+                </section>
+            </main>
+
+            <!-- Compare Panel -->
+            <div id="comparePanel" class="compare-panel">
+                <div class="compare-header">
+                    <h3>Compare Studies (<span id="compareCount">0</span>/3 selected)</h3>
+                    <div class="compare-actions">
+                        <button id="compareStudiesBtn" class="btn-primary" disabled>Compare</button>
+                        <button id="clearCompareBtn" class="btn-secondary">Clear</button>
+                        <button id="closeComparePanelBtn" class="btn-close" aria-label="Close">&times;</button>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
+
+        <!-- Modals -->
+        <div id="studyModal" class="modal"><div class="modal-content"><div class="modal-header"><h2 id="modalTitle">Study Details</h2><button class="close-modal" aria-label="Close">&times;</button></div><div class="modal-body"><div id="studyContent"></div></div></div></div>
+        <div id="comparisonModal" class="modal"><div class="modal-content large"><div class="modal-header"><h2>Study Comparison</h2><button class="close-modal" aria-label="Close">&times;</button></div><div class="modal-body"><div id="comparisonContent"></div></div></div></div>
+        <!-- Dashboard End -->
     </div>
-  </div>
 
-  <!-- Modals -->
-  <div id="studyModal" class="modal"><div class="modal-content"><div class="modal-header"><h2 id="modalTitle">Study Details</h2><button class="close-modal" aria-label="Close">&times;</button></div><div class="modal-body"><div id="studyContent"></div></div></div></div>
-  <div id="comparisonModal" class="modal"><div class="modal-content large"><div class="modal-header"><h2>Study Comparison</h2><button class="close-modal" aria-label="Close">&times;</button></div><div class="modal-body"><div id="comparisonContent"></div></div></div></div>
+    <footer>
+        <p>&copy; 2024 MyWebsite. All rights reserved.</p>
+    </footer>
 
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

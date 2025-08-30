@@ -1,3 +1,5 @@
+console.log('Website script loaded');
+
 // =================================================================================
 // Clinical Trials Dashboard - Evidence-Radar
 // =================================================================================
@@ -8,6 +10,7 @@ let filteredStudies = [];
 let currentCategory = 'overview';
 let selectedForCompare = new Set();
 let chartInstances = {};
+const chartColors = ['#2c3e50', '#3498db', '#95a5a6', '#f1c40f', '#e74c3c', '#2ecc71'];
 
 // --- Utility Functions ---
 const debounce = (func, wait) => {
@@ -34,38 +37,50 @@ const getActiveContainers = () => {
         section,
         cards: section.querySelector('.study-cards-grid'),
         noResults: section.querySelector('.no-results'),
-        resultsInfo: section.querySelector('.results-info'),
         categoryTitle: section.querySelector('.category-title'),
     };
 };
 
 // --- Initialization ---
-document.addEventListener('DOMContentLoaded', initializeApp);
+document.addEventListener('DOMContentLoaded', () => {
+    if (document.querySelector('.dashboard-container')) {
+        initializeApp();
+    }
+});
 
 async function initializeApp() {
+    const style = document.createElement('style');
+    style.innerHTML = `
+        .content-section { display: none; }
+        .content-section.active { display: block; }
+    `;
+    document.head.appendChild(style);
+
     showLoading(true);
     try {
-        await loadStudies();
+        await loadStudies('data/manifest.json');
         initializeEventListeners();
         populateFilters();
         renderDashboard();
     } catch (error) {
-        console.error('Initialization failed:', error);
+        console.error('Dashboard initialization failed:', error);
         showError(error.message);
     } finally {
         showLoading(false);
     }
 }
 
-async function loadStudies() {
-    const manifestResponse = await fetch('data/manifest.json');
+async function loadStudies(manifestPath) {
+    const cacheBuster = `?v=${new Date().getTime()}`;
+    
+    const manifestResponse = await fetch(`${manifestPath}${cacheBuster}`);
     if (!manifestResponse.ok) throw new Error('Manifest file (manifest.json) not found.');
     const manifest = await manifestResponse.json();
     if (!manifest.files?.length) throw new Error('No study files found in manifest.');
 
     const studyPromises = manifest.files.map(async (filename) => {
         try {
-            const res = await fetch(`data/${filename}`);
+            const res = await fetch(`data/${filename}${cacheBuster}`);
             if (!res.ok) throw new Error(`Failed to load ${filename}`);
             const data = await res.json();
             data._id = data.study_id || filename;
@@ -80,6 +95,7 @@ async function loadStudies() {
     filteredStudies = [...allStudies];
     if (!allStudies.length) throw new Error('All study files failed to load.');
 }
+
 
 function initializeEventListeners() {
     document.getElementById('sidebarToggle')?.addEventListener('click', toggleSidebar);
@@ -96,14 +112,10 @@ function initializeEventListeners() {
     document.getElementById('clearCompareBtn')?.addEventListener('click', clearCompareSelection);
     document.getElementById('closeComparePanelBtn')?.addEventListener('click', () => toggleComparePanel(false));
     document.querySelectorAll('.modal').forEach(modal => {
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) closeModal(modal.id);
-        });
+        modal.addEventListener('click', (e) => (e.target === modal && closeModal(modal.id)));
         modal.querySelector('.close-modal')?.addEventListener('click', () => closeModal(modal.id));
     });
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') document.querySelectorAll('.modal.active').forEach(m => closeModal(m.id));
-    });
+    document.addEventListener('keydown', (e) => (e.key === 'Escape' && document.querySelectorAll('.modal.active').forEach(m => closeModal(m.id))));
 }
 
 // --- Data Population & Filtering ---
@@ -127,14 +139,12 @@ function applyFilters() {
     const year = document.getElementById('yearFilter').value;
     const design = document.getElementById('designFilter').value;
     const condition = document.getElementById('conditionFilter').value;
-
-    filteredStudies = allStudies.filter(study => {
-        const title = (study.study_characteristics?.title || '').toLowerCase();
-        return (!searchTerm || title.includes(searchTerm) || getStudyCondition(study).toLowerCase().includes(searchTerm)) &&
-            (!year || study.study_characteristics?.publication_year == year) &&
-            (!design || study.study_characteristics?.design == design) &&
-            (!condition || getStudyCondition(study) == condition);
-    });
+    filteredStudies = allStudies.filter(study =>
+        (!searchTerm || (study.study_characteristics?.title || '').toLowerCase().includes(searchTerm) || getStudyCondition(study).toLowerCase().includes(searchTerm)) &&
+        (!year || study.study_characteristics?.publication_year == year) &&
+        (!design || study.study_characteristics?.design == design) &&
+        (!condition || getStudyCondition(study) == condition)
+    );
     renderDashboard();
 }
 
@@ -146,6 +156,9 @@ function clearAllFilters() {
 
 // --- Main Rendering Logic ---
 function renderDashboard() {
+    Object.values(chartInstances).forEach(chart => chart.destroy());
+    chartInstances = {};
+
     const isOverview = currentCategory === 'overview';
     document.getElementById('overview-section').classList.toggle('active', isOverview);
     document.getElementById('dynamic-section').classList.toggle('active', !isOverview);
@@ -163,6 +176,7 @@ function switchCategory(category) {
     renderDashboard();
 }
 
+// --- Page-Specific Rendering ---
 function renderOverview() {
     updateOverviewKPIs();
     renderOverviewCharts();
@@ -171,37 +185,47 @@ function renderOverview() {
 }
 
 function renderCategoryPage() {
+    const chartsGrid = document.getElementById('dynamic-charts-grid');
+    chartsGrid.innerHTML = '';
+    
+    switch (currentCategory) {
+        case 'study_characteristics':
+            renderStudyCharacteristicsPage(chartsGrid);
+            break;
+        case 'population':
+            renderPopulationPage(chartsGrid);
+            break;
+        case 'intervention':
+            renderInterventionPage(chartsGrid);
+            break;
+        case 'outcomes':
+            renderOutcomesPage(chartsGrid);
+            break;
+    }
+
+    chartsGrid.style.display = chartsGrid.hasChildNodes() ? 'grid' : 'none';
     updateCategoryHeader();
     renderStudyCards();
 }
 
+// --- KPI & Header Updates ---
 function updateOverviewKPIs() {
     const total = filteredStudies.length;
     const participants = filteredStudies.reduce((sum, s) => sum + (s.study_characteristics?.sample_size || 0), 0);
     const years = filteredStudies.map(s => s.study_characteristics?.publication_year).filter(Boolean);
     const yearRange = years.length ? `${Math.min(...years)}–${Math.max(...years)}` : '-';
     const avgSize = total > 0 ? Math.round(participants / total).toLocaleString() : 0;
-
     document.getElementById('overviewStudies').textContent = total.toLocaleString();
     document.getElementById('overviewParticipants').textContent = participants.toLocaleString();
     document.getElementById('overviewYears').textContent = yearRange;
     document.getElementById('overviewAvgSize').textContent = avgSize;
 }
 
-function renderOverviewCharts() {
-    Object.values(chartInstances).forEach(chart => chart.destroy());
-    chartInstances = {};
-    createGeographyChart();
-    createDesignsChart();
-    createConditionsChart();
-    createOutcomesList();
-}
-
 function updateCategoryHeader() {
     const titles = {
         overview: 'Studies',
         study_characteristics: 'Study Characteristics',
-        population: 'Population Details',
+        population: 'Population',
         intervention: 'Interventions',
         outcomes: 'Outcomes'
     };
@@ -209,44 +233,29 @@ function updateCategoryHeader() {
     if (categoryTitle) categoryTitle.textContent = titles[currentCategory] || 'Studies';
 }
 
+// --- Generic Component Creation ---
 function renderStudyCards() {
     const { cards, noResults } = getActiveContainers();
     if (!cards || !noResults) return;
     cards.innerHTML = '';
     noResults.style.display = filteredStudies.length ? 'none' : 'block';
     if (filteredStudies.length) {
-        filteredStudies.forEach(study => cards.appendChild(createStudyCard(study, currentCategory)));
+        filteredStudies.forEach(study => cards.appendChild(createStudyCard(study)));
     }
 }
 
-// --- Component & Chart Creation ---
-function createStudyCard(study, category) {
+function createStudyCard(study) {
     const card = document.createElement('div');
     card.className = 'study-card';
     const sc = study.study_characteristics || {};
-    let dataHTML = '';
-
-    switch (category) {
-        case 'study_characteristics':
-            dataHTML = `<div class="data-item"><strong>Location:</strong> ${sc.geographic_location || 'N/A'}</div><div class="data-item"><strong>Phase:</strong> ${sc.phase || 'N/A'}</div>`;
-            break;
-        case 'population':
-            const pop = (typeof study.population === 'string' ? JSON.parse(study.population || '{}') : study.population) || {};
-            dataHTML = `<div class="data-item"><strong>Condition:</strong> ${pop.condition || 'N/A'}</div><div class="data-item"><strong>Age Range:</strong> ${pop.age_range || 'N/A'}</div>`;
-            break;
-        case 'intervention':
-            const int = Array.isArray(study.interventions) ? study.interventions[0] || {} : {};
-            dataHTML = `<div class="data-item"><strong>Name:</strong> ${int.treatment || 'N/A'}</div><div class="data-item"><strong>Dosage:</strong> ${int.dose || 'N/A'}</div>`;
-            break;
-        case 'outcomes':
-            const out = Array.isArray(study.outcomes) ? study.outcomes[0] || {} : study.outcomes || {};
-            dataHTML = `<div class="data-item"><strong>Primary:</strong> ${out.name || out.primary_outcome || 'N/A'}</div><div class="data-item"><strong>Time Point:</strong> ${out.time_point || 'N/A'}</div>`;
-            break;
-        default: // Overview
-            const primaryOutcome = Array.isArray(study.outcomes) ? (study.outcomes.find(o => o.primary)?.name || study.outcomes[0]?.name) : study.outcomes?.primary_outcome;
-            dataHTML = `<div class="data-item"><strong>Condition:</strong> ${getStudyCondition(study) || 'N/A'}</div><div class="data-item"><strong>Primary Outcome:</strong> ${primaryOutcome || 'N/A'}</div>`;
-            break;
-    }
+    const primaryOutcome = Array.isArray(study.outcomes) 
+        ? (study.outcomes.find(o => o.primary)?.name || study.outcomes[0]?.name) 
+        : study.outcomes?.primary_outcome;
+    
+    const dataHTML = `
+        <div class="data-item"><strong>Condition:</strong> ${getStudyCondition(study) || 'N/A'}</div>
+        <div class="data-item"><strong>Primary Outcome:</strong> ${primaryOutcome || 'N/A'}</div>`;
+    
     card.innerHTML = `
         <div class="study-card-header">
             <h3 class="study-title">${sc.title || 'Untitled Study'}</h3>
@@ -259,8 +268,7 @@ function createStudyCard(study, category) {
         <div class="study-card-body">${dataHTML}</div>
         <div class="study-card-footer">
             <label class="compare-checkbox-container">
-                <input type="checkbox" data-study-id="${study._id}" ${selectedForCompare.has(study._id) ? 'checked' : ''}>
-                Add to Compare
+                <input type="checkbox" data-study-id="${study._id}" ${selectedForCompare.has(study._id) ? 'checked' : ''}> Add to Compare
             </label>
         </div>`;
     card.querySelector('.study-title').addEventListener('click', () => openStudyModal(study));
@@ -268,150 +276,392 @@ function createStudyCard(study, category) {
     return card;
 }
 
-function createChart(canvasId, type, data, options) {
-    const ctx = document.getElementById(canvasId);
-    if (ctx) chartInstances[canvasId] = new Chart(ctx, { type, data, options });
+// --- Category-Specific Page Renderers ---
+
+function renderStudyCharacteristicsPage(grid) {
+    const trials = filteredStudies.filter(s => {
+        const design = s.study_characteristics?.design?.toLowerCase();
+        if (!design || !s.study_characteristics.sample_size) return false;
+
+        const isTrial = design.includes('randomised') || design.includes('randomized') || design.includes('rct') || design.includes('trial');
+        const isExcluded = design.includes('economic') || design.includes('cost-effectiveness') || design.includes('model');
+
+        return isTrial && !isExcluded;
+    }).sort((a, b) => b.study_characteristics.sample_size - a.study_characteristics.sample_size);
+    
+    if (trials.length > 0) {
+        const canvas = createChartContainer(grid, 'Sample Size of Randomised Trials', '', 'sampleSizeChart');
+        createChart(canvas, 'bar', {
+            labels: trials.map(s => (s.study_characteristics.title || 'Untitled').substring(0, 40) + '...'),
+            datasets: [{
+                label: 'Sample Size',
+                data: trials.map(s => s.study_characteristics.sample_size),
+                backgroundColor: chartColors[0]
+            }]
+        }, { responsive: true, maintainAspectRatio: false, indexAxis: 'y', plugins: { legend: { display: false } } });
+    } else {
+         const container = createChartContainer(grid, 'Sample Size of Randomised Trials', '', 'sampleSizeChart');
+         container.parentElement.innerHTML += '<p style="text-align: center;">No trial data available for selected filters.</p>';
+    }
+
+    const durationData = aggregateData(s => s.study_characteristics?.follow_up_duration_month);
+    if (durationData.length > 0) {
+        const canvas = createChartContainer(grid, 'Study Follow-up Duration (Months)', '', 'durationChart');
+        createChart(canvas, 'doughnut', {
+            labels: durationData.map(i => `${i[0]}`),
+            datasets: [{ data: durationData.map(i => i[1]), backgroundColor: chartColors }]
+        }, { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom' } } });
+    }
 }
 
-function createGeographyChart() {
-    const locations = filteredStudies.reduce((acc, s) => {
-        const loc = s.study_characteristics?.geographic_location || 'Unknown';
-        if (loc !== 'Unknown') acc[loc] = (acc[loc] || 0) + 1;
+function renderPopulationPage(grid) {
+    const genderStudies = filteredStudies
+        .filter(s => s.population?.sex_ratio_male !== undefined && s.population?.sex_ratio_male !== null)
+        .sort((a, b) => b.population.sex_ratio_male - a.population.sex_ratio_male);
+
+    if (genderStudies.length > 0) {
+        const canvas = createChartContainer(grid, 'Male Sex Ratio by Study', '', 'genderRatioChart');
+        createChart(canvas, 'bar', {
+            labels: genderStudies.map(s => (s.study_characteristics.title || 'Untitled').substring(0, 40) + '...'),
+            datasets: [{
+                label: 'Male Sex Ratio',
+                data: genderStudies.map(s => s.population.sex_ratio_male),
+                backgroundColor: chartColors[1]
+            }]
+        }, { responsive: true, maintainAspectRatio: false, indexAxis: 'y', plugins: { legend: { display: false } } });
+    }
+
+    const ageData = filteredStudies.map(s => ({
+            name: s.population?.name || 'N/A',
+            condition: s.population?.condition || 'N/A',
+            age: s.population?.target_population_age || 'N/A'
+    })).filter(r => r.age !== 'N/A');
+
+    if (ageData.length > 0) {
+        createHtmlTable(grid, 'Population Age Details', ['Name', 'Condition', 'Target Age'], ageData.map(d => [d.name, d.condition, d.age]));
+    }
+}
+
+function renderInterventionPage(grid) {
+    const interventionData = filteredStudies.flatMap(s => s.interventions || []);
+    const typeData = aggregateData(i => i.intervention_type, interventionData);
+    if (typeData.length) {
+        const canvas = createChartContainer(grid, 'Intervention Types', '', 'intTypeChart');
+        createChart(canvas, 'doughnut', {
+            labels: typeData.map(i => i[0]),
+            datasets: [{ data: typeData.map(i => i[1]), backgroundColor: chartColors }]
+        }, { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom' } } });
+    }
+
+    const treatmentData = aggregateData(i => i.treatment, interventionData).slice(0, 10);
+    if (treatmentData.length) {
+        const canvas = createChartContainer(grid, 'Top 10 Interventions', '', 'topIntChart');
+        createChart(canvas, 'bar', {
+            labels: treatmentData.map(i => i[0]),
+            datasets: [{ data: treatmentData.map(i => i[1]), backgroundColor: chartColors[1] }]
+        }, { responsive: true, maintainAspectRatio: false, indexAxis: 'y', plugins: { legend: { display: false } } });
+    }
+}
+
+function renderOutcomesPage(grid) {
+    const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+    const year = document.getElementById('yearFilter').value;
+    const condition = document.getElementById('conditionFilter').value;
+
+    const relevantStudies = allStudies.filter(study =>
+        (!searchTerm || (study.study_characteristics?.title || '').toLowerCase().includes(searchTerm) || getStudyCondition(study).toLowerCase().includes(searchTerm)) &&
+        (!year || study.study_characteristics?.publication_year == year) &&
+        (!condition || getStudyCondition(study) == condition)
+    );
+
+    const modelParamDataByCurrency = {};
+    const directCostsData = [];
+
+    for (const study of relevantStudies) {
+        const studyTitle = study.study_characteristics?.title || 'Untitled Study';
+        const truncatedTitle = studyTitle.length > 50 ? studyTitle.substring(0, 50) + '...' : studyTitle;
+
+        if (study.economic_data) {
+            const params = study.economic_data.model_parameters;
+            const icerAnalysis = study.economic_data.icer_analysis;
+            const currency = params?.currency_code || icerAnalysis?.currency_code || 'UNKNOWN';
+            
+            const icerValue = params?.ICER ?? icerAnalysis?.icer_value;
+            const wtpValue = params?.WTP_threshold;
+
+            if (icerValue !== undefined || wtpValue !== undefined) {
+                if (!modelParamDataByCurrency[currency]) {
+                    modelParamDataByCurrency[currency] = { labels: [], icer: [], wtp: [] };
+                }
+                modelParamDataByCurrency[currency].labels.push(truncatedTitle);
+                modelParamDataByCurrency[currency].icer.push(icerValue ?? 0);
+                modelParamDataByCurrency[currency].wtp.push(wtpValue ?? 0);
+            }
+
+            if (Array.isArray(study.economic_data.direct_medical) && study.economic_data.direct_medical.length > 0) {
+                study.economic_data.direct_medical.forEach(cost => {
+                    directCostsData.push([
+                        studyTitle,
+                        cost.cost_type || 'N/A',
+                        `${cost.value?.toLocaleString() || 'N/A'} ${params?.currency_code || ''}`.trim()
+                    ]);
+                });
+            }
+        }
+    }
+
+    let wasDataFound = false;
+
+    // Render Model Parameter Charts
+    for (const currency in modelParamDataByCurrency) {
+        if (modelParamDataByCurrency[currency].labels.length > 0) {
+            wasDataFound = true;
+            const data = modelParamDataByCurrency[currency];
+            const canvas = createChartContainer(grid, `Model Parameters (Unit: ${currency})`, '', `modelParamsChart-${currency}`);
+            
+            if(canvas) {
+                canvas.parentElement.style.gridColumn = '1 / -1';
+            }
+
+            createChart(canvas, 'bar', {
+                labels: data.labels,
+                datasets: [
+                    { label: 'ICER', data: data.icer, backgroundColor: chartColors[0] },
+                    { label: 'WTP Threshold', data: data.wtp, backgroundColor: chartColors[1] }
+                ]
+            }, { responsive: true, maintainAspectRatio: false, indexAxis: 'y', scales: { x: { ticks: { beginAtZero: true } } } });
+        }
+    }
+
+    // Render Direct Costs Table
+    if (directCostsData.length > 0) {
+        wasDataFound = true;
+        createHtmlTable(grid, 'Direct Medical Costs', ['Study', 'Cost Type', 'Value'], directCostsData);
+    }
+    
+    if (!wasDataFound) {
+        grid.innerHTML = '<div class="chart-container" style="text-align: center; padding: 20px; grid-column: 1 / -1;"><p>No specific economic data found for the selected filters.</p></div>';
+    }
+}
+
+
+// --- Chart & Table Helpers ---
+const aggregateData = (keyFn, data = filteredStudies) => {
+    const counts = data.reduce((acc, item) => {
+        const key = keyFn(item);
+        if (key && key !== 'Unknown' && key !== 'N/A') {
+            acc[key] = (acc[key] || 0) + 1;
+        }
         return acc;
     }, {});
-    const sorted = Object.entries(locations).sort((a, b) => b[1] - a[1]);
-    const chartColors = ['#00274C', '#4A90E2', '#7BAEE0', '#A8C9EC', '#FFD700', '#FDB813'];
-    createChart('geoChart', 'bar', {
-        labels: sorted.map(item => item[0]),
-        datasets: [{
-            data: sorted.map(item => item[1]),
-            backgroundColor: chartColors,
-            borderRadius: 6
-        }]
+    return Object.entries(counts).sort((a, b) => b[1] - a[1]);
+};
+
+function createChart(canvas, type, data, options) {
+    if (!canvas) return;
+    if (chartInstances[canvas.id]) chartInstances[canvas.id].destroy();
+    chartInstances[canvas.id] = new Chart(canvas, { type, data, options });
+}
+
+function createChartContainer(grid, title, iconSVG, canvasId) {
+    const container = document.createElement('div');
+    container.className = 'chart-container';
+    container.innerHTML = `<h3>${iconSVG}${title}</h3><canvas id="${canvasId}"></canvas>`;
+    grid.appendChild(container);
+    return container.querySelector('canvas');
+}
+
+function createHtmlTable(grid, title, headers, rows) {
+    const tableHtml = `
+        <div class="table-wrapper">
+            <table class="dashboard-table">
+                <thead>
+                    <tr>${headers.map(h => `<th>${h}</th>`).join('')}</tr>
+                </thead>
+                <tbody>
+                    ${rows.map(row => `<tr>${row.map(cell => `<td>${cell}</td>`).join('')}</tr>`).join('')}
+                </tbody>
+            </table>
+        </div>`;
+    const container = document.createElement('div');
+    container.className = 'chart-container table-container';
+    container.innerHTML = `<h3>${title}</h3>${tableHtml}`;
+    grid.appendChild(container);
+    if (!document.getElementById('dashboard-table-styles')) {
+        const style = document.createElement('style');
+        style.id = 'dashboard-table-styles';
+        style.innerHTML = `
+            .table-container { display: flex; flex-direction: column; grid-column: 1 / -1; height: 420px; }
+            .table-wrapper { overflow: auto; height: 100%; }
+            .dashboard-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+            .dashboard-table th, .dashboard-table td { padding: 8px 12px; border: 1px solid var(--db-border); text-align: left; vertical-align: top;}
+            .dashboard-table th { background-color: var(--db-bg); font-weight: 600; position: sticky; top: 0; }
+            .dashboard-table tr:nth-child(even) { background-color: #f8f9fa; }
+        `;
+        document.head.appendChild(style);
+    }
+}
+
+// --- Overview Page Charts ---
+function renderOverviewCharts() {
+    createGeographyChart();
+    createDesignsChart();
+    createConditionsChart();
+    createOutcomesList();
+}
+
+// CORRECTED: This function robustly groups and normalizes geographic locations.
+function createGeographyChart() {
+    // This helper function normalizes a single place name.
+    const normalizeSingleLocation = (locPart) => {
+        if (!locPart) return null;
+        const lower = locPart.toLowerCase().trim();
+
+        // UK Aliases
+        if (lower === 'uk' || lower === 'united kingdom' || lower === 'england' || lower.endsWith(', uk')) {
+            return 'UK';
+        }
+        // USA Aliases
+        if (lower === 'us' || lower === 'usa' || lower === 'united states' || lower.endsWith(', usa') || lower.endsWith(', us')) {
+            return 'USA';
+        }
+        // China Aliases
+        if (lower === 'cn' || lower === 'china' || lower.endsWith(', china')) {
+            return 'China';
+        }
+        // Korea Aliases
+        if (lower === 'korea' || lower.endsWith(', korea')) {
+            return 'Korea';
+        }
+        // France Aliases
+        if (lower === 'france' || lower.endsWith(', france')) {
+            return 'France';
+        }
+        // Return the original, trimmed location if no specific rule applies.
+        return locPart.trim();
+    };
+
+    const geoCounts = filteredStudies.reduce((acc, study) => {
+        const locationStr = study.study_characteristics?.geographic_location;
+        if (locationStr) {
+            // Split the string by common delimiters like 'and', ',', ';'
+            const locations = locationStr.split(/ and |;/);
+            const uniqueNormalizedLocations = new Set();
+
+            locations.forEach(part => {
+                const trimmedPart = part.trim();
+                if (trimmedPart) { // Ensure the part is not an empty string
+                    const normalized = normalizeSingleLocation(trimmedPart);
+                    if (normalized) {
+                        uniqueNormalizedLocations.add(normalized);
+                    }
+                }
+            });
+
+            // Add counts for each unique normalized location found in the study
+            uniqueNormalizedLocations.forEach(loc => {
+                acc[loc] = (acc[loc] || 0) + 1;
+            });
+        }
+        return acc;
+    }, {});
+
+    if (Object.keys(geoCounts).length === 0) return;
+    const data = Object.entries(geoCounts).sort((a, b) => b[1] - a[1]);
+
+    createChart(document.getElementById('geoChart'), 'bar', {
+        labels: data.map(i => i[0]),
+        datasets: [{ data: data.map(i => i[1]), backgroundColor: chartColors, borderRadius: 6 }]
     }, { responsive: true, maintainAspectRatio: false, indexAxis: 'y', plugins: { legend: { display: false } }, scales: { x: { ticks: { precision: 0 } } } });
 }
 
+
 function createDesignsChart() {
-    const designs = filteredStudies.reduce((acc, study) => {
-        let design = study.study_characteristics?.design || 'Unknown';
-        if (design.toLowerCase().includes('rct')) design = 'RCT';
-        acc[design] = (acc[design] || 0) + 1;
-        return acc;
-    }, {});
-    const chartColors = ['#00274C', '#4A90E2', '#7BAEE0', '#FFD700', '#ADB5BD'];
-    createChart('designsChart', 'pie', {
-        labels: Object.keys(designs),
-        datasets: [{
-            data: Object.values(designs),
-            backgroundColor: chartColors
-        }]
+    const normalizeDesign = (design) => {
+        if (!design) return 'Other';
+        const d = design.toLowerCase();
+        if (d.includes('randomized') || d.includes('randomised') || d.includes('controlled')) return 'RCT';
+        if (d.includes('model') || d.includes('cost-effectiveness')) return 'CEA';
+        return design;
+    };
+    const data = aggregateData(s => normalizeDesign(s.study_characteristics?.design));
+    if (data.length === 0) return;
+    createChart(document.getElementById('designsChart'), 'pie', {
+        labels: data.map(i => i[0]),
+        datasets: [{ data: data.map(i => i[1]), backgroundColor: chartColors }]
     }, { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom' } } });
 }
 
 function createConditionsChart() {
-    const conditions = filteredStudies.reduce((acc, study) => {
-        const cond = getStudyCondition(study);
-        if (cond !== 'Unknown') acc[cond] = (acc[cond] || 0) + 1;
-        return acc;
-    }, {});
-    const sorted = Object.entries(conditions).sort((a, b) => b[1] - a[1]).slice(0, 5);
-    createChart('conditionsChart', 'bar', {
-        labels: sorted.map(item => item[0]),
-        datasets: [{
-            data: sorted.map(item => item[1]),
-            backgroundColor: '#4A90E2',
-            borderRadius: 6
-        }]
+    const data = aggregateData(getStudyCondition).slice(0, 5);
+    if (data.length === 0) return;
+    createChart(document.getElementById('conditionsChart'), 'bar', {
+        labels: data.map(i => i[0]),
+        datasets: [{ data: data.map(i => i[1]), backgroundColor: chartColors[1], borderRadius: 6 }]
     }, { responsive: true, maintainAspectRatio: false, indexAxis: 'y', plugins: { legend: { display: false } }, scales: { x: { ticks: { precision: 0 } } } });
 }
 
 function createOutcomesList() {
     const listContainer = document.getElementById('outcomesList');
-    if (!listContainer) return;
-    const counts = filteredStudies.reduce((acc, { outcomes }) => {
-        const outs = Array.isArray(outcomes) ? outcomes : (outcomes ? [outcomes] : []);
-        outs.forEach(o => {
-            [o?.name, o?.primary_outcome, ...(o?.secondary_outcomes || [])].filter(Boolean).forEach(name => {
-                const key = String(name).trim();
-                if (key) acc[key] = (acc[key] || 0) + 1;
-            });
-        });
-        return acc;
-    }, {});
-    const sorted = Object.entries(counts).sort((a, b) => b[1] - a[1]);
-    listContainer.innerHTML = sorted.length ? sorted.map(([outcome, count]) => `
-        <div class="outcome-item">
-            <div class="outcome-text">${outcome}</div>
-            <div class="outcome-count">${count}</div>
-        </div>`).join('') : '<p>No outcome data available.</p>';
+    if(!listContainer) return;
+    const outcomeData = filteredStudies.flatMap(s => s.outcomes || []);
+    const data = aggregateData(o => o.name || o.primary_outcome, outcomeData);
+    listContainer.innerHTML = data.length ? data.map(([name, count]) => `<div class="outcome-item"><div class="outcome-text">${name}</div><div class="outcome-count">${count}</div></div>`).join('') : '<p>No outcome data.</p>';
 }
 
-// --- UI State, Modals, & Compare ---
+// --- Modals, Compare, and other UI State Functions ---
 const toggleSidebar = () => {
     document.getElementById('sidebar').classList.toggle('collapsed');
-    setTimeout(() => Object.values(chartInstances).forEach(c => c?.resize()), 300);
+    setTimeout(() => Object.values(chartInstances).forEach(c => c && c.resize()), 300);
 };
-
-const showLoading = (isLoading) => {
-    document.getElementById('loadingSpinner').style.display = isLoading ? 'flex' : 'none';
+const showLoading = isLoading => {
+    const loader = document.getElementById('loadingSpinner');
+    if(loader) loader.style.display = isLoading ? 'flex' : 'none';
 };
-
-const toggleComparePanel = (show) => {
-    document.getElementById('comparePanel').classList.toggle('active', show);
+const toggleComparePanel = show => {
+    const panel = document.getElementById('comparePanel');
+    if(panel) panel.classList.toggle('active', show);
 };
-
-const openModal = (modalId) => {
+const openModal = modalId => {
     const modal = document.getElementById(modalId);
     if (modal) {
         modal.classList.add('active');
         document.body.style.overflow = 'hidden';
     }
 };
-
-const closeModal = (modalId) => {
+const closeModal = modalId => {
     const modal = document.getElementById(modalId);
     if (modal) {
         modal.classList.remove('active');
         document.body.style.overflow = '';
     }
 };
-
 function showError(message) {
-    const errorDiv = document.createElement('div');
-    errorDiv.className = 'error-message';
-    errorDiv.innerHTML = `<h3>Error</h3><p>${message}</p><button onclick="location.reload()">Reload</button>`;
-    document.body.appendChild(errorDiv);
+    const dashboardContainer = document.querySelector('.dashboard-container');
+    if (!dashboardContainer) return;
+    dashboardContainer.innerHTML = `<div class="error-message"><h3>Error</h3><p>${message}</p><button onclick="location.reload()">Reload Page</button></div>`;
     const style = document.createElement('style');
-    style.textContent = `
-        .error-message { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);
-        background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-        text-align: center; z-index: 10001; border-top: 4px solid var(--primary-color); }
-        .error-message h3 { margin-bottom: 1rem; color: var(--primary-color); }
-        .error-message button { margin-top: 1rem; padding: 0.5rem 1rem; background: var(--primary-color); color: white; border: none; border-radius: 4px; cursor: pointer; }`;
+    style.textContent = `.error-message { text-align: center; padding: 2rem; border-top: 4px solid var(--db-accent); background: var(--db-card-bg); }`;
     document.head.appendChild(style);
 }
-
 function toggleCompareSelection(studyId, isSelected) {
     if (isSelected) {
-        if (selectedForCompare.size < 3) {
-            selectedForCompare.add(studyId);
-        } else {
+        if (selectedForCompare.size < 3) selectedForCompare.add(studyId);
+        else {
             alert('You can only compare up to 3 studies at a time.');
             document.querySelector(`input[data-study-id="${studyId}"]`).checked = false;
         }
-    } else {
-        selectedForCompare.delete(studyId);
-    }
+    } else selectedForCompare.delete(studyId);
     updateComparePanel();
 }
-
 function updateComparePanel() {
     const count = selectedForCompare.size;
     toggleComparePanel(count > 0);
-    document.getElementById('compareCount').textContent = count;
-    document.getElementById('compareStudiesBtn').disabled = count < 2;
+    const countEl = document.getElementById('compareCount');
+    const btnEl = document.getElementById('compareStudiesBtn');
+    if(countEl) countEl.textContent = count;
+    if(btnEl) btnEl.disabled = count < 2;
 }
-
 function clearCompareSelection() {
     selectedForCompare.clear();
     document.querySelectorAll('input[type="checkbox"][data-study-id]').forEach(cb => cb.checked = false);
@@ -422,24 +672,33 @@ function openStudyModal(study) {
     document.getElementById('modalTitle').textContent = study.study_characteristics?.title || 'Study Details';
     const contentEl = document.getElementById('studyContent');
     const formatObject = (obj) => {
-        if (!obj) return 'N/A';
-        if (typeof obj === 'string') {
-            try { obj = JSON.parse(obj); } catch { return obj; }
+        if (obj === null || obj === undefined) return 'N/A';
+        if (typeof obj !== 'object') return String(obj);
+
+        if (Array.isArray(obj)) {
+            return obj.map(item => `<div class="modal-grid" style="border: 1px solid #eee; margin-top: 5px; padding: 5px;">${formatObject(item)}</div>`).join('');
         }
-        return Object.entries(obj).map(([key, value]) => `<div><strong>${key.replace(/_/g, ' ')}:</strong> ${value || 'N/A'}</div>`).join('');
+
+        return Object.entries(obj).map(([key, value]) => {
+            const formattedValue = (value !== null && typeof value === 'object')
+                ? `<div style="padding-left: 15px;">${formatObject(value)}</div>`
+                : (String(value) || 'N/A');
+            return `<div><strong>${key.replace(/_/g, ' ')}:</strong> ${formattedValue}</div>`;
+        }).join('');
     };
     contentEl.innerHTML = `
         <div class="modal-section"><h3>Study Characteristics</h3><div class="modal-grid">${formatObject(study.study_characteristics)}</div></div>
         <div class="modal-section"><h3>Population</h3><div class="modal-grid">${formatObject(study.population)}</div></div>
-        <div class="modal-section"><h3>Interventions</h3>${(study.interventions || []).map(int => `<div class="modal-grid">${formatObject(int)}</div>`).join('<hr>')}</div>
-        <div class="modal-section"><h3>Outcomes</h3><div class="modal-grid">${formatObject(study.outcomes)}</div></div>`;
+        <div class="modal-section"><h3>Interventions</h3><div class="modal-grid">${formatObject(study.interventions)}</div></div>
+        <div class="modal-section"><h3>Clinical Outcomes</h3><div class="modal-grid">${formatObject(study.outcomes)}</div></div>
+        <div class="modal-section"><h3>Economic Data</h3><div class="modal-grid">${formatObject(study.economic_data)}</div></div>`;
     openModal('studyModal');
 }
 
 function showComparisonModal() {
     const studiesToCompare = [...selectedForCompare].map(id => allStudies.find(s => s._id === id));
     const contentEl = document.getElementById('comparisonContent');
-    const headers = studiesToCompare.map(s => `<th>${s.study_characteristics?.title || s._id}</th>`).join('');
+    const headers = studiesToCompare.map(s => `<th>${(s.study_characteristics?.title || 'Untitled').substring(0,50)}...</th>`).join('');
     const getRow = (label, keyFn) => `<tr><td><strong>${label}</strong></td>${studiesToCompare.map(s => `<td>${keyFn(s) || 'N/A'}</td>`).join('')}</tr>`;
     contentEl.innerHTML = `
         <table class="comparison-table">
@@ -449,7 +708,7 @@ function showComparisonModal() {
                 ${getRow('Design', s => s.study_characteristics?.design)}
                 ${getRow('Sample Size', s => s.study_characteristics?.sample_size?.toLocaleString())}
                 ${getRow('Condition', s => getStudyCondition(s))}
-                ${getRow('Primary Outcome', s => Array.isArray(s.outcomes) ? (s.outcomes.find(o=>o.primary)?.name || s.outcomes[0]?.name) : s.outcomes?.primary_outcome)}
+                ${getRow('Primary Outcome', s => Array.isArray(s.outcomes) ? (s.outcomes.find(o => o.primary)?.name || s.outcomes[0]?.name) : s.outcomes?.primary_outcome)}
                 ${getRow('Intervention', s => (Array.isArray(s.interventions) && s.interventions.length > 0 ? s.interventions[0]?.treatment : 'N/A'))}
             </tbody>
         </table>`;

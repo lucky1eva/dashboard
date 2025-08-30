@@ -1,7 +1,7 @@
 {
-  "study_id": "Not Available",
+  "study_id": "DBS_Parkinson's_2014",
   "study_characteristics": {
-    "title": "Not Available",
+    "title": "The cost-effectiveness of deep brain stimulation in combination with best medical therapy, versus best medical therapy alone,in advanced Parkinson’s disease",
     "design": "Markov model",
     "follow_up_duration_month": 60.0,
     "publication_year": 2014,
